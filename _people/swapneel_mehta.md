@@ -1,7 +1,7 @@
 ---
 name: Swapneel Mehta
 position: postdoc
-avatar: SwapneelMehta.jpg
+avatar: swapneel_mehta.jpg
 twitter: 
 joined: 2023
 ---
