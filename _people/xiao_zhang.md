@@ -1,7 +1,7 @@
 ---
-name: Xiao Zhang
+name: Swapneel Mehta
 position: postdoc
-avatar: XiaoZhang.JPG
+avatar: SwapneelMehta.jpg
 twitter: 
 joined: 2023
 ---
@@ -13,6 +13,12 @@ joined: 2023
 
 ### Contact
 
-<i class="fa fa-envelope-o"></i>`xzhang11@seas.upenn.edu`<br>
-[<i class="fa fa-bar-chart"></i> Google Scholar](https://scholar.google.com/citations?user=xImPgj4AAAAJ) <br>
-[Homepage](http://xzhang.art/)
+<i class="fa fa-envelope-o"></i>`swapneel@bu.edu`<br>
+[LinkedIn](https://www.linkedin.com/in/swapneelm) <br>
+
+
+### Bio
+
+<p>Swapneel is the postdoc leading this project with the PIs, working on building our digital marketplace for online experimentation employing our governance intervention. He is a data science Ph.D. graduate from New York University and runs a nonprofit building responsible AI tools to advance information integrity. He runs fellowship programs supported by Google, Mozilla, and others.</p> 
+
+<br>
