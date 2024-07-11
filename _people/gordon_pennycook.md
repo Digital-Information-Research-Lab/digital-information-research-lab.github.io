@@ -1,17 +1,12 @@
 ---
-name: Felipe Parodi
-position: gradstudent
-avatar: felipe.jpg
-twitter:
-joined: 2020
-title: Felipe Parodi
+name: Gordon Pennycook
+position: pi
+avatar: gordon_pennycook.jpg
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">
 
-### Contact
-
-<i class="fa fa-envelope-o"></i>  `fparodi@pennmedicine.upenn.edu`<br>
+<i class="fa fa-envelope-o"></i> `grp58@cornell.edu`<br>
 
 <hr>
 

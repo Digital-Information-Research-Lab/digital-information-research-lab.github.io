@@ -1,9 +1,7 @@
 ---
-name: Melanie Segado
-position: postdoc
-avatar: melanie.jpg
-twitter: 
-joined: 2023
+name: Nina Mazar
+position: pi
+avatar: nina_mazar.jpg
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

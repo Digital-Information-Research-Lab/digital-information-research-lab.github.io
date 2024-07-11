@@ -1,9 +1,7 @@
 ---
-name: Joey Rudoler
-position: gradstudent
-avatar: joey_rudoler.jpg
-twitter: jrudoler
-joined: 2022
+name: Mayank Varia
+position: pi
+avatar: mayank_varia.jpg
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

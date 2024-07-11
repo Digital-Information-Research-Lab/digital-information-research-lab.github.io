@@ -9,13 +9,8 @@ joined: 2023
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">
 
 
-
-
-### Contact
-
 <i class="fa fa-envelope-o"></i>`swapneel@bu.edu`<br>
 [LinkedIn](https://www.linkedin.com/in/swapneelm) <br>
-
 
 ### Bio
 

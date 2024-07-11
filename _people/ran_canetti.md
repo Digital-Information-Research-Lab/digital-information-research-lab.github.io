@@ -1,18 +1,12 @@
 ---
-name: Jordan Matelsky
-position: gradstudent
-avatar: jordan-matelsky.jpg
-twitter: j6m8
-joined: 2021
+name: Ran Canetti
+position: pi
+avatar: ran_canetti.jpg
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">
 
-### Contact
-
-<i class="fa fa-envelope-o"></i> `matelsky@upenn.edu`<br>
-<i class="fa fa-bar-chart"></i> [Google Scholar](https://scholar.google.com/citations?user=QgJ7CPUAAAAJ&hl=en) <br>
-[Homepage](https://jordan.matelsky.com)
+<i class="fa fa-envelope-o"></i> `canetti@bu.edu`<br>
 
 <hr>
 
