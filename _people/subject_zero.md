@@ -1,6 +1,6 @@
 ---
 name: Subject Zero
-position: others
+position: undergrad
 avatar: subject_zero.jpg
 joined: -300000000
 ---

@@ -1,10 +1,7 @@
 ---
-name: Ansh Soni
+name: temp
 position: gradstudent
 avatar: Ansh_Soni.jpg
-twitter:
-joined: 2024
-title: Ansh Soni
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">
