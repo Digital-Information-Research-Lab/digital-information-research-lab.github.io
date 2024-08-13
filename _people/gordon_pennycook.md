@@ -2,6 +2,7 @@
 name: Gordon Pennycook
 position: pi
 avatar: gordon_pennycook.jpg
+joined: 4
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

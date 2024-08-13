@@ -2,6 +2,7 @@
 name: Marshall Van Alstyne
 position: pi
 avatar: mva.jpg
+joined: 1
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

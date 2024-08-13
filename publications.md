@@ -5,6 +5,41 @@ permalink: /publication/
 
 publications
 
+**Research Papers**
+
+Van Alstyne, Marshall W. "Free Speech and the Fake News Problem." *Available at SSRN 4414261* (2023).
+
+Mehta et al., “Improving the Governance of Digital Platforms with Interactive Marketplace Experiments”, Intl. Conference on Computational Social Science, 2024.
+
+**Talks**
+
+1. Marshall van Alstyne, Harvard
+
+Mehta, International Conference on Computational Social Science (2024). “Improving the Governance of Online Marketplaces using Warrants”.
+
+Nichols. Platform Strategy Research Symposium (2024). Certifiably True: The Impact of Self Certification on Misinformation.
+Nichols. International Conference on Computational Social Science (2024). Certifiably True: The Impact of Self-Certification on Misinformation.
+Nichols. Freedom of Expression Scholars Conference (2024). Certifiably True: The Impact of
+Self-Certification on Misinformation.
+
+**Slides**
+
+Swapneel IC2S2: ([Slides](https://docs.google.com/presentation/d/1v_K9nGETVi-Vy8GKcllhJzeE_5_IspdDvK9JTvk6liY/edit#slide=id.p))
+
+**Press**
+
+[BU Professors Earn NSF Grant for Data Science Project Fighting Online Misinformation](https://www.bu.edu/cds-faculty/2023/10/06/bu-professors-earn-nsf-grant-for-data-science-project-fighting-online-misinformation/) - BUCDS
+
+[Could Taxes Deter the Spread of Harmful Fake News?](https://www.bu.edu/articles/2019/deter-the-spread-of-harmful-fake-news/) - Anastasia Lennon, The Brink
+
+[Platforms Forge New Paths](https://medium.com/mit-initiative-on-the-digital-economy/platforms-forge-new-paths-c1e2f3541a8f) - MIT IDE, Medium
+
+[How Your Company Can Fight The Never-Ending War Against Misinformation](https://www.forbes.com/sites/edwardsegal/2020/10/21/how-your-company-can-fight-the-never-ending-war-against-misinformation/) - Edward Segal, Forbes    
+
+[Now It's Harvard Business Review Getting Section 230 Very, Very Wrong](https://www.techdirt.com/2021/08/13/now-harvard-business-review-getting-section-230-very-very-wrong/) - Mike Masnick, techDirt
+ 
+[BU researchers recieve 550000 grant, propose holistic approach to misinformation](https://dailyfreepress.com/2023/10/25/bu-researchers-receive-550000-grant-propose-holistic-approach-to-misinformation/) - The Daily Free Press
+
 <!-- For those interested in numbers, see Konrad's [google scholar citations profile](https://scholar.google.com/citations?user=MiFqJGcAAAAJ).
 
 We try to include links for all of our papers. Some of the links open PDFs, others direct you to a journal's site where that particular publication is available for download. If you cannot access one of our papers, let us know. The copyright notice for these papers is listed at the bottom of the page.
