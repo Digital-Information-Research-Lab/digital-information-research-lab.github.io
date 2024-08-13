@@ -13,14 +13,16 @@ Mehta et al., “Improving the Governance of Digital Platforms with Interactive 
 
 **Talks**
 
-1. Marshall van Alstyne, Harvard
+<p>1. Marshall van Alstyne, Harvard</p>
 
-Mehta, International Conference on Computational Social Science (2024). “Improving the Governance of Online Marketplaces using Warrants”.
+<p>2. Mehta, International Conference on Computational Social Science (2024). “Improving the Governance of Online Marketplaces using Warrants”. </p>
 
-Nichols. Platform Strategy Research Symposium (2024). Certifiably True: The Impact of Self Certification on Misinformation.
-Nichols. International Conference on Computational Social Science (2024). Certifiably True: The Impact of Self-Certification on Misinformation.
-Nichols. Freedom of Expression Scholars Conference (2024). Certifiably True: The Impact of
-Self-Certification on Misinformation.
+<p>3. Nichols. Platform Strategy Research Symposium (2024). Certifiably True: The Impact of Self Certification on Misinformation.</p>
+
+<p>4. Nichols. International Conference on Computational Social Science (2024). Certifiably True: The Impact of Self-Certification on Misinformation.</p>
+
+<p>5. Nichols. Freedom of Expression Scholars Conference (2024). Certifiably True: The Impact of
+   Self-Certification on Misinformation. </p>
 
 **Slides**
 
