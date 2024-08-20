@@ -30,6 +30,8 @@ nav:
     href:           "/publication"
   - name:           "people"
     href:           "/people"
+  - name:           "games"
+    href:           "/games"
   # - name:           "blog"
     # href:           "/blog"
 #   - name:           "abstracts"

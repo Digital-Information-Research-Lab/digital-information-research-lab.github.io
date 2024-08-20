@@ -3,13 +3,19 @@ title: Publication
 permalink: /publication/
 ---
 
-publications
+
 
 **Research Papers**
 
-Van Alstyne, Marshall W. "Free Speech and the Fake News Problem." *Available at SSRN 4414261* (2023).
+<ul>
+        <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261">Free Speech & the Fake News Problem</a></li>
+        <li><a href="https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/">Improving §230, Preserving Democracy & Protecting Free Speech</a></li>
+        <li><a href="https://www.dropbox.com/scl/fi/nopf4dhw86fh5oej7rquw/Certifiably_True-The_Impact_Of_Self_Certification_On_Misinfo.pdf?rlkey=vp9rcew7hq98plmhh5asofy93&e=1&dl=0">Truth is Warranted: The Impact of Self-Certification on Misinformation</a></li>
+        <li> Mehta et al., “Improving the Governance of Digital Platforms with Interactive Marketplace Experiments”, Intl. Conference on Computational Social Science, 2024.
+</li>
+    </ul>
 
-Mehta et al., “Improving the Governance of Digital Platforms with Interactive Marketplace Experiments”, Intl. Conference on Computational Social Science, 2024.
+
 
 **Talks**
 
