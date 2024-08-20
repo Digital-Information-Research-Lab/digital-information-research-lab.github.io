@@ -20,7 +20,6 @@ Van Alstyne MW. Free Speech and the Fake News Problem. Available at SSRN 4414261
     <li>Conducting randomized controlled trials (RCTs) to test interventions and measure their impact.</li>
     <li>Exploring the potential for market design to inform legal reforms, particularly updating §230 and content liability laws.</li>
 </ul>
-</section>
 <section id="research-results">
     <h2>Research Results</h2>
     <p>Here are some of our published papers and talks:</p>
