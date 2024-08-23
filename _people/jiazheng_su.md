@@ -2,7 +2,7 @@
 name: Jiazheng Su
 position: undergrad
 avatar: Jiazheng.jpg
-joined: 2
+joined: 15
 ---
 
 <img width="250" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

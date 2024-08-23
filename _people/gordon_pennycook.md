@@ -13,11 +13,4 @@ joined: 4
 
 ### Bio
 
-Felipe Parodi, originally from Buenos Aires, Argentina, received his B.S. in Neuroscience and Economics from the University of Miami. During his undergraduate studies, he contributed to neurolinguistic pain modulation research in the [Social and Cultural Neuroscience Lab](http://www.losinlab.org/). Following graduation, Felipe worked as a Psychometrician at First Choice Neurology, refining screening instruments to predict cognitive dysfunction in diverse geriatric populations. When he isn't immersed in research, Felipe enjoys playing soccer, indulging in people-watching, and on a personal mission to discover and craft the perfect burger.
-
-### Research Interests
-
-Currently a PhD candidate in Neuroscience, Felipe is mentored by Konrad Kording and Michael Platt. His research focus lies at the intersection of deep learning, wireless neurophysiology, and computer vision, aiming to unravel the neural representation of social primate gestures and touch.
-
-
-Visit his [webpage](https://felipe-parodi.github.io/) for a deeper dive or to have a chat!
+My research focus is on reasoning and decision-making, broadly defined. I investigate the distinction between intuitive processes (“gut feelings”) and more deliberative (“analytic”) reasoning processes and am principally interested in the causes (a) and consequences (b) of analytic thinking. That is, what makes us think and why is it (thinking) important? This is critical to understand if we’re ever to find better ways to make decisions. Alas, a lot of our problems as a species come from errors that we make during reasoning and decision-making – from global warming to health issues (including, but not limited to, the spread of pandemics) to political polarization and misinformation – and, thus, understanding why people make these errors is a major focus of mine. A recent review of my theoretical perspective and much of my research can be found [here](https://osf.io/preprints/psyarxiv/j3w7d).

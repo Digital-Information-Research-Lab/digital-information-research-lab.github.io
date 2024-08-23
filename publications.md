@@ -11,6 +11,8 @@ permalink: /publication/
         <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261">Free Speech & the Fake News Problem</a></li>
         <li><a href="https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/">Improving §230, Preserving Democracy & Protecting Free Speech</a></li>
         <li><a href="https://www.dropbox.com/scl/fi/nopf4dhw86fh5oej7rquw/Certifiably_True-The_Impact_Of_Self_Certification_On_Misinfo.pdf?rlkey=vp9rcew7hq98plmhh5asofy93&e=1&dl=0">Truth is Warranted: The Impact of Self-Certification on Misinformation</a></li>
+        <li><a href="https://www.usenix.org/system/files/usenixsecurity24-little.pdf">Secure Account Recovery for a
+        Privacy-Preserving Web Service</a></li>
         <li> Mehta et al., “Improving the Governance of Digital Platforms with Interactive Marketplace Experiments”, Intl. Conference on Computational Social Science, 2024.
 </li>
     </ul>
@@ -18,17 +20,16 @@ permalink: /publication/
 
 
 **Talks**
-
-<p>1. Marshall van Alstyne, Harvard</p>
-
-<p>2. Mehta, International Conference on Computational Social Science (2024). “Improving the Governance of Online Marketplaces using Warrants”. </p>
-
-<p>3. Nichols. Platform Strategy Research Symposium (2024). Certifiably True: The Impact of Self Certification on Misinformation.</p>
-
-<p>4. Nichols. International Conference on Computational Social Science (2024). Certifiably True: The Impact of Self-Certification on Misinformation.</p>
-
-<p>5. Nichols. Freedom of Expression Scholars Conference (2024). Certifiably True: The Impact of
-   Self-Certification on Misinformation. </p>
+<ul>
+    <li>Van Alystyne, Digital Platform Ecosystems Forum at University of Passau (2024). <a href="https://idw-online.de/en/news835047">"Truth is Warranted: Addressing Misinformation in Information Markets"</a></li>
+    <li>Van Alystyne, Marketplace Risk (2024). <a href="https://www.youtube.com/watch?v=G_UAuAdAgDQ">"Using Markets to Combat Misinformation"</a></li>
+    <li>Van Alstyne, Harvard</li>
+    <li>Mehta, International Conference on Computational Social Science (2024). “Improving the Governance of Online Marketplaces using Warrants” </li>
+    <li>Nichols. Platform Strategy Research Symposium (2024). "Certifiably True: The Impact of Self Certification on Misinformation"</li>
+    <li>Nichols. International Conference on Computational Social Science (2024). "Certifiably True: The Impact of Self-Certification on Misinformation"</li>
+    <li>Nichols. Freedom of Expression Scholars Conference (2024). "Certifiably True: The Impact of
+    Self-Certification on Misinformation" </li>
+</ul>
 
 **Slides**
 

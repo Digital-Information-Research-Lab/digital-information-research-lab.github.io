@@ -1,4 +1,4 @@
----
+<!-- ---
 name: Subject Zero
 position: undergrad
 avatar: subject_zero.jpg
@@ -57,4 +57,4 @@ Subject Zero likes jokes. He has a few:
 
 ### Subject Zero's with Neuroscientists
 
-Subject Zero traveled to University of Minnesota to give a lecture in Computational Neuroscience. He took pictures with many famous neuroscientists including: Prof. Reza Shadmehr (John Hopkins), Prof. Gelsy Torres-Oviedo (U Pitts), Prof. Gunnar Blohm (Queen's), Prof. Paul Schrater (U Minnesota), Prof. Adrian Haith (John Hopkins) and Prof. Alaa A. Ahmed (U of Colorado Boulder).
+Subject Zero traveled to University of Minnesota to give a lecture in Computational Neuroscience. He took pictures with many famous neuroscientists including: Prof. Reza Shadmehr (John Hopkins), Prof. Gelsy Torres-Oviedo (U Pitts), Prof. Gunnar Blohm (Queen's), Prof. Paul Schrater (U Minnesota), Prof. Adrian Haith (John Hopkins) and Prof. Alaa A. Ahmed (U of Colorado Boulder). -->

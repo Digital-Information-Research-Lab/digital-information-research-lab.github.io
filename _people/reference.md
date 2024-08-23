@@ -1,4 +1,4 @@
----
+<!-- ---
 name: temp
 position: gradstudent
 avatar: Ansh_Soni.jpg
@@ -20,7 +20,7 @@ Ansh recieved degrees in Physics and Psychology from University of California - 
 
 Ansh is interested in utilizing machine learning methods to better understand human perception and taking inspiration from the human brain to create improved machine learning algorithms.
 
-
+ -->
 
 
 
