@@ -1,5 +1,5 @@
 ---
-name: Daian lIU
+name: Daian Liu
 position: undergrad
 avatar: daian.jpeg
 joined: 8
