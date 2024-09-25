@@ -16,7 +16,7 @@ In addition, Laerk also serves as a Product Manager at the non-profit Hack4Impac
 
 <p>
 In addition to his leadership role, Laerk actively competes in hackathons, leveraging his skills to innovate and create solutions in team settings. You can find his work on 
-<a href="https://www.github.com/laerk23/">github.</a> </p>
+<a href="https://www.github.com/laerk23/">Github.</a> </p>
 
 
 <p>
