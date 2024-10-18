@@ -14,28 +14,8 @@ joined: 2023
 
 ### Bio
 
-<p>
+Swapneel is a postdoctoral associate at Boston University and MIT conducting behavioral economics research into platform governance and free speech. He founded and co-lead a nonprofit, [SimPPL](https://simppl.org), rebuilding trust on the social internet in 6 countries through responsible computing tools deployed with over 20 newsrooms, CSOs, nonprofits, and the UN. The nonprofit is focused on translating research into practice, spinning out an award-winning, MIT-incubated tech venture delivering maternal health literacy information in rural India called [Sakhi](https://sakhi-health.com).
 
-I am a Postdoctoral Associate jointly at Boston University and MIT and founder at SimPPL, researching platform governance, free speech, and democracy by modeling online marketplaces. I’m a Belfer Fellow at CTS, a Responsible Tech Affiliate at ATIH, and a Google Research Innovator. I got my Data Science Ph.D. at NYU primarily working at CSMAP, collaborating with folks at Oxford TVG and the Integrity Institute. My research deals with limiting disinformation on social networks using tools from machine learning and causal inference: </p> 
+Swapneel has been a Google Research Innovator, CTS Belfer Fellow, and won several grants from Google, Mozilla, and Wikimedia to support his work. He received his Ph.D. from NYU Data Science, estimating the causal effects of interventions to limit misinformation. In industry, he worked at Twitter, Adobe, Slack, with Meta at Oxford, (now acquired) startups, and CERN on AI products, algorithms, and applications.
 
-
-- Estimating the Causal Effects of Policy Interventions
-- Auditing the Impact of Content Recommendation Algorithms
-- Building Civic Integrity Tools for Practitioners and Policymakers
-<br>
-<p>
-I’ve previously worked on data science and machine learning at Slack, Twitter Civic Integrity, Adobe Research, and on ML for particle physics at CERN.
-</p>
-
-I founded SimPPL (read: ‘sim people’), a research collective that builds better civic integrity tools such as Parrot Report. We’ve worked with The Sunday Times, Ippen Media, Deutsche Welle, the Yale Daily News, the Vermont Digger, and others on:
-<br>
-
-- Supporting newsrooms to better understand their audiences on social networks.
-- Study the spread of unreliable news and identify influence operations online.
-<p>
-SimPPL has received support from the Wikimedia Foundation, Google, AWS, the NYC Media Lab, AI2Amplify (German Federal funding), and the NYU Tech Venture Workshop. It is materially supported by the One Fact Foundation and the AI4ABM Foundation at Oxford.
-</p>
-
-I mentored students and conducted collaborative research with Unicode Research. This team was born out of the parent org. I co-founded in 2017 to teach open-source development to undergrads, called DJ Unicode.
-
-<br>
+He serves as a Community Advisory Board member at the Integrity Institute, Responsible Tech Affiliate at All Tech is Human, and Board of Studies member at D.J. Sanghvi College of Engineering. He has mentored about 130 undergraduates and 4 high-school students.
