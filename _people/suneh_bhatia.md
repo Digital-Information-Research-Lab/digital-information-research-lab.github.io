@@ -1,4 +1,4 @@
--- ---
+---
 name: Suneh Bhatia
 position: undergrad
 avatar: Suneh.jpg
@@ -15,7 +15,7 @@ joined: 2024
 
 ### Bio
 
-Suneh is a senior at Boston University, majoring in Computer Science. Suneh 
+Suneh is a senior at Boston University, majoring in Computer Science.  
 
 ### Research Interests
 
