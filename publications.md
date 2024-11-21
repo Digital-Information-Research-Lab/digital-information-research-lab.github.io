@@ -3,51 +3,371 @@ title: Publication
 permalink: /publication/
 ---
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all toggle buttons
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    // Find the description element within the same publication-entry
+    const description = button.closest('.publication-entry').querySelector('.description');
+    
+    // Initially hide all descriptions
+    description.style.display = 'none';
 
+    button.addEventListener('click', function() {
+      if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block';
+        this.textContent = '-';
+      } else {
+        description.style.display = 'none';
+        this.textContent = '+';
+      }
+    });
+  });
+});
+</script>
 
-**Research Papers**
+<style>
+/* Restore the previous styles */
+.publications-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
 
-<ul>
-        <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261">Free Speech & the Fake News Problem</a></li>
-        <li><a href="https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/">Improving §230, Preserving Democracy & Protecting Free Speech</a></li>
-        <li><a href="https://www.dropbox.com/scl/fi/nopf4dhw86fh5oej7rquw/Certifiably_True-The_Impact_Of_Self_Certification_On_Misinfo.pdf?rlkey=vp9rcew7hq98plmhh5asofy93&e=1&dl=0">Truth is Warranted: The Impact of Self-Certification on Misinformation</a></li>
-        <li><a href="https://www.usenix.org/system/files/usenixsecurity24-little.pdf">Secure Account Recovery for a
-        Privacy-Preserving Web Service</a></li>
-        <li> Mehta et al., “Improving the Governance of Digital Platforms with Interactive Marketplace Experiments”, Intl. Conference on Computational Social Science, 2024.
-</li>
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1.5rem 0;
+  color: #1a1a1a;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.publication-entry {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  position: relative; 
+}
+
+.publication-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.publication-content .toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.publication-info {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.description {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.description p {
+  margin: 0.5rem 0;
+}
+
+.description strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.publication-entry a {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.publication-entry h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.publication-entry:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.description p {
+  margin: 0.5rem 0;
+}
+
+.description strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  position: absolute;
+  right: 1rem;
+}
+
+.toggle-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+</style>
+
+<div class="publications-list">
+  <h2>Research Papers</h2>
+  <ul>
+    <li class="publication-entry">
+    <div class="publication-content">
+    <div class="publication-info">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261">Free Speech & the Fake News Problem</a>
+    </div>
+      <button class="toggle-btn">+</button>
+    </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Marshall W. Van Alstyne</p>
+        <p><strong>Abstract:</strong> This paper explores the intersection of free speech and the rise of fake news. We examine regulatory solutions and propose new frameworks for addressing this issue in online media.</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+    <div class="publication-content">
+     <div class="publication-info">
+      <a href="https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/">Improving §230, Preserving Democracy & Protecting Free Speech</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong>  Marshall Van Alstyne, Michael D. Smith, and Herbert Lin</p>
+        <p><strong>Abstract:</strong> Proposing a framework for a decentralized market where no one party controls the flow of information.</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://www.dropbox.com/scl/fi/nopf4dhw86fh5oej7rquw/Certifiably_True-The_Impact_Of_Self_Certification_On_Misinfo.pdf?rlkey=vp9rcew7hq98plmhh5asofy93&e=1&dl=0">Truth is Warranted: The Impact of Self-Certification on Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Aaron D. Nichols, Nina Mazar, Tejovan Parker, Gordon Pennycook, David Rand, and Marshall Van Alstyne</p>
+        <p><strong>Abstract:</strong> Research of certifications and their utilization in the marketplace.</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+      <div class="publication-info">
+      <a href="https://www.usenix.org/system/files/usenixsecurity24-little.pdf">Secure Account Recovery for a Privacy-Preserving Web Service</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Ryan Little, Lucy Qin, and Mayank Varia</p>
+        <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+    <div class="publication-content">
+      <div class="publication-info">
+    <h3>"Improving the Governance of Digital Platforms with Interactive Marketplace Experiments", Intl. Conference on Computational Social Science, 2024.</h3>
+    </div>
+    <button class="toggle-btn">+</button>
+    </div>
+    <div class="description">
+        <p><strong>Authors:</strong> Swapneel Mehta</p>
+        <p><strong>Abstract:</strong> TBD</p>
+    </div>
+    </li>
+  </ul>
+
+  <h2>Talks</h2>
+  <ul>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://idw-online.de/en/news835047"> Truth is Warranted: Addressing Misinformation in Information Markets</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Van Alystyne</p>
+        <p><strong>Venue:</strong> Digital Platform Ecosystems Forum at University of Passau (2024)</p>
+        <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://www.youtube.com/watch?v=G_UAuAdAgDQ"> Using Markets to Combat Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Van Alystyne</p>
+        <p><strong>Venue:</strong> Harvard University</p>
+        <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry"> 
+      <div class="publication-content">
+       <div class="publication-info">
+       <h3>Improving the Governance of Online Marketplaces using Warrants</h3>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Authors:</strong> Swapneel Mehta</p>
+      <p><strong>Venue:</strong> International Conference on Computational Social Science (2024)</p>
+      <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry"> 
+      <div class="publication-content">
+       <div class="publication-info">
+       <h3>Certifiably True: The Impact of Self Certification on Misinformation</h3>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Authors:</strong> Nichols</p>
+      <p><strong>Venue:</strong> Platform Strategy Research Symposium (2024)</p>
+      <p><strong>Venue:</strong> International Conference on Computational Social Science (2024)</p>
+      <p><strong>Venue:</strong> Freedom of Expression Scholars Conference (2024)</p>
+      <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <!-- Add more talk entries as needed -->
+  </ul>
+  <h2>Slides</h2>
+    <ul>
+      <li class="publication-entry"><h3> Swapneel IC2S2: <a href="https://docs.google.com/presentation/d/1v_K9nGETVi-Vy8GKcllhJzeE_5_IspdDvK9JTvk6liY/edit#slide=id.p">[Slides]</a></h3>
+      </li>
     </ul>
 
+  
+  <h2>Press</h2>
+  <ul>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://www.bu.edu/cds-faculty/2023/10/06/bu-professors-earn-nsf-grant-for-data-science-project-fighting-online-misinformation/">BU Professors Earn NSF Grant for Data Science Project Fighting Online Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Toni Fitzgerald</p>
+        <p><strong>Publisher:</strong> BUCDS</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://www.bu.edu/articles/2019/deter-the-spread-of-harmful-fake-news/">Could Taxes Deter the Spread of Harmful Fake News?</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Author:</strong> Anastasia Lennon, </p>
+      <p><strong>Publisher:</strong> The Brink</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+      <div class="publication-info">
+      <a href="https://medium.com/mit-initiative-on-the-digital-economy/platforms-forge-new-paths-c1e2f3541a8f">Platforms Forge New Paths</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Author:</strong> Peter Krass</p>
+        <p><strong>Publisher:</strong> MIT IDE, Medium</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://www.forbes.com/sites/edwardsegal/2020/10/21/how-your-company-can-fight-the-never-ending-war-against-misinformation/">How Your Company Can Fight The Never-Ending War Against Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Edward Segal</p>
+        <p><strong>Publisher:</strong> Forbes</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://www.techdirt.com/2021/08/13/now-harvard-business-review-getting-section-230-very-very-wrong/">Now It's Harvard Business Review Getting Section 230 Very, Very Wrong</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Mike Masnick</p>
+        <p><strong>Publisher:</strong> techDirt</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://dailyfreepress.com/2023/10/25/bu-researchers-receive-550000-grant-propose-holistic-approach-to-misinformation/">BU researchers recieve 550000 grant, propose holistic approach to misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Anna Albrecht</p>
+        <p><strong>Publisher:</strong> The Daily Free Press</p>
+      </div>
+    </li>
+  </ul>
+</div>
 
-
-**Talks**
-<ul>
-    <li>Van Alystyne, Digital Platform Ecosystems Forum at University of Passau (2024). <a href="https://idw-online.de/en/news835047">"Truth is Warranted: Addressing Misinformation in Information Markets"</a></li>
-    <li>Van Alystyne, Marketplace Risk (2024). <a href="https://www.youtube.com/watch?v=G_UAuAdAgDQ">"Using Markets to Combat Misinformation"</a></li>
-    <li>Van Alstyne, Harvard</li>
-    <li>Mehta, International Conference on Computational Social Science (2024). “Improving the Governance of Online Marketplaces using Warrants” </li>
-    <li>Nichols. Platform Strategy Research Symposium (2024). "Certifiably True: The Impact of Self Certification on Misinformation"</li>
-    <li>Nichols. International Conference on Computational Social Science (2024). "Certifiably True: The Impact of Self-Certification on Misinformation"</li>
-    <li>Nichols. Freedom of Expression Scholars Conference (2024). "Certifiably True: The Impact of
-    Self-Certification on Misinformation" </li>
-</ul>
-
-**Slides**
-
-Swapneel IC2S2: ([Slides](https://docs.google.com/presentation/d/1v_K9nGETVi-Vy8GKcllhJzeE_5_IspdDvK9JTvk6liY/edit#slide=id.p))
-
-**Press**
-
-[BU Professors Earn NSF Grant for Data Science Project Fighting Online Misinformation](https://www.bu.edu/cds-faculty/2023/10/06/bu-professors-earn-nsf-grant-for-data-science-project-fighting-online-misinformation/) - BUCDS
-
-[Could Taxes Deter the Spread of Harmful Fake News?](https://www.bu.edu/articles/2019/deter-the-spread-of-harmful-fake-news/) - Anastasia Lennon, The Brink
-
-[Platforms Forge New Paths](https://medium.com/mit-initiative-on-the-digital-economy/platforms-forge-new-paths-c1e2f3541a8f) - MIT IDE, Medium
-
-[How Your Company Can Fight The Never-Ending War Against Misinformation](https://www.forbes.com/sites/edwardsegal/2020/10/21/how-your-company-can-fight-the-never-ending-war-against-misinformation/) - Edward Segal, Forbes    
-
-[Now It's Harvard Business Review Getting Section 230 Very, Very Wrong](https://www.techdirt.com/2021/08/13/now-harvard-business-review-getting-section-230-very-very-wrong/) - Mike Masnick, techDirt
- 
-[BU researchers recieve 550000 grant, propose holistic approach to misinformation](https://dailyfreepress.com/2023/10/25/bu-researchers-receive-550000-grant-propose-holistic-approach-to-misinformation/) - The Daily Free Press
 
 <!-- For those interested in numbers, see Konrad's [google scholar citations profile](https://scholar.google.com/citations?user=MiFqJGcAAAAJ).
 
