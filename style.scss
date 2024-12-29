@@ -12,6 +12,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+
 }
 
 html {
@@ -285,9 +286,10 @@ tbody tr:nth-child(odd) th {
 
 .container {
   max-width: 40rem;
-//  padding: 2rem 1.5rem;
+  // padding: -2rem -1.5rem;
   margin-left:  auto;
   margin-right: auto;
+
 
   @media (min-width: 40rem){
 //    padding: 5rem 1rem;
@@ -295,6 +297,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .masthead {
+  padding: 2rem 1rem;
 
   &-title {
     font-weight: 300;
@@ -525,9 +528,14 @@ tbody tr:nth-child(odd) th {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 80%;
-  // padding-top: 50px;
-  // padding-bottom: 50px;
+  // padding-top: -50px;
+  // padding-bottom: -50px;
 }
+
+.navbar {
+  margin-bottom: -2rem; 
+}
+
 
 // fix menu bar spacing for mobile
 @media(max-width: 40em){
@@ -542,7 +550,7 @@ tbody tr:nth-child(odd) th {
   }
 }
 
-// fix spacing
+// // fix spacing
 .navbar-nav>li {
   margin-bottom: 0;
 }
@@ -569,4 +577,66 @@ tbody tr:nth-child(odd) th {
 
 test {
   background-color: black;
+}
+
+.research-section {
+  margin-top: 2rem;
+  background-color: #f8f4f1; 
+  padding: 3rem 1rem; 
+  text-align: center; 
+
+  h1 {
+    font-size: 2.5rem; 
+    color: #333; 
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .research-steps {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 2rem; 
+
+    .step {
+      background: #fff; 
+      border: 1px solid #ddd; 
+      border-radius: 10px; 
+      padding: 1.5rem; 
+      width: 300px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      text-align: left; 
+      transition: transform 0.3s ease; 
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+      }
+
+      .step-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #b5651d; 
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: #333; 
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.5; 
+      }
+    }
+  }
 }
