@@ -781,7 +781,7 @@ a {
           color: #fff;
 
           &:hover {
-            background: darken(#6c4ce1, 10%);
+            // background: scale($color, $lightness: -21.4285714286%);
             transform: translateY(-2px);
           }
         }
@@ -791,7 +791,7 @@ a {
           color: #fff;
 
           &:hover {
-            background: darken(#777, 10%);
+            // background: scale($color, $lightness: -21.4285714286%);
             transform: translateY(-2px);
           }
         }
@@ -1050,7 +1050,7 @@ a {
   background: #6c4ce1;
   color: #fff;
   &:hover {
-    background: darken(#6c4ce1, 10%);
+    // background: scale($color, $lightness: -21.4285714286%);
     transform: translateY(-2px);
   }
 }
@@ -1058,7 +1058,7 @@ a {
   background: #777;
   color: #fff;
   &:hover {
-    background: darken(#777, 10%);
+    // background: scale($color, $lightness: -21.4285714286%);
     transform: translateY(-2px);
   }
 }
@@ -1243,5 +1243,5 @@ a {
   height: auto; 
   margin-bottom: 1.5rem;
   position: relative;
-  top: -200px; 
+  top: -100px; 
 }
