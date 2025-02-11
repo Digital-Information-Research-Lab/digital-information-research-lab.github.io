@@ -10,7 +10,6 @@ Welcome to the documentation for the Feedback Stage component! This guide will h
 This is the list of functions that are defined on this page.
 - [handleSubmit()](#function-handlesubmit)
 - [useEffect Hook](#function-useeffect)
-- [ConsumerFeedback()](#function-consumerfeedback)
 
 ---
 
