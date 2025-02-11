@@ -8,12 +8,8 @@ const config = {
   tagline: 'Empirica Marketplace Simulation Documentation', // Short description
   favicon: 'img/favicon.png', // Path to the site icon
 
-  // URL where the site is hosted (CHANGE THIS TO YOUR GITHUB PAGES URL)
   url: 'https://digital-information-research-lab.github.io',
-
-  // The base path under which the site is served.
-  // Make sure it matches your repository name if using GitHub Pages
-  baseUrl: '/digital-information-research-lab.github.io/',
+  baseUrl: '/',
 
   // GitHub Repository Info
   organizationName: 'Digital-Information-Research-Lab', // GitHub Organization/User Name
