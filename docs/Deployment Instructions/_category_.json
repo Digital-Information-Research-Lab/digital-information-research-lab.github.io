@@ -3,6 +3,6 @@
     "position": 5,
     "link": {
       "type": "generated-index",
-      "description": "This section will teach you how to deploy your own server in production using Google Cloud Platform!"
+      "description": "Welcome to the documentation for deployment of the H2H marketplace in the Google Cloud Platform! This guide will help you better understand how to **deploy your game, run a server in production, obtain game data, and troubleshoot issues.**. This page is verified by: *Laerk Ndreko*"
     }
  }
