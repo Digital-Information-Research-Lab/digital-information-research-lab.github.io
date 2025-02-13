@@ -45,90 +45,64 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
   - Create!
  
 - Navigate back to your vm machine, select it and click edit.
-  - Under both "Labels" and "Network Tags", enter **"(yourname)-http-server"**.
-  - 
-
+  - Under both "Labels" and "Network Tags", enter **"(yourname)-http-server"**, and click save.
 
 ---
 ## <span class="h2style">SSH and Terminal Instructions</span>
 - Now we have to enter the SSH terminal and install the necessary packages.
   - For this to work ensure that any settings on your device, allow pop-ups (including disabling any ad-blockers).
 
-- There should be a button under "SSH", select that and you should have a terminal pop up on your screen.
+- There should be a button labeled "SSH" at your VM Machine, select that and you should have a terminal pop up on your screen.
 
 - Once that is loaded, now we have to install our libraries/packages for this to work. For that to happen we need to initialize an environment.
-- We will be using Miniconda. Copy and paste "**wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh**" into your terminal and press enter.
-  - Enter the command "**bash Miniconda3-latest-Linux-x86_64.sh**" and hit enter.
+- We will be using Miniconda. Copy and paste ```wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh``` into your terminal and press enter.
+  - Enter the command ```bash Miniconda3-latest-Linux-x86_64.sh``` and hit enter.
   - Now your terminal should be going through Miniconda's terms and conditions (to shortcut this press q).
   - Follow all instructions and select "yes" when prompted to.
   - If the terminal asks for a folder location, you may hit **Enter** or select a folder yourself.
 
-- Once Miniconda is downloaded, enter "**source ~/.bashrc**".
+- Once Miniconda is downloaded, enter ```source ~/.bashrc```.
   - You should see a "(base)" environment to the left of your terminal line, if this appears you have taken all of the correct steps!
   - We now have to create and activate our environment, copy and paste these commands into your terminal:
-    **conda create --name fake_news_env python=3.9**
-    **conda activate fake_news_env**
-    **conda install -c conda-forge::nodejs**
+    ```
+    conda create --name empirica_env python=3.9
+    conda activate empirica_env
+    conda install -c conda-forge nodejs
+    conda install jupyterlab
+    ```
     - You may give your environment another name as well.
+  - Once those packages are installed, now install Caddy & Empirica:
+    ```
+    sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+    curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+    curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list**
+    sudo apt update
+    sudo apt install caddy
+    curl -fsS https://install.empirica.dev | sh
+    ```
+  - Now you should have a Caddyfile, we will edit it:
+  ```
+  sudo vi /etc/caddy/Caddyfile
+  ```
+  **IMPORTANT COMMANDS:**
+    - "i" to insert/edit text
+    - "Esc" to stop inserting/editing
+    - "q!" to quit without saving changes
+    - "wq!" to quit and save changes
+ 
+  - In your Caddyfile, comment all code there out, and at the very top of the file insert:
+  ```
+  :80 { 
+    reverse_proxy :3000 
+  }
+  ```
+  - Quit and save changes!
 
-The `callbacks.js` file is the **core logic handler** for initializing and managing game states in the **Empirica framework**. It defines:
-- **Player attributes** for both **producers** and **consumers**.
-- **Game rules** that dictate the **economy and player interactions**.
-- **Stage progression** that structures each round.
-- **Scorekeeping mechanisms** for tracking performance.
+## <span class="h2style">SSH and Terminal Instructions</span>
 
-It utilizes Empirica's **`ClassicListenersCollector`** to manage game lifecycle events such as:
-- **Game Start**
-- **Round Transitions**
-- **Stage Completions**
-
----
-
-## <span class="h2style">Variables</span>
-
-### <span class="custom-heading">Explanation</span>
-
-1. **Imported Constants and Modules**:
-   - The game **imports multiple constants** from `constants.js`, which store **predefined values** such as:
-     - **`productPrice`**
-     - **`warrantCost`**
-     - **`challengeCost`**
-     - **Scoring parameters**
-   - Hooks from **`@empirica/core`** allow interaction with **player data** and **game states**.
-
-2. **Player Variable Assignments**:
-   - The game initializes **player attributes** using `player.set()`, defining their:
-     - **Role** → (`"producer"` or `"consumer"`)
-     - **Resources** → (`wallet`, `capital`)
-     - **Tracking Metrics** → (`score`, `reviews`, `claims`, etc.)
-   - Many variables are stored as **arrays**, allowing the game to **track historical data** across multiple rounds.
-
----
-
-## <span class="h2style">Functions</span>
-This is the list of functions that are defined in this file:
 
 - [Empirica.onGameStart()](./onGameStart().md)
 - [Empirica.onRoundStart()](./onRoundStart().md)
 - [Empirica.onStageEnded()](./onStageEnded().md)
 
 Click on any of these functions to view **detailed documentation** on their role in game execution.
-
----
-
-## <span class="h2style">Logical Flow</span>
-
-1. **Game Initialization (`onGameStart`)**
-   - Defines **game parameters**.
-   - **Assigns players** as **producers or consumers**.
-   - Sets **initial attributes** for each player.
-
-2. **Round Start (`onRoundStart`)**
-   - **Resets player variables** for the new round.
-   - Updates **financial resources, reviews, and claims**.
-   - Ensures producers and consumers **begin fresh**.
-
-3. **Stage Completion (`onStageEnded`)**
-   - Executes **core game logic** at the **end of each stage**.
-   - Processes **transactions, challenges, reviews, and scoring**.
-   - Updates **player history and market conditions**.
