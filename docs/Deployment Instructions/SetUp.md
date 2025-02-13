@@ -85,6 +85,7 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
   **IMPORTANT COMMANDS FOR VIM:**
     - "i" to insert/edit text
     - "Esc" to stop inserting/editing
+    - ":" to enter "quit" mode
     - "q!" to quit without saving changes
     - "wq!" to quit and save changes
  
