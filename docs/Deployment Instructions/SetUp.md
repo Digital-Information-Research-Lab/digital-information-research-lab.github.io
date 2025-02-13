@@ -137,9 +137,3 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 # <span class="h2style">Happy Experimenting!</span>
 
 ---
-
-- [Empirica.onGameStart()](./onGameStart().md)
-- [Empirica.onRoundStart()](./onRoundStart().md)
-- [Empirica.onStageEnded()](./onStageEnded().md)
-
-Click on any of these functions to view **detailed documentation** on their role in game execution.
