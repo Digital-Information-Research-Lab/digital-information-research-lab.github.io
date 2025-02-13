@@ -67,7 +67,9 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
     ```
     conda create --name empirica_env python=3.9
     conda activate empirica_env
-    conda install -c conda-forge nodejs
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+    \. "$HOME/.nvm/nvm.sh"
+    nvm install 22
     conda install jupyterlab
     ```
     - You may give your environment another name as well.
@@ -117,6 +119,24 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 - Enter ```empirica bundle```.
 - Move the newly created "tar.zst" file back into your home directory (use ```mv```).
 - Now do ```empirica serve < tar.zst filename >```.
+- Your server will be running!
+  - To remove the tajriba.json local file and retry your build, run ```rm .empirica/local/*``` first.
+
+---
+
+# <span class="h2style">Running the server in a browser:</span>
+- Once your server is running, return to your GCP instance.
+- Click on its external IP, this should take you to a new tab.
+- In the URL bar, ensure that your URL begins with **http://** and ends in either **:80** or **:80/admin**.
+  - The admin username is **"admin"**.
+  - To access the admin password, contact the research team.
+- Now, you should be able to run experiments on your IP's admin page, players can join by entering your machine's external IP into a browser.
+
+---
+
+# <span class="h2style">Happy Experimenting!</span>
+
+---
 
 - [Empirica.onGameStart()](./onGameStart().md)
 - [Empirica.onRoundStart()](./onRoundStart().md)
