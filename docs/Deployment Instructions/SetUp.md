@@ -102,7 +102,7 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 ## <span class="h2style">SSH-Keygen & Repo Instructions</span>
 - Run ```ssh-keygen```.
   - You can pick and choose your own ssh-key password & location to store your ssh-key information.
-- Run ```~/.ssh/id_rsa.pub```
+- Run ```cat ~/.ssh/id_rsa.pub```
   - **NOTE:** do not EVER print your private ssh-key!!!
 - Copy your public key and go to your Github account.
   - Go to your Github profile, and go to settings.
