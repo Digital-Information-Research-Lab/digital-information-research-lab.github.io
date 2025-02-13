@@ -80,11 +80,9 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
     sudo apt install caddy
     curl -fsS https://install.empirica.dev | sh
     ```
-  - Now you should have a Caddyfile, we will edit it:
-  ```
-  sudo vi /etc/caddy/Caddyfile
-  ```
-  **IMPORTANT COMMANDS:**
+  - Now you should have a Caddyfile, we will edit it in vim:```sudo vi /etc/caddy/Caddyfile```
+  
+  **IMPORTANT COMMANDS FOR VIM:**
     - "i" to insert/edit text
     - "Esc" to stop inserting/editing
     - "q!" to quit without saving changes
@@ -98,8 +96,26 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
   ```
   - Quit and save changes!
 
-## <span class="h2style">SSH and Terminal Instructions</span>
+---
 
+## <span class="h2style">SSH-Keygen & Repo Instructions</span>
+- Run ```ssh-keygen```.
+  - You can pick and choose your own ssh-key password & location to store your ssh-key information.
+- Run ```~/.ssh/id_rsa.pub```
+  - **NOTE:** do not EVER print your private ssh-key!!!
+- Copy your public key and go to your Github account.
+  - Go to your Github profile, and go to settings.
+  - Navigate to SSH and GPG keys, click "New SSH Key".
+  - Name your key "gcp instance empirica game"
+  - Double-check that your key is an **authentication key**.
+ 
+- Now, go to the H2H repo, and clone using SSH. Copy and paste that into your terminal!
+- Make sure ```git clone``` is in front of your pasted link before you hit enter!
+- Now cd into your repository and enter ```cd client && npm i && cd ../server/ && npm i && cd ../ && empirica```.
+  - Once your build is created, hit ```Ctrl``` + ```C```.
+- Enter ```empirica bundle```.
+- Move the newly created "tar.zst" file back into your home directory (use ```mv```).
+- Now do ```empirica serve < tar.zst filename >```.
 
 - [Empirica.onGameStart()](./onGameStart().md)
 - [Empirica.onRoundStart()](./onRoundStart().md)
