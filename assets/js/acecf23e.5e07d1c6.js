@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[1903],{9531:e=>{e.exports=JSON.parse('{"blogBasePath":"/digital-information-research-lab.github.io/blog","blogTitle":"Blog","authorsListPath":"/digital-information-research-lab.github.io/blog/authors"}')}}]);
