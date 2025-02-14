@@ -8,13 +8,13 @@ const config = {
   tagline: 'Empirica Marketplace Simulation Documentation', // Short description
   favicon: 'img/favicon.png', // Path to the site icon
 
-  url: 'https://truthmarket.com',
+  url: 'https://truthmarket.com/',
   baseUrl: '/',
 
   // GitHub Repository Info
   organizationName: 'Digital-Information-Research-Lab', // GitHub Organization/User Name
   projectName: 'digital-information-research-lab.github.io', // Repository Name
-  deploymentBranch: 'documentation', // The branch where GitHub Pages will deploy from
+  deploymentBranch: 'deployment-temp', // The branch where GitHub Pages will deploy from
 
   // Handling broken links
   onBrokenLinks: 'warn',
