@@ -8,7 +8,7 @@ const config = {
   tagline: 'Empirica Marketplace Simulation Documentation', // Short description
   favicon: 'img/favicon.png', // Path to the site icon
 
-  url: 'https://digital-information-research-lab.github.io',
+  url: 'https://truthmarket.com',
   baseUrl: '/',
 
   // GitHub Repository Info
