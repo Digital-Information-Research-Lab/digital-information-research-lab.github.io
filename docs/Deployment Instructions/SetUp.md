@@ -1,4 +1,4 @@
-# <span class="h1style">Setting up the server:</span>
+# Setting up the server
 This page will help you navigate to the right pages, settings, and installations to set up your server correctly. This page is verified by: *Laerk Ndreko*
 
 ## <span class="h2style">🟠 Initial Navigation</span>
@@ -9,7 +9,7 @@ To start, navigate to **console.cloud.com** using an appropriate BU or other aut
 
 ---
 
-## <span class="h2style">🟠 Server Settings</span>
+## 🟠 Server Settings
 Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 - Select **"Marketplace"** and search for **"Ubuntu 22.04 LTS (Jammy)"**.
   - It is **IMPORTANT** that you select this version and not the **Pro** version.
@@ -33,7 +33,7 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 - **ALL DONE HERE!** Now select "CREATE".
   - Wait for the server to be created and then move on to the next steps.
 ---
-## <span class="h2style">🟠 Firewall Settings</span>
+## 🟠 Firewall Settings
 
 - At the top of the page, search for and click **"Firewall"**. Create a new firewall rule.
   - Name it "(yourname)-http-allowall".
@@ -48,7 +48,7 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
   - Under both "Labels" and "Network Tags", enter **"(yourname)-http-server"**, and click save.
 
 ---
-## <span class="h2style">🟠 SSH and Terminal Instructions</span>
+## 🟠 SSH and Terminal Instructions
 - Now we have to enter the SSH terminal and install the necessary packages.
   - For this to work ensure that any settings on your device, allow pop-ups (including disabling any ad-blockers).
 
@@ -104,7 +104,7 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 
 ---
 
-## <span class="h2style">🟠 SSH-Keygen & Repo Instructions</span>
+## 🟠 SSH-Keygen & Repo Instructions
 - Run ```ssh-keygen```.
   - You can pick and choose your own ssh-key password & location to store your ssh-key information.
 - Run ```cat ~/.ssh/id_rsa.pub```
@@ -135,7 +135,7 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 
 ---
 
-# <span class="h2style">🟢 Running the server in a browser:</span>
+# 🟢 Running the server in a browser
 - Once your server is running, return to your GCP instance.
 - Click on its external IP, this should take you to a new tab.
 - In the URL bar, ensure that your URL begins with **http://** and ends in either **:80** or **:80/admin**.
@@ -145,6 +145,6 @@ Now, navigate to **"Create Instance"**. Select **"CREATE VM FROM..."**
 
 ---
 
-# <span class="h2style">Happy Experimenting! 🤗</span>
+Happy Experimenting! 🤗
 
 ---
