@@ -59,6 +59,7 @@ const config = {
       },
       items: [
         { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Documentation' },
+        { to: '/publications', position: 'left', label: 'Publications' },
         { href: 'https://truthmarket.com/', label: 'Website', position: 'left' },
         { href: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io', label: 'GitHub', position: 'right' },
       ],
