@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software in Quadcorn</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet"> 
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png"> -->
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/2016/08/17/quadcorn-software.html">
+  <meta property="og:title" content="Software in Quadcorn">
+  <meta property="og:site_name" content="Platform Governance Research Lab at Boston University">
+  <meta property="og:description" content="List of main software installed and how to install it" />
+  <meta property="og:image" content="http://localhost:4000/images/logo/InstituteMark_DBI_RGB.jpg">
+
+</head>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kordinglab.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<body id="page-top" style="padding-top: 7em;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>
+              <span style='font-family:"Open Sans"; font-weight:300'>Platform Governance Research Lab</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a class='name' href="/">home</a></li>
+                  
+                  <li><a class='name' href="/about">about</a></li>
+                  
+                  <li><a class='name' href="/publication">publications</a></li>
+                  
+                  <li><a class='name' href="/people">people</a></li>
+                  
+                  <li><a class='name' href="/games">games</a></li>
+                  
+                  <li><a class='name' href="/research">research</a></li>
+                  
+                </ul>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container content post">
+  <h3><strong>Software in Quadcorn</strong><br/>
+  <small>posted on August 17, 2016</small></h3>
+  <hr>
+  <p>We generally followed the instructions in <a href="https://github.com/saiprashanths/dl-setup">Setting up a Deep Learning Machine from Scratch</a>.</p>
+
+<h3 id="installing-nvidia-drivers">Installing NVidia Drivers</h3>
+
+<p>Before installing the drivers, make sure there are no nvidia drivers already installed by doing the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get --purge remove nvidia-*
+</code></pre></div></div>
+
+<p>And reboot. Then download NVidia drivers from <a href="http://www.geforce.com/drivers/results/105343">here</a> and install them according to instructions.</p>
+
+<h3 id="installing-cuda">Installing CUDA</h3>
+
+<p>First, install some AMD drivers that will be used by CUDA.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install fglrx-updates
+</code></pre></div></div>
+
+<p>After installation, reboot the computer.</p>
+
+<p>Next, stop the SSH X11 forwarding by modifying /etc/ssh/sshd_config:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/ssh/sshd_config
+</code></pre></div></div>
+<p>Find the following line:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X11Forwarding yes
+</code></pre></div></div>
+
+<p>and change it to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X11Forwarding no
+</code></pre></div></div>
+<p>After saving the changes, restart the ssh service by typing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service ssh restart
+</code></pre></div></div>
+
+<p>Now, stop the default X server by typing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service mdm stop
+</code></pre></div></div>
+
+<p>Now we can install CUDA. The latest supported version is 7.5 which can be downloaded from <a href="https://developer.nvidia.com/cuda-downloads">here</a>. Select Linux &gt; X86_64 &gt; Ubuntu &gt; 14.04 &gt; runfile (local). Follow the instructions on the page to complete the installation.</p>
+
+<p>After finishing the installation of CUDA, undo the change that you made to /etc/ssh/sshd_config, and restart the ssh server using <code class="language-plaintext highlighter-rouge">sudo service ssh restart</code>. Also, start the X server again: <code class="language-plaintext highlighter-rouge">sudo service mdm start</code></p>
+
+<h3 id="installing-cudnn">Installing cuDNN</h3>
+
+<p>Download cuDNN from <a href="https://developer.nvidia.com/cudnn">here</a>. Select a version which is compatible with CUDA. After downloading, do the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tar xvf &lt;DOWNLOADED FILE NAME&gt;
+$ cd cuda
+$ sudo cp */*.h /usr/local/cuda/include/
+$ sudo cp */libcudnn* /usr/local/cuda/lib64/
+$ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+</code></pre></div></div>
+
+<h2 id="software">Software</h2>
+
+<p>To install for all users</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo -i
+</code></pre></div></div>
+<p>then install package. <code class="language-plaintext highlighter-rouge">git clone</code> in <code class="language-plaintext highlighter-rouge">~\repos</code> if need.</p>
+
+<p>To install only for user then add <code class="language-plaintext highlighter-rouge">--user</code> at the end. E.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python setup.py install --user
+</code></pre></div></div>
+
+<p>Here are some specific instructions:</p>
+
+<h5 id="theano">Theano</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install theano
+</code></pre></div></div>
+
+<p>Edit/create <code class="language-plaintext highlighter-rouge">~/.theanorc</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[global]
+floatX = float32
+device = gpuX
+</code></pre></div></div>
+
+<p>choose as <code class="language-plaintext highlighter-rouge">gpuX</code> your assigned gpu, there will be random inspections. Grad students all share <code class="language-plaintext highlighter-rouge">gpu1</code>. <code class="language-plaintext highlighter-rouge">klab</code> uses <code class="language-plaintext highlighter-rouge">gpu0</code></p>
+
+<h5 id="tensorflow"><a href="https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#using-pip">Tensorflow</a></h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl
+$ pip install --ignore-installed --upgrade $TF_BINARY_URL
+</code></pre></div></div>
+
+<p>Note: right now <code class="language-plaintext highlighter-rouge">tensorflow</code> is not working because we are using <code class="language-plaintext highlighter-rouge">cuDNN v5</code>. Either wait for it to be compatible or downgrade <code class="language-plaintext highlighter-rouge">cuDNN</code> to <code class="language-plaintext highlighter-rouge">v4</code> when we really need to use tensorflow (don’t do it). Or try to compile/install <code class="language-plaintext highlighter-rouge">tensorflow</code> <a href="https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#installing-from-sources">from source</a> (good luck with that).</p>
+
+<h5 id="keras">Keras</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install keras
+</code></pre></div></div>
+
+<p>See <a href="https://keras.io/backend/">here</a> to choose <code class="language-plaintext highlighter-rouge">tensorflow</code> and <code class="language-plaintext highlighter-rouge">theano</code> in <code class="language-plaintext highlighter-rouge">Keras</code></p>
+
+<h5 id="xgboost"><a href="https://xgboost.readthedocs.io/en/latest/build.html#building-on-ubuntu-debian">XGBoost</a></h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone --recursive https://github.com/dmlc/xgboost
+$ cd xgboost; make -j4
+$ cd python-package
+$ python setup.py install
+</code></pre></div></div>
+
+<h5 id="opencv">Opencv</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ conda install opencv
+</code></pre></div></div>
+
+  <ul class="share-buttons">
+  <a style="color:#3b5998;" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2016/08/17/quadcorn-software.html" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+  <a style="color:#0084b4;" href="https://twitter.com/intent/tweet?text=http://localhost:4000/2016/08/17/quadcorn-software.html" title="Share on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+</ul>
+
+  <div id="disqus_thread"></div>
+</div>
+
+
+    <script id="dsq-count-scr" src="//kordinglab.disqus.com/count.js" async></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-34145995-1");
+    pageTracker._trackPageview();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34145995-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34145995-1');
+    </script>
+
+</body>
+</html>

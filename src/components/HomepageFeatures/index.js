@@ -47,14 +47,26 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <div>
+      <section className={styles.supportedBySection} data-aos="zoom-in">
+        <h3>Supported By</h3>
+        <div className={styles.logosContainer}>
+          <img src="/img/InstituteMark_DBI_RGB.png" alt="Logo" className={styles.supportedLogo} />
+          <img src="/img/NSF_Logo.png" alt="Logo 2" className={styles.supportedLogo} />
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
+
+

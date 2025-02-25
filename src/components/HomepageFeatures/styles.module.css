@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .features {
   display: flex;
   align-items: center;
@@ -8,4 +10,37 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.supportedBySection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.supportedBySection h3 {
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.logosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.supportedLogo {
+  max-height: 90px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .logosContainer {
+    flex-direction: column;
+  }
 }

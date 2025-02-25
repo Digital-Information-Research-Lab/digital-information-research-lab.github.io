@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab Teaching: Docker 101 for reproducible science</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet"> 
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png"> -->
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/2022/10/28/LabTeaching-Docker-for-Science.html">
+  <meta property="og:title" content="Lab Teaching: Docker 101 for reproducible science">
+  <meta property="og:site_name" content="Platform Governance Research Lab at Boston University">
+  <meta property="og:description" content="Using Docker for a reproducible and reusable data science workflow" />
+  <meta property="og:image" content="http://localhost:4000/images/logo/InstituteMark_DBI_RGB.jpg">
+
+</head>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kordinglab.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<body id="page-top" style="padding-top: 7em;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>
+              <span style='font-family:"Open Sans"; font-weight:300'>Platform Governance Research Lab</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a class='name' href="/">home</a></li>
+                  
+                  <li><a class='name' href="/about">about</a></li>
+                  
+                  <li><a class='name' href="/publication">publications</a></li>
+                  
+                  <li><a class='name' href="/people">people</a></li>
+                  
+                  <li><a class='name' href="/games">games</a></li>
+                  
+                  <li><a class='name' href="/research">research</a></li>
+                  
+                </ul>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container content post">
+  <h3><strong>Lab Teaching: Docker 101 for reproducible science</strong><br/>
+  <small>posted on October 28, 2022</small></h3>
+  <hr>
+  <h1 id="docker-101-for-reproducible-science">Docker 101 for Reproducible Science</h1>
+<p><em>By <a href="https://twitter.com/j6m8">Jordan Matelsky</a></em></p>
+
+<blockquote>
+  <p>See the video version of this Lab Teaching <a href="https://www.youtube.com/watch?v=fs1ko2UNVOo">on YouTube</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>A brief note — I will use the term “Docker” to refer to a container management system, even though Docker is not the only one. I will use the term “container” to refer to a running instance of a Docker image.</p>
+</blockquote>
+
+<h2 id="whats-the-difference-between-a-container-and-a-virtual-machine">What’s the difference between a container and a virtual machine?</h2>
+
+<p>A container runs a single process, taking no more memory than any other executable, while virtual machines (VMs) run a full-blown “guest” operating system with virtual access to host resources through a hypervisor. In general, containers are considered much more lightweight. Containers are becoming popular for reliably deploying applications because they are:</p>
+
+<ul>
+  <li>Portable across clouds and OS platforms</li>
+  <li>Scalable up and down as needed</li>
+  <li>Isolated from one another and the host environment</li>
+</ul>
+
+<h2 id="whats-the-difference-between-a-container-and-an-environment-like-anaconda">What’s the difference between a container and an environment like Anaconda?</h2>
+
+<p>Anaconda is a distribution of Python and R and many of their most popular packages for scientific computing. It is a great tool for data scientists and analysts who want to have a consistent environment for their work. However, it is not a container. Containers are a way to package an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package. By doing so, thanks to the containerization software, you can rest assured that the application will run quickly and reliably from one computing environment to another.</p>
+
+<h2 id="why-is-docker-useful-for-scientific-computing">Why is Docker useful for scientific computing?</h2>
+
+<p>Docker is useful for scientific computing because it allows you to package your entire scientific computing environment into a single “image” that you can easily share with others. This image can be run on any computer that has Docker installed, regardless of the operating system or other applications that are already installed.</p>
+
+<p>This means:</p>
+
+<ul>
+  <li>You can easily share your work with collaborators, who can run it on their own computers without having to install any dependencies.</li>
+  <li>You don’t have to worry about breaking your system by installing a bunch of dependencies for a project that you’re only going to work on for a few days.</li>
+  <li>You can easily deploy your work on a cloud computing service, such as Amazon Web Services (AWS) or Microsoft Azure to scale it up.</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Our first venture into Docker will be to create an Image (blueprint) and then use that image to create and run a simple container.</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:20.04</span>
+<span class="k">LABEL</span><span class="s"> maintainer="Jordan Matelsky &lt;tutorial@example.com&gt;"</span>
+
+<span class="k">CMD</span><span class="s"> echo "Hello World"</span>
+</code></pre></div></div>
+
+<p>This is a simple Dockerfile that will create an image that is based on the latest version of Ubuntu (20.04). It will also add a label to the image that includes the name and email address of the person who created it. Finally, it will run the command <code class="language-plaintext highlighter-rouge">echo "Hello World"</code> when the container is started.</p>
+
+<p>To build this image, we will use the <code class="language-plaintext highlighter-rouge">docker build</code> command. This command will look for a file called <code class="language-plaintext highlighter-rouge">Dockerfile</code> in the current directory and use the instructions in that file to build the image.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> hello-world <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">-t</code> flag lets us specify a name and tag for the image that will be created. In this case, we are using the name <code class="language-plaintext highlighter-rouge">hello-world</code> and the tag <code class="language-plaintext highlighter-rouge">latest</code>. The <code class="language-plaintext highlighter-rouge">.</code> at the end of the command tells Docker to look for the <code class="language-plaintext highlighter-rouge">Dockerfile</code> in the current directory.</p>
+
+<p>You can see a list of all of the images that you have built on your computer by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image <span class="nb">ls</span>
+</code></pre></div></div>
+
+<p>You should see output that looks something like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              4ab4c602aa5e        3 minutes ago       72.9MB
+ubuntu              20.04               4ab4c602aa5e        3 minutes ago       72.9MB
+</code></pre></div></div>
+
+<p>The first time we build an image, Docker will download the base image (in this case, Ubuntu 20.04) from Docker Hub, a registry of Docker images. This image will be stored on your computer so that you don’t have to download it again the next time you want to build an image.</p>
+
+<p>Docker tends to be pretty smart and will only re-run the steps that are necessary to update an image. For example, if we change the <code class="language-plaintext highlighter-rouge">CMD</code> in our Dockerfile and then run <code class="language-plaintext highlighter-rouge">docker build</code> again, Docker will only have to re-run that last step, since the rest of the image is the same.</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:20.04</span>
+<span class="k">LABEL</span><span class="s"> maintainer="Jordan Matelsky &lt;tutorial@example.com&gt;"</span>
+
+<span class="k">CMD</span><span class="s"> echo "Greetings, World!"</span>
+</code></pre></div></div>
+
+<p>Note that just changing the Dockerfile is NOT enough to change the image on disk. If we run a container built from the current image, it will still say “Hello World”. We need to rebuild the image for the changes to take effect.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> hello-world <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Now, if we run a container from the new image, we will see the updated message.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run hello-world
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Greetings, World!
+</code></pre></div></div>
+
+<h2 id="i-told-you-docker-containers-live-in-their-own-world">I told you Docker containers live in their own world</h2>
+
+<p>…and I was serious. What do you think happens here?</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:20.04</span>
+
+<span class="k">CMD</span><span class="s"> ls </span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> tutorial-isolation <span class="nb">.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run tutorial-isolation
+</code></pre></div></div>
+
+<p>Did you expect to see the <code class="language-plaintext highlighter-rouge">Dockerfile</code>? in the <code class="language-plaintext highlighter-rouge">ls</code> output? Remember, as far as the container is concerned, it is the only thing that exists on the computer. It doesn’t know that there is a <code class="language-plaintext highlighter-rouge">Dockerfile</code> in the current directory; in fact, (modulo some special cases) it doesn’t even know that it’s a container.</p>
+
+<p>What if we <em>want</em> it to see files from our host computer?</p>
+
+<p>There are two ways of doing this; we can either mount a directory from our host computer into the container, or we can copy files from our host computer into the container when we build the image.</p>
+
+<h3 id="mounting-a-directory">Mounting a directory</h3>
+
+<p>Let’s think about the first option for a second. If we mount a directory from our host computer into the container, then the container will be able to see the files in that directory. But what happens if we change the files in that directory? Will the container see those changes? What if we delete the files in that directory? Will the container still be able to see them? What if we delete the directory? Will the container still be able to see it?</p>
+
+<p>Now that you’ve thought about it for a second, let’s try it out.</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:20.04</span>
+
+<span class="k">CMD</span><span class="s"> ls /mnt</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> tutorial-mount <span class="nb">.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-v</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/mnt tutorial-mount
+</code></pre></div></div>
+
+<p>Did you see what you expected?</p>
+
+<h3 id="copying-files-into-the-image">Copying files into the image</h3>
+
+<p>In the last section, we let the <em>container</em> see files from our host machine. But what if we want the <em>image</em> to see files from our host machine? (Think for a moment about what the difference is!)</p>
+
+<p>We can do this by copying files from our host machine into the image when we build it.</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:20.04</span>
+
+<span class="k">COPY</span><span class="s"> Dockerfile /mnt</span>
+<span class="k">CMD</span><span class="s"> ls /mnt</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> tutorial-copy <span class="nb">.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run tutorial-copy
+</code></pre></div></div>
+
+<p>Did you see what you expected?</p>
+
+<p>Because we COPIED the file into the image when we built it, the container will still be able to see the file even if we delete it from our host machine, and if we delete the file inside the container, it won’t impact the file on our host machine.</p>
+
+<h2 id="i-want-to-go-to-there">I want to go to there</h2>
+
+<p>It’s good to treat a container as a relatively immutable object: If you put all of your analysis code in the image, then anyone who runs a container from your image will get a reproducible output.</p>
+
+<p>But it is also possible to “ssh” into a container (really, you’re just running a shell inside the container) and make changes to the container. This is useful for working in a more powerful virtual environment, debugging, or just poking around.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> hello-world /bin/bash
+</code></pre></div></div>
+
+<p>We pass the <code class="language-plaintext highlighter-rouge">-it</code> flag to <code class="language-plaintext highlighter-rouge">docker run</code> to tell Docker that we want to run the container in interactive (and TTY) mode. This will give us a shell inside the container.</p>
+
+<p>We then pass a program that we want to run (in this case, bash). This is the command that will be run when the container starts.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@e0b0b0b0b0b0: <span class="nb">echo</span> <span class="s2">"I'm in a container!"</span>
+</code></pre></div></div>
+
+<p>You can exit the container by quitting the shell (Ctrl-D) or by running <code class="language-plaintext highlighter-rouge">exit</code>.</p>
+
+<h2 id="using-a-container-as-an-environment">Using a container as an environment</h2>
+
+<p>So far, we’ve learned about three capabilities that will be very useful to us:</p>
+
+<ul>
+  <li>We can isolate executables and make reproducible environments by running them in containers.</li>
+  <li>We can mount a piece of our filesystem into a container, so that the container can see files from our host machine and change them in realtime.</li>
+  <li>We can run containers interactively.</li>
+</ul>
+
+<p>Let’s apply these three capabilities to a real-world problem.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>Let’s do a simple experiment — we’ll use a Python script to generate some random numbers and save them to a file.</p>
+
+<p>First, we’ll write a <code class="language-plaintext highlighter-rouge">requirements.txt</code> file. Unlike our usual workflow, we WON’T install the packages in this file into our host environment. Instead, we’ll install them into a container.</p>
+
+<pre><code class="language-requirements.txt"># requirements.txt
+
+numpy
+</code></pre>
+
+<p>WAIT! We should version-pin our dependencies! We can do it manually, like this:</p>
+
+<pre><code class="language-requirements.txt"># requirements.txt
+
+numpy==1.23.4
+</code></pre>
+
+<p>Or we can use the power of Docker!</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> python:3.9</span>
+
+<span class="k">COPY</span><span class="s"> requirements.txt /tmp/requirements.txt</span>
+<span class="k">RUN </span>pip <span class="nb">install</span> <span class="nt">-r</span> /tmp/requirements.txt
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> tutorial-env <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Now we can version-pin using Docker by having Docker output the version of the packages that it installed.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--rm</span> tutorial-env pip freeze <span class="nt">-r</span> /tmp/requirements.txt
+</code></pre></div></div>
+
+<p>Docker containers are cheap and fast!</p>
+
+<h2 id="getting-started-with-machine-learning-exploratory-data-analysis-in-docker">Getting started with machine learning exploratory data analysis in Docker</h2>
+
+<p>Each lab member can now begin using Docker to run their own experiments. It’s common to start off with some exploratory data analysis in a Jupyter notebook. Here’s a command that starts a notebook server in a Docker container with GPU access, and mounts the current directory as a volume inside the container:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">--gpus</span> all <span class="nt">-p</span> 8888:8888 <span class="nt">-v</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/home/jovyan/work jupyter/datascience-notebook
+</code></pre></div></div>
+
+<p>This command will start a Jupyter notebook server in a Docker container, and mount the current directory as a volume inside the container. The <code class="language-plaintext highlighter-rouge">--rm</code> flag tells Docker to remove the container when it exits, and the <code class="language-plaintext highlighter-rouge">-it</code> flag tells Docker to run the container in interactive mode. The <code class="language-plaintext highlighter-rouge">--gpus all</code> flag tells Docker to give the container access to all GPUs on the host machine. The <code class="language-plaintext highlighter-rouge">-p 8888:8888</code> flag tells Docker to forward port 8888 on the host machine to port 8888 on the container. (You may want to use another port if other users are also running notebooks; for example, <code class="language-plaintext highlighter-rouge">-p 8889:8888</code> will let you point to <code class="language-plaintext highlighter-rouge">http://myfancyserver:8889</code> in a browser.)</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">-v $(pwd):/home/jovyan/work</code> flag tells Docker to mount the current directory as a volume inside the container, at the path <code class="language-plaintext highlighter-rouge">/home/jovyan/work</code>. Finally, the <code class="language-plaintext highlighter-rouge">jupyter/datascience-notebook</code> argument tells Docker to use the <a href="https://hub.docker.com/r/jupyter/datascience-notebook"><code class="language-plaintext highlighter-rouge">jupyter/datascience-notebook</code></a> image as the base image for the container.</p>
+
+<h2 id="connecting-to-a-docker-container-in-visual-studio-code">Connecting to a Docker Container in Visual Studio Code</h2>
+
+<p>It is possible to connect to a Docker container in Visual Studio Code. This is useful if you want to use Visual Studio Code to edit files in the container, or if you want to use Visual Studio Code’s debugger to debug code running in the container. To connect to a Docker container in Visual Studio Code, you need to install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Remote - Containers</a> extension. Once you’ve installed the extension, you can connect to a Docker container by clicking on the green “Remote-Containers: Open Folder in Container…” button in the bottom left corner of the Visual Studio Code window. You can then select the folder you want to open in the container, and Visual Studio Code will automatically build a Docker image for the container and start the container.</p>
+
+<h2 id="running-a-machine-learning-hyperparameter-search-using-docker">Running a machine learning hyperparameter search using Docker</h2>
+
+<p>Because Docker completely isolates an environment, it is also a perfect tool for running a hyperparameter search. In this example, we’ll write a simple sklearn demo, and then try a few different hyperparameter sets, writing out evaluation results to a text file.</p>
+
+<h3 id="creating-the-base-experiment">Creating the base experiment</h3>
+
+<p>First, create a file called <code class="language-plaintext highlighter-rouge">main.py</code> with the following contents:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># For parsing command line arguments:
+</span><span class="kn">import</span> <span class="n">argparse</span>
+<span class="c1"># For writing out evaluation results:
+</span><span class="kn">import</span> <span class="n">json</span>
+<span class="kn">from</span> <span class="n">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="n">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Parse command line arguments:
+</span>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="nc">ArgumentParser</span><span class="p">()</span>
+    <span class="n">parser</span><span class="p">.</span><span class="nf">add_argument</span><span class="p">(</span><span class="sh">"</span><span class="s">--max_depth</span><span class="sh">"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">parser</span><span class="p">.</span><span class="nf">add_argument</span><span class="p">(</span><span class="sh">"</span><span class="s">--n_estimators</span><span class="sh">"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="nf">parse_args</span><span class="p">()</span>
+    <span class="c1"># Load the iris dataset:
+</span>    <span class="n">iris</span> <span class="o">=</span> <span class="nf">load_iris</span><span class="p">()</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">data</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="p">.</span><span class="n">target</span>
+    <span class="c1"># Split the dataset into training and test sets:
+</span>    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="c1"># Train a random forest classifier:
+</span>    <span class="n">clf</span> <span class="o">=</span> <span class="nc">RandomForestClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="n">args</span><span class="p">.</span><span class="n">max_depth</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="n">args</span><span class="p">.</span><span class="n">n_estimators</span><span class="p">)</span>
+    <span class="n">clf</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="c1"># Evaluate the classifier:
+</span>    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="nf">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="c1"># Write out evaluation results:
+</span>    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span>
+        <span class="sa">f</span><span class="sh">"</span><span class="s">results/results-depth_</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">max_depth</span><span class="si">}</span><span class="s">-ests_</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">n_estimators</span><span class="si">}</span><span class="s">.txt</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span>
+    <span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="p">.</span><span class="nf">dump</span><span class="p">({</span>
+            <span class="sh">"</span><span class="s">accuracy</span><span class="sh">"</span><span class="p">:</span> <span class="n">accuracy</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">max_depth</span><span class="sh">"</span><span class="p">:</span> <span class="n">args</span><span class="p">.</span><span class="n">max_depth</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">n_estimators</span><span class="sh">"</span><span class="p">:</span> <span class="n">args</span><span class="p">.</span><span class="n">n_estimators</span>
+        <span class="p">},</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="nf">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="creating-a-dockerfile-and-image">Creating a Dockerfile and Image</h3>
+
+<p>Realistically, we could reuse the <code class="language-plaintext highlighter-rouge">jupyter/datascience-notebook</code> image from earlier. But to show how to install custom dependencies, let’s look at an engineered example:</p>
+
+<p>Create a file called <code class="language-plaintext highlighter-rouge">Dockerfile</code> with the following contents:</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> python:3.10</span>
+<span class="c"># Install dependencies:</span>
+<span class="k">RUN </span>pip <span class="nb">install </span>scikit-learn
+<span class="c"># Copy the experiment code into the container:</span>
+<span class="k">COPY</span><span class="s"> main.py /main.py</span>
+<span class="c"># Run the experiment:</span>
+<span class="k">CMD</span><span class="s"> ["python", "/main.py"]</span>
+</code></pre></div></div>
+
+<p>By default, Docker will run the <code class="language-plaintext highlighter-rouge">CMD</code> command when the container starts. In this case, we want to run the <code class="language-plaintext highlighter-rouge">main.py</code> script, so we set the <code class="language-plaintext highlighter-rouge">CMD</code> to <code class="language-plaintext highlighter-rouge">["python", "/main.py"]</code>. (Because we set defaults for argparse, we don’t need to pass any arguments to <code class="language-plaintext highlighter-rouge">main.py</code> in the default case.)</p>
+
+<p>Let’s make sure it works. First, build the Docker image:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> hyperparam <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Then, run the Docker container:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">-v</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/results hyperparam
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You should see a new `results-depth_2-ests_100.txt` file in your current directory. If you open it, you should see something like this:
+```json
+{"accuracy": 0.95, "max_depth": 2, "n_estimators": 100}
+</code></pre></div></div>
+
+<h3 id="running-the-hyperparameter-search">Running the hyperparameter search</h3>
+
+<p>Let’s run a hyperparameter search. We’ll try a few different values for <code class="language-plaintext highlighter-rouge">max_depth</code> and <code class="language-plaintext highlighter-rouge">n_estimators</code>, and write out the results to a text file.</p>
+
+<p>Create a file called <code class="language-plaintext highlighter-rouge">search.sh</code> with the following contents:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="k">for </span>max_depth <span class="k">in </span>2 4 6 8 10
+<span class="k">do
+    for </span>n_estimators <span class="k">in </span>10 20 30 40 50
+    <span class="k">do
+        </span>docker run <span class="nt">-v</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/results hyperparam <span class="se">\</span>
+            <span class="nt">--max_depth</span> <span class="nv">$max_depth</span> <span class="se">\</span>
+            <span class="nt">--n_estimators</span> <span class="nv">$n_estimators</span>
+    <span class="k">done
+done</span>
+</code></pre></div></div>
+
+<p>This script will run the <code class="language-plaintext highlighter-rouge">main.py</code> script with different values for <code class="language-plaintext highlighter-rouge">max_depth</code> and <code class="language-plaintext highlighter-rouge">n_estimators</code>. It will write out the results to a file called <code class="language-plaintext highlighter-rouge">results/results-depth_&lt;max_depth&gt;-ests_&lt;n_estimators&gt;.txt</code>.</p>
+
+<p>Let’s run the script:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./search.sh
+</code></pre></div></div>
+
+<p>When it’s done, you should see a bunch of new files in the <code class="language-plaintext highlighter-rouge">results</code> directory.</p>
+
+<p>Note that this runs ALL of the experiments simultaneously; for a less ridiculous workload, consider using <code class="language-plaintext highlighter-rouge">parallel</code> or <code class="language-plaintext highlighter-rouge">xargs</code> to run the experiments in parallel:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>max_depth <span class="k">in </span>2 4 6 8 10
+<span class="k">do
+    for </span>n_estimators <span class="k">in </span>10 20 30 40 50
+    <span class="k">do
+        </span><span class="nb">echo</span> <span class="s2">"docker run -v </span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">:/results hyperparam --max_depth </span><span class="nv">$max_depth</span><span class="s2"> --n_estimators </span><span class="nv">$n_estimators</span><span class="s2">"</span>
+    <span class="k">done
+done</span> | parallel <span class="nt">-j</span> 4 <span class="c"># Run 4 experiments in parallel</span>
+</code></pre></div></div>
+
+<p>For more complex job dependency graphs, consider using a <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG job scheduler</a> like <a href="https://github.com/j6k4m8/frof/">frof</a>.</p>
+
+<h2 id="seeing-the-status-of-the-server">Seeing the status of the server</h2>
+
+<p>Because everything is running in containers, it’s easy to see what’s running on the server. Just run <code class="language-plaintext highlighter-rouge">docker ps</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this post, we looked at how to use Docker to run a machine learning experiment. We used Docker to create a reproducible environment, and to run the experiment on a remote server. We also used Docker to run a hyperparameter search, and to see the status of the server. This is just a small sample of what you can do with Docker. And while it may feel like there is some extra overhead to using Docker, you may discover that many of the features of containerized, isolated environments are well worth learning a powerful new tool!</p>
+
+  <ul class="share-buttons">
+  <a style="color:#3b5998;" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2022/10/28/LabTeaching-Docker-for-Science.html" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+  <a style="color:#0084b4;" href="https://twitter.com/intent/tweet?text=http://localhost:4000/2022/10/28/LabTeaching-Docker-for-Science.html" title="Share on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+</ul>
+
+  <div id="disqus_thread"></div>
+</div>
+
+
+    <script id="dsq-count-scr" src="//kordinglab.disqus.com/count.js" async></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-34145995-1");
+    pageTracker._trackPageview();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34145995-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34145995-1');
+    </script>
+
+</body>
+</html>

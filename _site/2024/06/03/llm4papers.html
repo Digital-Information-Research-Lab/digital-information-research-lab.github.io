@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLMs for Paper Writing</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet"> 
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png"> -->
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/2024/06/03/llm4papers.html">
+  <meta property="og:title" content="LLMs for Paper Writing">
+  <meta property="og:site_name" content="Platform Governance Research Lab at Boston University">
+  <meta property="og:description" content="
+  LLMs for Paper Writing
+  posted on June 3, 2024
+  
+  by: Jordan Matelsky
+
+Much has been said about AI language models’ role in scientific publis..." />
+  <meta property="og:image" content="http://localhost:4000/images/logo/InstituteMark_DBI_RGB.jpg">
+
+</head>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kordinglab.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<body id="page-top" style="padding-top: 7em;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>
+              <span style='font-family:"Open Sans"; font-weight:300'>Platform Governance Research Lab</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a class='name' href="/">home</a></li>
+                  
+                  <li><a class='name' href="/about">about</a></li>
+                  
+                  <li><a class='name' href="/publication">publications</a></li>
+                  
+                  <li><a class='name' href="/people">people</a></li>
+                  
+                  <li><a class='name' href="/games">games</a></li>
+                  
+                  <li><a class='name' href="/research">research</a></li>
+                  
+                </ul>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container content post">
+  <h3><strong>LLMs for Paper Writing</strong><br/>
+  <small>posted on June 3, 2024</small></h3>
+  <hr>
+  <p><em>by: <a href="https://jordan.matelsky.com">Jordan Matelsky</a></em></p>
+
+<p>Much has been said about <a href="https://www.scientificamerican.com/article/chatbots-have-thoroughly-infiltrated-scientific-publishing/">AI language models’ role in scientific publishing</a> (see also <a href="https://arxiv.org/abs/2404.01268"><em>Mapping the Increasing Use of LLMs in Scientific Papers</em></a>) and <a href="https://houstonlawreview.org/article/92132-what-is-an-author-copyright-authorship-of-ai-art-through-a-philosophical-lens">the implications of AI authorship more generally</a>, but it is undeniable that LLM assistance — used properly — can be a force-multiplier for technical writing.</p>
+
+<p>Collaborative editors like Google Docs or <a href="https://www.overleaf.com/">Overleaf</a> have made it easier to write papers with human coauthors, and these tools have already acquainted us with the workflows of asynchronous text collaboration. Early in 2023, our team (<a href="https://jordan.matelsky.com/">me</a>, and Drs. <a href="https://sites.google.com/view/bonsai-lab/home">Richard Lange</a>, <a href="https://kordinglab.com/">Konrad Kording</a>) cobbled together a simple tool to use a language model to asynchronously edit a paper in the Overleaf editor — the industry standard collaborative editor for LaTeX documents. Today we are <a href="https://github.com/KordingLab/llm4papers">open-sourcing this project</a> so that others can adapt and adopt it for their scientific writing workflows as well.</p>
+
+<p><img src="http://localhost:4000/images/post/llm4papersschematic.png" alt="Schematic" /></p>
+
+<h2 id="technical-approach">Technical approach</h2>
+
+<p>Though Overleaf does not have a public-facing editing API, they have a robust git-flavored backend that allows for programmatic editing of documents. We built a simple Python tool to listen for changes to this git repository, and when a change is detected, the tool sends the new text to a language model of your choice. (We’ve been using the OpenAI API for this purpose, but any language model API can be used — including local on-prem models).</p>
+
+<p>Because this tool works at the backend git level, it can be used with any git repository, not just Overleaf. We’ve tested it with GitHub repositories (and plaintext files!) as well, and it works just as well there. (We encourage engineers to check out our <a href="https://github.com/KordingLab/llm4papers/tree/main/llm4papers/paper_remote"><code class="language-plaintext highlighter-rouge">PaperRemote</code></a> abstraction if you want to add support for another editor!) Talking to the backend (rather than implementing this through, say, a browser extension) also means that end users don’t need to install anything. The tool can be run on a server, and the end user can simply use Overleaf as they normally would.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>As a result of interfacing with git — a tool designed for version control, not real-time collaboration — we had to make some compromises. This library implements its own debouncing and <a href="https://github.com/KordingLab/llm4papers/blob/7d54b9839cc803857151be56f4a7eeeb9ba0d7a3/llm4papers/paper_remote/OverleafGitPaperRemote.py#L50">“clobber-avoidance”</a> to prevent the model from editing too close to ongoing changes from human collaborators. This means that the model will not edit the document until it has been stable for a few seconds, or until the human collaborator has moved on to a new section. (In our testing, this was not a significant limitation, since it’s rare that you want AI editing the same text you’re typing.)</p>
+
+<p>We also have chosen to use LaTeX comments (text starting with <code class="language-plaintext highlighter-rouge">% @ai:</code>) to trigger the AI model, rather than having the model edit the entire document. This allows for fine-grained control over the AI’s edits, and allows for human collaborators to easily see where the AI has made changes. But naturally, we expect users will want to use the same comment-style task assignment commonly used in Overleaf and other editors like Google Docs, and we believe that this is a natural extension of our tool. But we haven’t figured out how to get programmatic access to Overleaf comments yet… maybe you know what to do? :)</p>
+
+<h2 id="upshots">Upshots</h2>
+
+<p>Naturally, AI has some very well-known (and some not-well-known) failures and limitations. Hallucination and plagiarism are two of the most common, and we’ve found that the best way to avoid these is to use the AI as an editorial tool, not as a replacement for human thought. And because AI is only as good as its training data, you should never expect AI to understand the logic or overarching themes of your paper, nor should you use it for literature reviews or in lieu of human oversight.</p>
+
+<p>Nonetheless, we’ve found that using LLMs for paper writing has been a boon to our productivity. The AI can help with things like equation formatting, spelling, or rephrasing complex ideas. We’ve found that AI prompted with <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619">good paper-writing techniques</a> can be particularly good at annoying but simple tasks, like rephrasing sentences, reformatting text, checking for text flow, or making suggestions about readability and clarity.</p>
+
+<p>We encourage the open source community to take advantage of this tool and — if you’re inspired — to collaborate with us by steering its development. We’re excited to see how this tool and AI tools like it can make the scientific process more efficient and more accessible to all!</p>
+
+<hr />
+
+<ul>
+  <li>Jordan Matelsky</li>
+  <li>Dr. Richard Lange</li>
+  <li>Dr. Konrad Kording</li>
+</ul>
+
+  <ul class="share-buttons">
+  <a style="color:#3b5998;" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2024/06/03/llm4papers.html" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+  <a style="color:#0084b4;" href="https://twitter.com/intent/tweet?text=http://localhost:4000/2024/06/03/llm4papers.html" title="Share on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+</ul>
+
+  <div id="disqus_thread"></div>
+</div>
+
+
+    <script id="dsq-count-scr" src="//kordinglab.disqus.com/count.js" async></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-34145995-1");
+    pageTracker._trackPageview();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34145995-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34145995-1');
+    </script>
+
+</body>
+</html>

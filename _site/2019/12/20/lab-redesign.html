@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redesigning our lab practices</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet"> 
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png"> -->
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/2019/12/20/lab-redesign.html">
+  <meta property="og:title" content="Redesigning our lab practices">
+  <meta property="og:site_name" content="Platform Governance Research Lab at Boston University">
+  <meta property="og:description" content="The 'design process' works really well for creating a good culture" />
+  <meta property="og:image" content="http://localhost:4000/images/logo/InstituteMark_DBI_RGB.jpg">
+
+</head>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kordinglab.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<body id="page-top" style="padding-top: 7em;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>
+              <span style='font-family:"Open Sans"; font-weight:300'>Platform Governance Research Lab</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a class='name' href="/">home</a></li>
+                  
+                  <li><a class='name' href="/about">about</a></li>
+                  
+                  <li><a class='name' href="/publication">publications</a></li>
+                  
+                  <li><a class='name' href="/people">people</a></li>
+                  
+                  <li><a class='name' href="/games">games</a></li>
+                  
+                  <li><a class='name' href="/research">research</a></li>
+                  
+                </ul>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container content post">
+  <h3><strong>Redesigning our lab practices</strong><br/>
+  <small>posted on December 20, 2019</small></h3>
+  <hr>
+  <p><em>by Ari Benjamin.</em></p>
+
+<p><strong>Every lab is a set of practices, traditions, recurring events, and expectations.</strong>
+These practices determine the daily rhythms of its members.
+They affect personal growth, research quality, the relationships between its members,
+and how enjoyable it is to be a scientist.
+Unfortunately, for reasons relating to complacency and authority, I’ve found that a lot of labs
+just organize themselves in standard ways and don’t regularly switch things up.</p>
+
+<p>Just picture that “toxic” lab down the hall. (You know the one). Communication is stifled,
+trainees don’t feel nurtured, science is competitive, and everyone is scared
+of being wrong. These are some common big failures, but even the best labs
+have room to improve.</p>
+
+<p>Now, group leaders have the best of intentions. It’s just hard to be a perfect
+manager – too much is expected of advisors to be perfect at everything. For us,
+it was important to realize that we only had to <em>try to improve things</em> and things
+would improve just by virtue of our trying. It was the process of lab-improvement
+that matters, not just the new solutions.
+A good lab isn’t good from the outset, but rather has a process of reflection and
+regularly asks, <em>“How
+is this, what we’re doing now? Does it support our values? How could it be better?”</em></p>
+
+<p>This fall we challenged ourselves to make the Kording lab better suited for us.
+Our key realization was that we could <em>design our lab</em> towards the values we think
+make a good lab. Behavior follows structure!</p>
+
+<p>We changed a lot, and learned a lot,
+and we hope our lessons can be of some use to others.</p>
+
+<h5 id="overall-approach">Overall approach</h5>
+
+<p>We took a look at the way we run our lab in the same way that a human-centered design
+consultant would. Essentially this just means we separated the overall process
+into three separate steps. These occurred in three separate all-lab meetings.</p>
+
+<figure><center>
+  <img width="500" src="/images/post/lab_redesign/overall_schem-01.png" data-action="zoom" />
+</center></figure>
+
+<p>We came up with over <strong>100</strong> ideas for good things our lab could do.
+We settled on implementing just one new
+thing each week. We’ve put in place
+some awesome things!
+(Scroll to the bottom if you just want to see what our new practices are.)</p>
+
+<p>At all times it was <strong>democratic</strong>: everyone had equal input. I can’t understate the importance
+of this. Since we were looking for a <strong>system that works for everyone</strong>, it was
+really helpful to hear from everyone what matters most to each of us.
+Everyone equally stated their priorities, came up with solutions, and decided
+what would be best for everyone.
+At our lab meeting each Wednesday, we now vote on one new thing to implement in
+our lab structure. What we ended up with is an environment where (I think!) everyone
+in the lab really feels empowered to contribute in their own way.</p>
+
+<h6 id="where-we-got-our-process-from">Where we got our process from</h6>
+
+<p>Very creative and smart folks in <strong>human-centered design</strong> have come up with ways of
+being creative about creativity.
+Many of the same folks have also thought a lot about what makes a great team and
+a great working environment.
+If you’re interested in learning more,
+I recommend checking out the courses put out by <a href="https://www.ideou.com/">IDEO</a>.
+I can vouch that these courses are entirely worth it.
+(I personally took the course entitled ‘Cultivating Creative Collaboration’).</p>
+
+<h6 id="how-konrad-got-involved">How Konrad got involved</h6>
+
+<p>We were really lucky to have
+an advisor with an open mind to new possibilities. The entire process was led by labmembers,
+and Konrad even stepped out at various points in the process when he felt his
+presence would stifle suggestions, conversation, or disagreement. It ended up
+being really useful that everyone in the lab felt so empowered, even new members
+and rotating students. Our process won’t work for all labs, I’m sure, but
+usually the reason trainees won’t speak up or act to improve their situation is
+that they feel intimidated by their advisor.</p>
+
+<p>Here’s what the process looked like at each stage.</p>
+
+<h3 id="stage-1-what-makes-a-good-lab-environment">Stage 1. What makes a good lab environment?</h3>
+
+<figure><center>
+  <img width="500" src="/images/post/lab_redesign/stage1_callout-01.png" data-action="zoom" />
+</center></figure>
+
+<p><strong>Our lab practices were established long before anyone (besides Konrad) had arrived.</strong>
+In our first session, we spent some time just outlining what those things were.
+We don’t have weekly lab meetings, unlike a lot of labs. Instead, we largely met
+spontaneously and individually about our research. We also had weekly “lab teachings”
+in which one lab member would teach everyone about some concept they found interesting.
+We ended up keeping most of these practices (<em>free coffee!</em>) but it was helpful to recommit.</p>
+
+<p>We then outlined some of our goals in an open discussion. What should a lab be?
+How should people feel while a part of it? One of us stood at the whiteboard
+and put down what people said. You can see some of our priorities above.</p>
+
+<p>Out of the values that came out of that discussion,
+I want to single out the concept of <em>“psychological safety”</em>. (You can Google that one
+and jump right into the management consulting world.) Any manager (or PI) should
+strive for this. When an environment promotes psychological
+safety, it promotes:</p>
+<ol>
+  <li>A learning mindset (in which it is OK to make mistakes),</li>
+  <li>A curious mindset (in which people are curious of everyone’s thoughts.</li>
+  <li>A vulnerable mindset (in which people feel welcomed to express their shortcomings).</li>
+</ol>
+
+<p>Once everyone had their say, the next step was to actually design towards what
+we just established as our collective goals. The central idea here is that behavior
+doesn’t just come about spontaneously. Recurring practices (like lab meetings) are
+essential. But what should they be?</p>
+
+<h3 id="stage-2-how-might-we-design-our-lab-environment">Stage 2: How might we design our lab environment?</h3>
+
+<figure><center>
+  <img width="500" src="/images/post/lab_redesign/converge-diverge-01.png" data-action="zoom" />
+</center></figure>
+
+<h4 id="diverging--brainstorming">Diverging &amp; Brainstorming</h4>
+
+<p>“Coming up with ideas” sounds organic, but it’s helpful to be systematic about it.
+We had two phases: <strong>1) Diverging</strong> and <strong>2) Converging</strong>. In the “diverging”
+stage, the goal was to come up with as many and as diverse ideas as possible. We
+saved any critical thought (“that won’t work because…”) until the “converging”
+phase. By brainstorming
+ideas without critiquing them at the same time, you can encourage creativity and diversity.
+People feel encouraged to try things out without risk of being shut down.
+This process also avoids the failure mode of running with the first good idea;
+the best ideas usually come later.</p>
+
+<p><strong>We spent 5 minutes in silence writing ideas onto post-its.</strong>
+I highly recommend the post-it approach as opposed to hand-raising or open discussion.
+Our best ideas came out from that silence. It’s efficient and gets ideas equally from everyone.
+IDEO folks will also tell you that post-its allow the idea’s originator to detach
+themself from their own ideas.</p>
+
+<p>After a few rounds of post-its and idea presentations, we had over 100 ideas of
+awesome-sounding lab practices.</p>
+
+<h4 id="converging">Converging</h4>
+
+<p>We wanted to ensure that the process was democratic throughout. (This is all about
+creating a lab environment that everyone feels they own, after all.)
+Since voting on 100 things is a lot, we took another trick from IDEO’s book
+and <em>voted in parallel</em>. Everyone had several votes in each of several categories,
+and in a mad dash we voted on everything and then dropped the half of ideas with
+the least votes.</p>
+
+<figure><center>
+  <sup>Our shared google sheet for voting on ideas.</sup>
+  <img width="700" src="/images/post/lab_redesign/voting.png" data-action="zoom" />
+</center></figure>
+
+<h3 id="stage-3-a-continued-process-of-weekly-voting">Stage 3: A continued process of weekly voting.</h3>
+
+<p>Instead of deciding right away what the full list of new practices will be, we
+took it slow and chose things one at a time, once per week. We did this weekly
+all through the fall. In the first 10 minutes of lab meetings
+(or rather, lab teachings), we nominate a few possibilities from the list.
+Everyone votes for their favorite, and the option with the most votes takes it.
+Then – ta da! – we have a new lab practice.</p>
+
+<h5 id="every-new-practice-has-a-czar">Every new practice has a czar</h5>
+
+<p>When we decide on a new practice, we also nominate a person to be in charge of
+bringing it into being and ensuring it continues to happen. We found this to be
+enormously helpful. The czars rotate once a semester so people don’t get burned out.</p>
+
+<h3 id="5-overall-takeaways">5. Overall takeaways</h3>
+
+<p>More than anything else, I’d say the democratic aspect of this process helped
+the most.
+A lot of standard practices – and things we already did – actually work quite
+well. The problem is that when they don’t have 100% buy-in, these practices tend
+to grow less helpful. Now everyone feels like they’ve <em>decided</em> to be doing them,
+we’ve really amped up our collective effort.</p>
+
+<p>It’s been fun to be creative with this. I’m proud of some of the changes we made.
+We’re more social as a lab, more supportive, and I think the high morale is going
+to be self-sustaining.</p>
+
+<hr />
+<h3 id="our-current-list-of-practices">Our current list of practices</h3>
+
+<p>Our practices generally fall into the categories of <em>physical environment, scheduling,
+orientation, social, research communication, mentorship, documentation, and resources.</em></p>
+
+<ol>
+  <li><strong>Lab teachings</strong>: A member of the lab leads a ~1 hour ‘teaching’ on a subject
+of their interest. It cannot be updates on their current research. This is a longstanding
+Kording lab practice. http://kordinglab.com/2018/08/29/upcoming-lab-teaching.html</li>
+  <li><strong>1-on-1’s</strong>: Every member of the lab is required to sit down with every other
+member of the lab and discuss their work for an hour. Refreshes once a semester.</li>
+  <li><strong>Physical environment</strong>: We now have
+    <ul>
+      <li>little magnetic pandas that are used
+to indicate if you would like not to be bothered (see pic)</li>
+      <li>yoga mats</li>
+      <li>a hammock
+<img width="200" style="transform:rotate(90deg); float: right" src="/images/post/lab_redesign/pandas/20191122_182635.jpg" data-action="zoom" /></li>
+      <li>a hangboard</li>
+      <li>plants</li>
+      <li>a tea kettle</li>
+      <li>an espresso machine and free coffee</li>
+    </ul>
+  </li>
+  <li><strong>Tea talks</strong>: The tea czar makes tea, and someone gives a 10 minute talk about anything.
+Usually someone talks about an idea they’re working on in their research. This happens weekly.</li>
+  <li><strong>Monday morning donuts</strong>: Our lab is not an early-morning lab. Some of us need
+a push out of bed. For that reason we have donuts in the lab served at 9:00am every Monday.</li>
+  <li><strong>A potluck lunch</strong>: Once a semester, we have a potluck.</li>
+  <li><strong>DJ Friday</strong>: We just play music in the lab on Friday afternoons!
+We have a shared lab YouTube playlist, and anyone can add to it.</li>
+  <li><strong>Failure Friday</strong>: Academia is full of times of disappointment, big and small.
+To bring these events into the open, we have a Failure Friday every now and then
+in which people are encouraged to discussed things that did not go as hoped, what
+they learned, and (if asked for) for advice going forward.</li>
+  <li><strong>‘Extreme’ (pair) programming</strong>: All about learning to code! Everyone is matched
+with someone else, and the two of them code together. One codes, the other watches, and
+then they switch.</li>
+  <li><strong>Lab calendar</strong>: A simple Google Calendar that everyone can edit. For these
+lab practices but also for seminars and so on.</li>
+  <li><strong>Web redesign efforts</strong>: These are more one-off things. If we vote on a specific
+web improvement, then we appoint a czar and they are in charge of coordinating the lab
+to get this done. Often these are resources we want, like how-to’s.</li>
+</ol>
+
+<p>That’s the list! There are still things to be voted on, too – it’s an ongoing process.
+An orientation buddy system and more social events are likely upcoming additions.</p>
+
+  <ul class="share-buttons">
+  <a style="color:#3b5998;" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019/12/20/lab-redesign.html" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+  <a style="color:#0084b4;" href="https://twitter.com/intent/tweet?text=http://localhost:4000/2019/12/20/lab-redesign.html" title="Share on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+</ul>
+
+  <div id="disqus_thread"></div>
+</div>
+
+
+    <script id="dsq-count-scr" src="//kordinglab.disqus.com/count.js" async></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-34145995-1");
+    pageTracker._trackPageview();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34145995-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34145995-1');
+    </script>
+
+</body>
+</html>

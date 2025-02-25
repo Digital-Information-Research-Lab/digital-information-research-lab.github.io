@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Microsoft SQL example</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet"> 
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png"> -->
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/2016/02/29/sql-exam-sample.html">
+  <meta property="og:title" content="Microsoft SQL example">
+  <meta property="og:site_name" content="Platform Governance Research Lab at Boston University">
+  <meta property="og:description" content="
+  Microsoft SQL example
+  posted on February 29, 2016
+  
+  I have to take EDW exam (Northwestern Data Warehouse exam) this coming week which is an..." />
+  <meta property="og:image" content="http://localhost:4000/images/logo/InstituteMark_DBI_RGB.jpg">
+
+</head>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kordinglab.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<body id="page-top" style="padding-top: 7em;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>
+              <span style='font-family:"Open Sans"; font-weight:300'>Platform Governance Research Lab</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a class='name' href="/">home</a></li>
+                  
+                  <li><a class='name' href="/about">about</a></li>
+                  
+                  <li><a class='name' href="/publication">publications</a></li>
+                  
+                  <li><a class='name' href="/people">people</a></li>
+                  
+                  <li><a class='name' href="/games">games</a></li>
+                  
+                  <li><a class='name' href="/research">research</a></li>
+                  
+                </ul>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container content post">
+  <h3><strong>Microsoft SQL example</strong><br/>
+  <small>posted on February 29, 2016</small></h3>
+  <hr>
+  <p>I have to take EDW exam (Northwestern Data Warehouse exam) this coming week which is an SQL exam. I think people/ lab members who will work with EDW in order to access medical data that they provide have to take that too. The database that they have is Microsoft SQL 2008 (MSSQL). There is an easy way to query MSSQL on my Mac by installing
+native app called <a href="http://www.macsqlclient.com/">SQLPro for MSSQL</a>. For SQLPro, you have to add following field that EDW gave to an application before connecting to the database: server name (<code class="language-plaintext highlighter-rouge">&lt;serve_name&gt;.database.windows.net</code>),
+Login (<code class="language-plaintext highlighter-rouge">user_name</code>), Password (<code class="language-plaintext highlighter-rouge">password</code>), Database <code class="language-plaintext highlighter-rouge">database_name</code>.
+Also there is a way to connect using Python with  Pandas library and <a href="http://www.pymssql.org/en/latest/"><code class="language-plaintext highlighter-rouge">pymssql</code></a> to connect to the database as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">pymssql</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">pymssql</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="sh">'</span><span class="s">&lt;serve_name&gt;.database.windows.net</span><span class="sh">'</span><span class="p">,</span>
+                       <span class="n">user</span><span class="o">=</span><span class="sh">'</span><span class="s">&lt;user_name&gt;@&lt;server_name&gt;.database.windows.net</span><span class="sh">'</span><span class="p">,</span>
+                       <span class="n">password</span><span class="o">=</span><span class="sh">'</span><span class="s">&lt;password&gt;</span><span class="sh">'</span><span class="p">,</span>
+                       <span class="n">database</span><span class="o">=</span><span class="sh">'</span><span class="s">&lt;database_name&gt;</span><span class="sh">'</span><span class="p">,</span>
+                       <span class="n">port</span><span class="o">=</span><span class="sh">'</span><span class="s">1433</span><span class="sh">'</span><span class="p">,</span>
+                       <span class="n">login_timeout</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span> <span class="c1"># create connection
+</span><span class="n">pd</span><span class="p">.</span><span class="nf">read_sql</span><span class="p">(</span><span class="sh">"</span><span class="s">select * from information_schema.tables</span><span class="sh">"</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span> <span class="c1"># put any query in first argument
+</span></code></pre></div></div>
+
+<p>The following is my answer to the example questions:</p>
+
+<p>List tables available</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">tables</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>List all gender codes available in the system sorted alphabetically by title.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">distinct</span> <span class="n">gender_title</span> <span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">gender_codes</span> <span class="k">as</span> <span class="k">g</span> <span class="k">order</span> <span class="k">by</span> <span class="k">g</span><span class="p">.</span><span class="n">gender_title</span>
+</code></pre></div></div>
+
+<p>List the two youngest patients showing a patient’s name and date of birth.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">top</span> <span class="mi">2</span> <span class="n">patient_nm</span><span class="p">,</span> <span class="n">dob</span> <span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">patients</span> <span class="k">as</span> <span class="n">p</span> <span class="k">order</span> <span class="k">by</span> <span class="n">p</span><span class="p">.</span><span class="n">dob</span> <span class="k">desc</span>
+</code></pre></div></div>
+
+<p>List all diagnosis codes that contain the word “pain” in their title showing the diagnosis code and its title.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">code</span><span class="p">,</span><span class="n">title</span> <span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">diagnoses</span> <span class="k">where</span> <span class="n">title</span> <span class="k">like</span> <span class="s1">'%pain%'</span>
+</code></pre></div></div>
+
+<p>List the current date and time (the example below was generated on March 12, 2013 at 8:05 AM for example):</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">getdate</span><span class="p">()</span> <span class="k">as</span> <span class="n">current_dt</span>
+</code></pre></div></div>
+
+<p>List all patients showing each patient’s name and their NMH MRN (if they have one).</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">patient_nm</span><span class="p">,</span> <span class="n">mrn</span> <span class="k">as</span> <span class="n">nmh_mrn</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">patients</span>  <span class="n">p</span>
+<span class="k">left</span> <span class="k">join</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">patient_mrns</span> <span class="n">pm</span>
+<span class="k">on</span> <span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">patient_id</span> <span class="o">=</span> <span class="n">pm</span><span class="p">.</span><span class="n">patient_id</span> <span class="k">and</span> <span class="n">pm</span><span class="p">.</span><span class="n">mrn_type</span> <span class="o">=</span> <span class="s1">'NMH'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Dr. Nick Riviera wants a list of all his encounters showing the encounter ID, department name,and encounter date. He’s also requested that the earliest encounter display first.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">department_nm</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">start_dts</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="n">e</span><span class="p">,</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">departments</span> <span class="n">d</span>
+<span class="k">where</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">provider_id</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="p">)</span>
+<span class="k">order</span> <span class="k">by</span> <span class="n">e</span><span class="p">.</span><span class="n">start_dts</span> <span class="k">asc</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>List all patients showing each person’s month of birth and whether that falls within the first or second half of the calendar year.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">patient_nm</span><span class="p">,</span> <span class="k">MONTH</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span> <span class="k">as</span> <span class="n">dob_month</span><span class="p">,</span>
+<span class="k">case</span> <span class="k">when</span> <span class="k">MONTH</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">6</span>
+	<span class="k">then</span> <span class="s1">'1st Half'</span>
+	<span class="k">else</span> <span class="s1">'2nd Half'</span>
+<span class="k">end</span> <span class="k">as</span> <span class="n">part_of_year</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">patients</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>List each diagnosis in the system and show the first time it was documented on any encounter.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">code</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="k">MIN</span><span class="p">(</span><span class="n">start_dts</span><span class="p">)</span> <span class="k">as</span> <span class="n">earliest_case</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">diagnoses</span> <span class="k">as</span> <span class="n">d</span><span class="p">,</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="k">as</span> <span class="n">e</span><span class="p">,</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounter_diagnoses</span> <span class="k">as</span> <span class="n">ed</span>
+<span class="k">where</span> <span class="n">d</span><span class="p">.</span><span class="n">diagnosis_id</span> <span class="o">=</span> <span class="n">ed</span><span class="p">.</span><span class="n">diagnosis_id</span> <span class="k">and</span> <span class="n">ed</span><span class="p">.</span><span class="n">encounter_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">encounter_id</span>
+<span class="k">group</span> <span class="k">by</span> <span class="n">d</span><span class="p">.</span><span class="n">code</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">title</span>
+</code></pre></div></div>
+
+<p>The clinical application has some basic built-in reporting functionality and it reports that only 17 valid encounters exist. The “encounters” table has 18 rows. Why might the system only believe 17 of those rows are valid?</p>
+
+<p><strong>ans.</strong> there is a column name <code class="language-plaintext highlighter-rouge">deleted_ind</code> that indicates whether that row is still existed or not</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="c1">-- give 18</span>
+<span class="k">select</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="k">as</span> <span class="n">e</span> <span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">deleted_ind</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">-- give 17</span>
+</code></pre></div></div>
+
+<p>List all encounter types that have been charted on valid encounters and how many times each was charted. If the encounter type is missing, use the title “Unknown.”</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">coalesce</span><span class="p">(</span><span class="n">et</span><span class="p">.</span><span class="n">encounter_title</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span> <span class="k">as</span> <span class="n">encounter_title</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">encounter_type_cd</span><span class="p">)</span> <span class="k">as</span> <span class="n">encounter_ct</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounter_type_codes</span> <span class="n">et</span>
+<span class="k">right</span> <span class="k">join</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="n">e</span>
+<span class="k">on</span> <span class="p">(</span><span class="n">et</span><span class="p">.</span><span class="n">encounter_type_code_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">encounter_type_cd</span> <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">deleted_ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">group</span> <span class="k">by</span> <span class="n">et</span><span class="p">.</span><span class="n">encounter_title</span>
+</code></pre></div></div>
+
+<p>The Division Administrator of the “Inpatient Floor 8” department needs a list of all providers and the number of valid encounters they had in the department. Even providers with no visits in that department should appear.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">p</span><span class="p">.</span><span class="n">provider_nm</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">provider_id</span><span class="p">)</span> <span class="k">as</span> <span class="n">encounter_ct</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">providers</span> <span class="k">as</span> <span class="n">p</span>
+<span class="k">left</span> <span class="k">join</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="k">as</span> <span class="n">e</span>
+<span class="k">on</span> <span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">provider_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">provider_id</span> <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="mi">4</span> <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">deleted_ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">group</span> <span class="k">by</span> <span class="n">p</span><span class="p">.</span><span class="n">provider_nm</span>
+</code></pre></div></div>
+
+<p>Each department would like to contact the first patient who was treated by their staff. Generate a list of each department, the name of the first patient and the date on which that first visit occurred.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">d</span><span class="p">.</span><span class="n">department_nm</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">patient_nm</span><span class="p">,</span> <span class="n">de</span><span class="p">.</span><span class="n">start_dts</span>
+<span class="k">from</span>
+<span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">departments</span> <span class="k">as</span> <span class="n">d</span><span class="p">,</span>
+<span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="k">as</span> <span class="n">e</span><span class="p">,</span>
+<span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">patients</span> <span class="k">as</span> <span class="n">p</span><span class="p">,</span>
+<span class="p">(</span><span class="k">select</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="p">,</span> <span class="k">min</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">start_dts</span><span class="p">)</span> <span class="k">as</span> <span class="n">start_dts</span>
+<span class="k">from</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">departments</span> <span class="k">as</span> <span class="n">d</span><span class="p">,</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">encounters</span> <span class="k">as</span> <span class="n">e</span><span class="p">,</span> <span class="n">edw_emr_ods</span><span class="p">.</span><span class="n">patients</span> <span class="k">as</span> <span class="n">p</span>
+<span class="k">where</span> <span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">department_id</span> <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">patient_id</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">patient_id</span><span class="p">)</span>
+<span class="k">group</span> <span class="k">by</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="p">)</span> <span class="k">as</span> <span class="n">de</span>
+<span class="k">where</span> <span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">department_id</span> <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">patient_id</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">patient_id</span> <span class="k">and</span> <span class="n">de</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">department_id</span> <span class="k">and</span> <span class="n">de</span><span class="p">.</span><span class="n">start_dts</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">start_dts</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In querying SQL, “sargable” search terms are important. What does this mean and why is it important?</p>
+
+<p><strong>Ans.</strong> sargable means that a query is capable of having the query engine optimize the execution plan that the query use</p>
+
+  <ul class="share-buttons">
+  <a style="color:#3b5998;" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2016/02/29/sql-exam-sample.html" title="Share on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+  <a style="color:#0084b4;" href="https://twitter.com/intent/tweet?text=http://localhost:4000/2016/02/29/sql-exam-sample.html" title="Share on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+</ul>
+
+  <div id="disqus_thread"></div>
+</div>
+
+
+    <script id="dsq-count-scr" src="//kordinglab.disqus.com/count.js" async></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-34145995-1");
+    pageTracker._trackPageview();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34145995-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34145995-1');
+    </script>
+
+</body>
+</html>

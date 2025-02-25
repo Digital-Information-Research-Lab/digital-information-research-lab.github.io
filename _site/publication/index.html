@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publication</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+  <link href="http://localhost:4000/css/zoom.css" rel="stylesheet"> 
+  <script src="http://localhost:4000/js/zoom.js"></script>
+  <script src="http://localhost:4000/js/transition.js"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/logo/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/logo/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/logo/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/logo/apple-touch-icon-144x144-precomposed.png"> -->
+
+  <!-- open graph -->
+
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:4000/publication/">
+  <meta property="og:title" content="Publication">
+  <meta property="og:site_name" content="Platform Governance Research Lab at Boston University">
+  <meta property="og:description" content="
+  
+  
+
+
+
+
+  Research Papers
+  
+    
+    
+    
+      Free Speech &amp; the Fake News Problem
+    
+      +
+    
+      
+        Authors: Marshall W. ..." />
+  <meta property="og:image" content="http://localhost:4000/images/logo/InstituteMark_DBI_RGB.jpg">
+
+</head>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//kordinglab.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<body id="page-top" style="padding-top: 7em;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class='navbar-brand page-scroll' href='/'>
+              <span style='font-family:"Open Sans"; font-weight:300'>Platform Governance Research Lab</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a class='name' href="/">home</a></li>
+                  
+                  <li><a class='name' href="/about">about</a></li>
+                  
+                  <li><a class='name' href="/publication">publications</a></li>
+                  
+                  <li><a class='name' href="/people">people</a></li>
+                  
+                  <li><a class='name' href="/games">games</a></li>
+                  
+                  <li><a class='name' href="/research">research</a></li>
+                  
+                </ul>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+    <div class="container content page">
+  <!-- <h1 class="page-title">Publication</h1> -->
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all toggle buttons
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    // Find the description element within the same publication-entry
+    const description = button.closest('.publication-entry').querySelector('.description');
+    
+    // Initially hide all descriptions
+    description.style.display = 'none';
+
+    button.addEventListener('click', function() {
+      if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block';
+        this.textContent = '-';
+      } else {
+        description.style.display = 'none';
+        this.textContent = '+';
+      }
+    });
+  });
+});
+</script>
+
+<style>
+/* Restore the previous styles */
+.publications-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1.5rem 0;
+  color: #1a1a1a;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.publication-entry {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  position: relative; 
+}
+
+.publication-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.publication-content .toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.publication-info {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.description {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.description p {
+  margin: 0.5rem 0;
+}
+
+.description strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.publication-entry a {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.publication-entry h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.publication-entry:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.description p {
+  margin: 0.5rem 0;
+}
+
+.description strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  position: absolute;
+  right: 1rem;
+}
+
+.toggle-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+</style>
+
+<div class="publications-list">
+  <h2>Research Papers</h2>
+  <ul>
+    <li class="publication-entry">
+    <div class="publication-content">
+    <div class="publication-info">
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261">Free Speech &amp; the Fake News Problem</a>
+    </div>
+      <button class="toggle-btn">+</button>
+    </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Marshall W. Van Alstyne</p>
+        <p><strong>Abstract:</strong> This paper explores the intersection of free speech and the rise of fake news. We examine regulatory solutions and propose new frameworks for addressing this issue in online media.</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+    <div class="publication-content">
+     <div class="publication-info">
+      <a href="https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/">Improving §230, Preserving Democracy &amp; Protecting Free Speech</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong>  Marshall Van Alstyne, Michael D. Smith, and Herbert Lin</p>
+        <p><strong>Abstract:</strong> Proposing a framework for a decentralized market where no one party controls the flow of information.</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://www.dropbox.com/scl/fi/nopf4dhw86fh5oej7rquw/Certifiably_True-The_Impact_Of_Self_Certification_On_Misinfo.pdf?rlkey=vp9rcew7hq98plmhh5asofy93&amp;e=1&amp;dl=0">Truth is Warranted: The Impact of Self-Certification on Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Aaron D. Nichols, Nina Mazar, Tejovan Parker, Gordon Pennycook, David Rand, and Marshall Van Alstyne</p>
+        <p><strong>Abstract:</strong> Research of certifications and their utilization in the marketplace.</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+      <div class="publication-info">
+      <a href="https://www.usenix.org/system/files/usenixsecurity24-little.pdf">Secure Account Recovery for a Privacy-Preserving Web Service</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Ryan Little, Lucy Qin, and Mayank Varia</p>
+        <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+    <div class="publication-content">
+      <div class="publication-info">
+    <h3>"Improving the Governance of Digital Platforms with Interactive Marketplace Experiments", Intl. Conference on Computational Social Science, 2024.</h3>
+    </div>
+    <button class="toggle-btn">+</button>
+    </div>
+    <div class="description">
+        <p><strong>Authors:</strong> Swapneel Mehta</p>
+        <p><strong>Abstract:</strong> TBD</p>
+    </div>
+    </li>
+  </ul>
+
+  <h2>Talks</h2>
+  <ul>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://idw-online.de/en/news835047"> Truth is Warranted: Addressing Misinformation in Information Markets</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Van Alystyne</p>
+        <p><strong>Venue:</strong> Digital Platform Ecosystems Forum at University of Passau (2024)</p>
+        <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://www.youtube.com/watch?v=G_UAuAdAgDQ"> Using Markets to Combat Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Authors:</strong> Van Alystyne</p>
+        <p><strong>Venue:</strong> Harvard University</p>
+        <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry"> 
+      <div class="publication-content">
+       <div class="publication-info">
+       <h3>Improving the Governance of Online Marketplaces using Warrants</h3>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Authors:</strong> Swapneel Mehta</p>
+      <p><strong>Venue:</strong> International Conference on Computational Social Science (2024)</p>
+      <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <li class="publication-entry"> 
+      <div class="publication-content">
+       <div class="publication-info">
+       <h3>Certifiably True: The Impact of Self Certification on Misinformation</h3>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Authors:</strong> Nichols</p>
+      <p><strong>Venue:</strong> Platform Strategy Research Symposium (2024)</p>
+      <p><strong>Venue:</strong> International Conference on Computational Social Science (2024)</p>
+      <p><strong>Venue:</strong> Freedom of Expression Scholars Conference (2024)</p>
+      <p><strong>Abstract:</strong> TBD</p>
+      </div>
+    </li>
+    <!-- Add more talk entries as needed -->
+  </ul>
+  <h2>Slides</h2>
+    <ul>
+      <li class="publication-entry"><h3> Swapneel IC2S2: <a href="https://docs.google.com/presentation/d/1v_K9nGETVi-Vy8GKcllhJzeE_5_IspdDvK9JTvk6liY/edit#slide=id.p">[Slides]</a></h3>
+      </li>
+    </ul>
+
+  
+  <h2>Press</h2>
+  <ul>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+      <a href="https://www.bu.edu/cds-faculty/2023/10/06/bu-professors-earn-nsf-grant-for-data-science-project-fighting-online-misinformation/">BU Professors Earn NSF Grant for Data Science Project Fighting Online Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Toni Fitzgerald</p>
+        <p><strong>Publisher:</strong> BUCDS</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://www.bu.edu/articles/2019/deter-the-spread-of-harmful-fake-news/">Could Taxes Deter the Spread of Harmful Fake News?</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Author:</strong> Anastasia Lennon, </p>
+      <p><strong>Publisher:</strong> The Brink</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+      <div class="publication-info">
+      <a href="https://medium.com/mit-initiative-on-the-digital-economy/platforms-forge-new-paths-c1e2f3541a8f">Platforms Forge New Paths</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+      <p><strong>Author:</strong> Peter Krass</p>
+        <p><strong>Publisher:</strong> MIT IDE, Medium</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://www.forbes.com/sites/edwardsegal/2020/10/21/how-your-company-can-fight-the-never-ending-war-against-misinformation/">How Your Company Can Fight The Never-Ending War Against Misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Edward Segal</p>
+        <p><strong>Publisher:</strong> Forbes</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://www.techdirt.com/2021/08/13/now-harvard-business-review-getting-section-230-very-very-wrong/">Now It's Harvard Business Review Getting Section 230 Very, Very Wrong</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Mike Masnick</p>
+        <p><strong>Publisher:</strong> techDirt</p>
+      </div>
+    </li>
+    <li class="publication-entry">
+      <div class="publication-content">
+       <div class="publication-info">
+       <a href="https://dailyfreepress.com/2023/10/25/bu-researchers-receive-550000-grant-propose-holistic-approach-to-misinformation/">BU researchers recieve 550000 grant, propose holistic approach to misinformation</a>
+      </div>
+      <button class="toggle-btn">+</button>
+      </div>
+      <div class="description">
+        <p><strong>Author:</strong> Anna Albrecht</p>
+        <p><strong>Publisher:</strong> The Daily Free Press</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- For those interested in numbers, see Konrad's [google scholar citations profile](https://scholar.google.com/citations?user=MiFqJGcAAAAJ).
+
+We try to include links for all of our papers. Some of the links open PDFs, others direct you to a journal's site where that particular publication is available for download. If you cannot access one of our papers, let us know. The copyright notice for these papers is listed at the bottom of the page.
+
+<hr>
+
+### 2022
+
+_Data-driven exclusion criteria for instrumental variable studies_<br>
+Tony Liu, Patrick Lawlor, Lyle Ungar, Konrad Kording<br>
+Conference on Causal Learning and Reasoning, 2022 ([Article](https://proceedings.mlr.press/v177/liu22a/liu22a.pdf))
+
+_Neural Networks as Paths through the Space of Representations_<br>
+Richard D Lange, Jordan Matelsky, Xinyue Wang, Devin Kwok, David S Rolnick, Konrad P Kording<br>
+arXiv preprint arXiv:2206.10999, 2022 ([Article](https://arxiv.org/pdf/2206.10999))
+
+_Causal mapping of human brain function_<br>
+Shan H Siddiqi, Konrad P Kording, Josef Parvizi, Michael D Fox<br>
+Nature reviews neuroscience, 2022 ([Article](https://www.nature.com/articles/s41583-022-00583-8.pdf?origin=ppub))
+
+_Nothing makes sense in deep learning, except in the light of evolution_<br>
+Artem Kaznatcheev, Konrad Paul Kording<br>
+arXiv preprint arXiv:2205.10320, 2022 ([Article](https://arxiv.org/pdf/2205.10320))
+
+_Comparing high-dimensional neural recordings by aligning their low-dimensional latent representations_<br>
+Max Dabagia, Konrad P Kording, Eva L Dyer<br>
+arXiv preprint arXiv:2205.08413, 2022 ([Article](https://arxiv.org/pdf/2205.08413))
+
+_Do biological constraints impair dendritic computation?_<br>
+Ilenna Simone Jones, Konrad Paul Kording<br>
+Neuroscience, 2022 ([Article](https://upenn.alma.exlibrisgroup.com/discovery/openurl?institution=01UPENN_INST&vid=01UPENN_INST:Services&=?sid=google&auinit=IS&aulast=Jones&atitle=Do+biological+constraints+impair+dendritic+computation%3F&id=doi:10.1016/j.neuroscience.2021.07.036&title=IBRO+journal,&volume=489&date=2022&spage=262&issn=0306-4522))
+
+_The relationship between text message sentiment and self-reported depression_<br>
+Tony Liu, Jonah Meyerhoff, Johannes C Eichstaedt, Chris J Karr, Susan M Kaiser, Konrad P Kording, David C Mohr, Lyle H Ungar<br>
+Journal of affective disorders, 2022 ([Article](https://upenn.alma.exlibrisgroup.com/discovery/openurl?institution=01UPENN_INST&vid=01UPENN_INST:Services&=?sid=google&auinit=T&aulast=Liu&atitle=The+relationship+between+text+message+sentiment+and+self-reported+depression&id=doi:10.1016/j.jad.2021.12.048&title=Journal+of+affective+disorders.&volume=302&date=2022&spage=7&issn=0165-0327))
+
+_Neuromatch Academy: a 3-week, online summer school in computational neuroscience_<br>
+Bernard Hart, Titipat Achakulvisut, Ayoade Adeyemi, Athena Akrami, Bradly Alicea, Alicia Alonso-Andres, Diego Alzate-Correa, Arash Ash, Jesus Ballesteros, Aishwarya Balwani, Eleanor Batty, Ulrik Beierholm, Ari Benjamin, Upinder Bhalla, Gunnar Blohm, Joachim Blohm, Kathryn Bonnen, Marco Brigham, Bingni Brunton, John Butler, Brandon Caie, N Gajic, Sharbatanu Chatterjee, Spyridon Chavlis, Ruidong Chen, You Cheng, HM Chow, Raymond Chua, Yunwei Dai, Isaac David, Eric DeWitt, Julien Denis, Alish Dipani, Arianna Dorschel, Jan Drugowitsch, Kshitij Dwivedi, Sean Escola, Haoxue Fan, Roozbeh Farhoodi, Yicheng Fei, Pierre-Étienne Fiquet, Lorenzo Fontolan, Jeremy Forest, Yuki Fujishima, Byron Galbraith, Mario Galdamez, Richard Gao, Julijana Gjorgjieva, Alexander Gonzalez, Qinglong Gu, Yueqi Guo, Ziyi Guo, Pankaj Gupta, Busra Gurbuz, Caroline Haimerl, Jordan Harrod, Alexandre Hyafil, Martin Irani, Daniel Jacobson, Michelle Johnson, Ilenna Jones, Gili Karni, Robert Kass, Hyosub Kim, Andreas Kist, Randal Koene, Konrad Kording, Matthew Krause, Arvind Kumar, Norma Kühn, Ray Lc, Matthew Laporte, Junseok Lee, Songting Li, Sikun Lin, Yang Lin, Shuze Liu, Tony Liu, Jesse Livezey, Linlin Lu, Jakob Macke, Kelly Mahaffy, A Martins, Nicolás Martorell, Manolo Martínez, Marcelo Mattar, Jorge Menendez, Kenneth Miller, Patrick Mineault, Nosratullah Mohammadi, Yalda Mohsenzadeh, Elenor Morgenroth, Taha Morshedzadeh, Alice Mosberger, Madhuvanthi Muliya, Marieke Mur, John Murray, Yashas Nd, Richard Naud, Prakriti Nayak, Anushka Oak, Itzel Castillo, Seyedmehdi Orouji, Jorge Otero-Millan, Marius Pachitariu, Biraj Pandey, Renato Paredes, Jesse Parent, Il Park, Megan Peters, Xaq Pitkow, Panayiota Poirazi, Haroon Popal, Sandhya Prabhakaran, Tian Qiu, Srinidhi Ragunathan, Raul Rodriguez-Cruces, David Rolnick, Ashish Sahoo, Saeed Salehinajafabadi, Cristina Savin, Shreya Saxena, Paul Schrater, Karen Schroeder, Alice Schwarze, Madineh Sedigh-Sarvestani, K Sekhar, Reza Shadmehr, Maryam Shanechi, Siddhant Sharma, Eric Shea-Brown, Krishna Shenoy, Carolina Shimabukuro, Sergey Shuvaev, Man Sin, Maurice Smith, Nicholas Steinmetz, Karolina Stosio, Elizabeth Straley, Gabrielle Strandquist, Carsen Stringer, Rimjhim Tomar, Ngoc Tran, Sofia Triantafillou, Lawrence Udeigwe, Davide Valeriani, Vincent Valton, Maryam Vaziri-Pashkam, Peter Vincent, Gal Vishne<br>
+Journal of Open Source Education, 2022 ([Article](https://discovery.ucl.ac.uk/id/eprint/10146628/1/10.21105.jose.00118.pdf))
+
+_Clustering units in neural networks: upstream vs downstream information_<br>
+Richard D Lange, David S Rolnick, Konrad P Kording<br>
+arXiv preprint arXiv:2203.11815, 2022 ([Article](https://arxiv.org/pdf/2203.11815))
+
+
+_Energy expenditure does not solely explain step length–width choices during walking_<br>
+Stephen A Antos, Konrad P Kording, Keith E Gordon<br>
+Journal of Experimental Biology, 2022 ([Article](https://journals.biologists.com/jeb/article-pdf/225/6/jeb243104/2136815/jeb243104.pdf))
+
+_Tackling climate change with machine learning_<br>
+David Rolnick, Priya L Donti, Lynn H Kaack, Kelly Kochanski, Alexandre Lacoste, Kris Sankaran, Andrew Slavin Ross, Nikola Milojevic-Dupont, Natasha Jaques, Anna Waldman-Brown, Alexandra Sasha Luccioni, Tegan Maharaj, Evan D Sherwin, S Karthik Mukkavilli, Konrad P Kording, Carla P Gomes, Andrew Y Ng, Demis Hassabis, John C Platt, Felix Creutzig, Jennifer Chayes, Yoshua Bengio<br>
+ACM Computing Surveys (CSUR), 2022 ([Article](https://dl.acm.org/doi/full/10.1145/3485128))
+
+_Prospective Learning: Back to the Future_<br>
+Joshua T Vogelstein, Timothy Verstynen, Konrad P Kording, Leyla Isik, John W Krakauer, Ralph Etienne-Cummings, Elizabeth L Ogburn, Carey E Priebe, Randal Burns, Kwame Kutten, James J Knierim, James B Potash, Thomas Hartung, Lena Smirnova, Paul Worley, Alena Savonenko, Ian Phillips, Michael I Miller, Rene Vidal, Jeremias Sulam, Adam Charles, Noah J Cowan, Maxim Bichuch, Archana Venkataraman, Chen Li, Nitish Thakor, Justus M Kebschull, Marilyn Albert, Jinchong Xu, Marshall Hussain Shuler, Brian Caffo, Tilak Ratnanather, Ali Geisa, Seung-Eon Roh, Eva Yezerets, Meghana Madhyastha, Javier J How, Tyler M Tomita, Jayanta Dey, Jong M Shin, Kaleab Alemayehu Kinfu, Pratik Chaudhari, Ben Baker, Anna Schapiro, Dinesh Jayaraman, Eric Eaton, Michael Platt, Lyle Ungar, Leila Wehbe, Adam Kepecs, Amy Christensen, Onyema Osuagwu, Bing Brunton, Brett Mensh, Alysson R Muotri, Gabriel Silva, Francesca Puppo, Florian Engert, Elizabeth Hillman, Julia Brown, Chris White, Weiwei Yang<br>
+arXiv preprint arXiv:2201.07372, 2022 ([Article](https://arxiv.org/pdf/2201.07372))
+
+_Hue tuning curves in V4 change with visual context_<br>
+Ari S Benjamin, Pavan Ramkumar, Hugo Fernandes, Matthew Smith, Konrad P Kording<br>
+bioRxiv, 2022 ([Article](https://scholar.archive.org/work/r76js7hsa5c6rnl5q7afppwkem/access/wayback/https://www.biorxiv.org/content/biorxiv/early/2019/09/24/780478.full.pdf))
+
+_Efficient neural codes naturally emerge through gradient descent learning_<br>
+Ari S Benjamin, Ling-Qi Zhang, Cheng Qiu, Alan Stocker, Konrad P Kording<br>
+bioRxiv, 2022 ([Article](https://www.biorxiv.org/content/biorxiv/early/2022/05/12/2022.05.11.491548.full.pdf))
+
+_Inferring causal connectivity from pairwise recordings and optogenetics_<br>
+Mikkel Elle Lepperød, Tristan Stöber, Torkel Hafting, Marianne Fyhn, Konrad Paul Kording<br>
+bioRxiv, 2022 ([Article](https://scholar.archive.org/work/dagloyy6jnaxpdjzkg7zrlhtzm/access/wayback/https://www.biorxiv.org/content/biorxiv/early/2018/11/20/463760.full.pdf)) -->
+
+</div>
+
+
+    <script id="dsq-count-scr" src="//kordinglab.disqus.com/count.js" async></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-34145995-1");
+    pageTracker._trackPageview();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34145995-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34145995-1');
+    </script>
+
+</body>
+</html>

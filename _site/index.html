@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Platform Governance Research Lab - Home</title>
+    <meta name="description" content="The Platform Governance Research Lab is a research group focused on curbing disinformation through market solutions at Boston University.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  </head>
+
+  <!--  .dark-landing makes the entire page dark -->
+  <body class="dark-landing">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, 
+        once: true,  
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        gsap.registerPlugin(ScrollTrigger);
+    
+        
+        document.querySelectorAll("[data-scroll='fade-up']").forEach((el, index) => {
+          gsap.to(el, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+              toggleActions: "play none none reverse"
+            }
+          });
+        });
+    
+        // Make the image move slightly when scrolling
+        if (document.querySelector(".floating-image img")) {
+          gsap.to(".floating-image img", {
+            yPercent: -20,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: ".floating-image",
+              start: "top 60%",
+              end: "bottom 20%",
+              scrub: true
+            }
+          });
+        }
+        // gsap.from(".text-content p", {
+        //   opacity: 0,
+        //   y: 20,
+        //   duration: 1.2,
+        //   ease: "power2.out",
+        //   scrollTrigger: {
+        //     trigger: ".text-content p",
+        //     start: "top 80%",
+        //     toggleActions: "play none none reverse"
+        //   }
+        // });
+
+      });
+    </script>
+    
+    
+    <!-- ====== Navigation / Header ====== -->
+    <header class="site-header dark-header" data-aos="fade-up">
+      <div class="container">
+        <nav class="navbar main-nav-dark">
+          <ul class="navbar-nav">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/people">People</a></li>
+            <li><a href="/publication">Publications</a></li>
+            <li><a href="/games">Games</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /Navigation -->
+
+    <!-- ====== Hero Section (Full Screen) ====== -->
+     <section class="hero-dark" id="hero-section" data-aos="fade-up" data-aos-delay="200">
+      <div class="hero-content typewriter ">
+        
+        <h1>Platform Governance Research Lab</h1>
+        <p>The Platform Governance Research Lab is a research group focused on curbing disinformation through market solutions at Boston University.</p>
+
+        <div class="cta-buttons">
+          <a href="/about" class="button primary">About Us</a>
+          <a href="/research" class="button secondary">Contact</a>
+        </div>
+      </div>
+    </section> 
+    <div class="supported-by-section" data-aos="zoom-in">
+      <h2>Supported By</h2>
+      <div class="logos-container">
+        <img src="images/logo/InstituteMark_DBI_RGB.png" alt="Logo" class="supported-logo" />
+          <img src="images/logo/NSF_Logo.png" alt="Logo 2" class="supported-logo">
+      </div>
+  </div>
+  <section class="dynamic-scroll">
+    <div class="dynamic-container">
+      <div class="text-content">
+        <h2 data-scroll="fade-up">PLATFORMS NEED TO BALANCE THE RIGHTS OF SPEAKERS AND LISTENERS</h2>
+        <div class="underline"></div> 
+        <p data-scroll="fade-up" data-delay="200">
+          If <strong>either one of the two</strong> is given preferential treatment, the other suffers.
+        </p>
+        <p data-scroll="fade-up" data-delay="400">
+          Audiences provide platforms with <strong>reach</strong>, so <strong>platforms should be accountable</strong> to protect audiences.
+        </p>
+        <p data-scroll="fade-up" data-delay="600">
+          <strong>Free speech</strong> is an absolutely vital right, but <strong>mechanisms for accountability</strong> are needed in exchange for reach.
+        </p>
+      </div>
+      <!-- <div class="floating-image">
+        <img src="images/scale-balance.png" alt="Balance of Free Speech and Selective Hearing">
+      </div> -->
+    </div>
+  </section>
+    <section class="research-section" id="research-section" data-aos="fade-up">
+      <div class="container">
+        <h1>Replicable Behavioral Economics Research</h1>
+        <p>Our research process is divided into four steps</p>
+        <div class="research-steps">
+          <div class="step">
+            <span class="step-number">01</span>
+            <h3>Design</h3>
+            <p>Researchers design gamified experiments...</p>
+          </div>
+          <div class="step">
+            <span class="step-number">02</span>
+            <h3>Deploy</h3>
+            <p>Human players join a game to play the designed experiment.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">03</span>
+            <h3>Monitor</h3>
+            <p>Data is collected from experimental activity.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">04</span>
+            <h3>Analyze</h3>
+            <p>Data is analyzed to test hypotheses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="split-section" data-aos="fade-left" data-aos-delay="200">
+      <div class="split-left" data-aos="fade-left">
+        <h1>Platforms need to Balance the Rights of Speakers and Listeners</h1>
+      </div>
+      <div class="split-right" data-aos="fade-left" data-aos-delay="400">
+        <p>
+        Platforms should be accountable to protect audiences. Free speech is an absolutely vital + legal right.
+        But we need mechanisms to introduce accountability in exchange for reach!
+        </p>
+        <<img src="images/others/scale_balance.png" alt="Balance of Free Speech and Selective Hearing" class="split-image"> -->
+      <!-- </div> -->
+    <!-- </section> --> 
+    
+   
+
+    <section class="flashcards-section dark-section fade-in-up" id="flashcards-section" style="animation-delay: 0.2s;">
+      <div class="container">
+        <h2>Areas of Work</h2>
+        <p>Hover over a card to learn more about each issue or solution.</p>
+    
+        <div class="flip-cards-grid">
+          <!-- Card 1 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front">
+                <h3>The Issue</h3>
+                <!-- <p>Misinformation is an externality...</p> -->
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <p>
+                  When the right to free speech is abused, speakers create spam and hate while listeners find themselves in a filter bubble that results in polarization. 
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3>Our Solution: Warrants</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  “warrants” can help mitigate
+                  misinformation by verifying credible sources...
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3>Our Goal</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Design a two-sided experiment with buyers and sellers... BUT sellers may self-certify their claims with collateral.
+                  Buyers may buy from multiple products in marketplace based on their capital.
+                   
+
+                </p>
+              </div>
+            </div>
+          </div>
+    
+    
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- ====== Footer ====== -->
+    <footer class="site-footer dark-footer">
+      <div class="container">
+        <p>&copy; 2025 Platform Governance Research Lab. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+  </body>
+</html>
