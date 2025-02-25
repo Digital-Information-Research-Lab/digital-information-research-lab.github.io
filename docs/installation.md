@@ -35,23 +35,23 @@ Follow the steps below to **install and run the Empirica experiment** on your lo
 
 2. Install miniconda by finding the latest Linux installer from [this page](https://docs.conda.io/projects/miniconda/en/latest/).
 
-    a. Inside a WSL terminal, use command: 
+    a. Inside a WSL terminal, use command:
     
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
     b. Then run:
     
-    bash Miniconda3-latest-Linux-x86_64.sh
+    `bash Miniconda3-latest-Linux-x86_64.sh`
 
     And follow the instructions to install and initialize the conda environment on your system in Linux (initializing is the process of setting a path so that every time you open Linux, you launch a conda base environment to work out of. Ideally you need a separate conda environment for each project so let’s create one now).
 
-3. Create a conda environment for your project: conda create -n empirica_env python=3.9
+3. Create a conda environment for your project: `conda create -n empirica_env python=3.9`
 
     a. This creates a named empirica environment for your system.
 
-    b. Activate the environment after it's installed: conda activate empirica_env
+    b. Activate the environment after it's installed: `conda activate empirica_env`
 
-4. Now install nodejs inside the conda environment: conda install nodejs -c conda-forge
+4. Now install nodejs inside the conda environment: `conda install nodejs -c conda-forge`
 
 ## **Optional Step: Set up your Public Key on Github** ##
 
