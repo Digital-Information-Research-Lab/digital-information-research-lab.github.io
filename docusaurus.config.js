@@ -67,12 +67,6 @@ const config = {
           label: 'Publications'
         },
         {
-          to: 'https://truthmarket.com/',
-          label: 'Website',
-          position: 'right',
-          target: '_self'
-        },
-        {
           to: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io',
           label: 'GitHub',
           position: 'right',
