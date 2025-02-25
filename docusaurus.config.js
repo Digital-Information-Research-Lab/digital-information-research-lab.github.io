@@ -52,17 +52,37 @@ const config = {
   themeConfig: ({
     image: 'img/favicon.png', // Social media card image
     navbar: {
-      title: 'Platform Governance Research Docs',
-      logo: {
-        alt: 'Digital Research Lab Logo',
-        src: 'img/favicon.png',
-      },
+      title: 'Platform Governance Research Lab',
+      style: 'primary',
       items: [
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Documentation' },
-        { to: '/publications', position: 'left', label: 'Publications' },
-        { href: 'https://truthmarket.com/', label: 'Website', position: 'left' },
-        { href: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io', label: 'GitHub', position: 'right' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'right',
+          label: 'Documentation'
+        },
+        {
+          to: '/publications',
+          position: 'right',
+          label: 'Publications'
+        },
+        {
+          to: 'https://truthmarket.com/',
+          label: 'Website',
+          position: 'right',
+          target: '_self'
+        },
+        {
+          to: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io',
+          label: 'GitHub',
+          position: 'right',
+          target: '_self' },
       ],
+    },
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: true,
+      respectPrefersColorScheme: false
     },
     footer: {
       style: 'dark',
