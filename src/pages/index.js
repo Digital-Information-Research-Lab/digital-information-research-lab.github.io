@@ -26,7 +26,7 @@ function HomepageHeader() {
                   </div>
               </div>
               <div className="container">
-                  Video Goes Here
+                  {/* Video Goes Here */}
               </div>
           </header>
       </div>
