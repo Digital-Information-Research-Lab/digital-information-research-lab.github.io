@@ -12,6 +12,13 @@
   width: 200px;
 }
 
+.featureImage {
+  width: 100%; 
+  height: 250px; 
+  object-fit: cover; 
+}
+
+
 .supportedBySection {
   text-align: center;
   margin-bottom: 2rem;
