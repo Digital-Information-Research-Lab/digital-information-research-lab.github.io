@@ -42,7 +42,12 @@ title: Publications
 
 - **Improving the Governance of Online Marketplaces using Warrants**  
   **Author:** Swapneel Mehta  
-  **Venue:** International Conference on Computational Social Science (2024)  
+  **Venue:** Stanford Trust and Safety Research Conference (2024)   
+
+- **Market Design Interventions for Safer Agentic AI**  
+  **Presenter:** Aaron Nichols
+  **Venue:** Yale AI/ML Conference (2024)
+  **Venue:** Columbia MarkTech Conference (2024)
 
 - **Certifiably True: The Impact of Self Certification on Misinformation**  
   **Author:** Aaron Nichols  
