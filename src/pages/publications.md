@@ -33,8 +33,8 @@ title: Publications
 # Talks
 
 - [Truth is Warranted: Addressing Misinformation in Information Markets](https://idw-online.de/en/news835047)  
-  **Author:** Van Alystyne  
-  **Venue:** Digital Platform Ecosystems Forum at University of Passau (2024)  
+  **Author:** Van Alystyne   
+  **Venue:** Digital Platform Ecosystems Forum at University of Passau (2024)   
 
 - [Using Markets to Combat Misinformation](https://www.youtube.com/watch?v=G_UAuAdAgDQ)  
   **Author:** Van Alystyne  
@@ -45,9 +45,9 @@ title: Publications
   **Venue:** Stanford Trust and Safety Research Conference (2024)   
 
 - **Market Design Interventions for Safer Agentic AI**  
-  **Presenter:** Aaron Nichols
-  **Venue:** Yale AI/ML Conference (2024)
-  **Venue:** Columbia MarkTech Conference (2024)
+  **Presenter:** Aaron Nichols  
+  **Venue:** Yale AI/ML Conference (2024)  
+  **Venue:** Columbia MarkTech Conference (2024)  
 
 - **Certifiably True: The Impact of Self Certification on Misinformation**  
   **Author:** Aaron Nichols  
