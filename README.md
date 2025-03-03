@@ -64,7 +64,7 @@ The **navbar configuration** is defined in:
 
 The landing page includes the following key components:
 
-- **Experiment Cards** and **Supported By** sections are implemented in:  
+- **Feature List** and **Supported By** sections are implemented in:  
   - `src/components/HomepageFeatures/index.js`  
   - `src/pages/index.js`  
 
