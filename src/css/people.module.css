@@ -1,0 +1,76 @@
+.headshot {
+    width: 250px;
+    height: 250px;
+}
+
+.circular {
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Ensures image stays inside the circular boundary */
+}
+
+
+.headshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    max-width: 250px;
+    position: relative;
+}
+
+/* Underline Effect */
+.profileCard::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: var(--ifm-color-primary-light);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Expand underline on hover */
+.profileCard:hover::after {
+    width: 100%;
+    right: 0; /* Stays in position while growing */
+}
+
+/* Move right and shrink on unhover */
+.profileCard:not(:hover)::after {
+    width: 0;
+    right: 100%; /* Moves off-screen to the right */
+}
+
+.profileInfo {
+    padding: 10px 9px 15px 9px;
+}
+
+.profileTitle {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Public Sans', sans-serif;
+    color: var(--ifm-color-primary-light);
+}
+
+.profileDesc {
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Public Sans', sans-serif;
+    color: black;
+}
+
+.contact, .contact a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--ifm-color-primary-light);
+    text-decoration: none;
+}

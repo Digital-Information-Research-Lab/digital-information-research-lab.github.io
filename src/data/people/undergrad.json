@@ -1,0 +1,137 @@
+[
+  {
+    "id": "abhishek",
+    "name": "Abhishek Shah",
+    "role": "Undergraduate Student",
+    "joined": 10,
+    "contact": null,
+    "linkedin": null,
+    "description": "Abhishek Shah is a senior at Green Level High School, who is passionate about technology, artificial intelligence, and cyber security. He is the founder and creator of AuralStudio, a pioneering platform that reimagines computer science for the visually-impaired, and the developer of the corresponding programming language Rattle, designed to be heard. He has also been the co-founder of the EXPLORE Summer Program, where he raised over $6000 for COVID-19 relief and to provide laptops to visually-impaired students. Abhishek was selected to attend the 2024 Beaver Works Summer Institute program at the Massachusetts Institute of Technology, where he learned from distinguished researchers, industry professionals, and leading executives in the areas of technology, leadership, and economics.\n\nHis work in AuralStudio has been recognized with a second place grand award from Microsoft at the 2024 Regeneron International Science and Engineering Fair, the 25th anniversary award from IEEE, and a first place award in Youth Education from USAID. He became the youngest recipient of the Kaufmann Best Student Paper Award at the 2024 Southern Association for Information Systems Conference for his paper modeling the impact of influencer messaging on COVID-19 vaccine perception, which was subsequently published in a peer-reviewed journal. He is also an avid pianist, having performed at various concert halls, universities, and retirement homes and enjoys playing and watching tennis in his free time."
+  },
+  {
+    "id": "changxuan",
+    "name": "Changxuan Fan",
+    "role": "Undergraduate Student",
+    "joined": 6,
+    "contact": null,
+    "linkedin": null,
+    "description": "Changxuan Fan, a Senior at Boston University (Class of 2025) majoring in Computer Science, specializes in Software Engineering and Deep Learning. He gained hands-on experience as a Data Analyst Intern at Mechdyne Corporation, contributing to data-driven projects. Changxuan is dedicated to advancing software development and AI innovation."
+  },
+  {
+    "id": "daian",
+    "name": "Daian Liu",
+    "role": "Undergraduate Student",
+    "joined": 8,
+    "contact": null,
+    "linkedin": null,
+    "description": "Daian Liu is a Computer Science student at Boston University, Class of 2025. With a background in full-stack development, they are focused on specializing in front-end technologies. They also have a strong interest in 3D graphics and Augmented Reality (AR), exploring the intersection of technology and user experience."
+  },
+  {
+    "id": "hang",
+    "name": "Hang Ji",
+    "role": "Undergraduate Student",
+    "joined": 16,
+    "contact": null,
+    "linkedin": null,
+    "description": "Hang Ji is a computer science senior at Boston University. His research focus is distributed systems and compiler design. He joined the Platform Governance Research Lab in Fall 2024. He is dedicated to utilizing his computational skills to contribute to society."
+  },
+  {
+    "id": "isa",
+    "name": "Isa Alsafwah",
+    "role": "Undergraduate Student",
+    "joined": 8,
+    "contact": null,
+    "linkedin": null,
+    "description": "Isa is a rising senior studying Computer Science at Boston University. With experience in full-stack development, he currently focuses on front-end development for the online digital marketplace, collaboratively working to ensure a responsive and intuitive user interface."
+  },
+  {
+    "id": "jenny",
+    "name": "Jenny Li",
+    "role": "Undergraduate Student",
+    "joined": 17,
+    "contact": null,
+    "linkedin": null,
+    "description": "Jenny Li is a Computer Science student at Boston University, graduating in 2026. With a strong passion for game development, she is committed to leveraging technology to address complex, real-world challenges. Her academic journey has been marked by a focus on creating innovative solutions through software development. Jenny is particularly interested in the intersection of technology and social impact, aiming to develop applications that not only entertain but also contribute positively to society."
+  },
+  {
+    "id": "jiazheng",
+    "name": "Jiazheng Su",
+    "role": "Undergraduate Student",
+    "joined": 15,
+    "contact": null,
+    "linkedin": null,
+    "description": "Jiazheng Su, a Senior at Boston University (Class of 2025) majoring in Computer Science, is passionate about software development and game design. He has experience in full-stack development, research computing, and AI, with skills in a wide range of programming languages and frameworks. Jiazheng has contributed to projects that enhance community engagement and security in web applications. Outside his academic pursuits, he enjoys fitness, badminton, cooking, and traveling."
+  },
+  {
+    "id": "laerk",
+    "name": "Laerk Ndreko",
+    "role": "Undergraduate Student",
+    "joined": 1,
+    "contact": null,
+    "linkedin": "laerk",
+    "description": "Laerk is a senior at Boston University, majoring in Computer Science & Economics. On the Platform Governance Research Lab team, Laerk contributes as a Sprint Lead and software developer to develop and deploy an online digital marketplace involving direct human-to-human interactions, empowering individuals to buy and sell with one another in unfamiliar environments. He ensures timely completion and steady progress by managing team members' tasks and progress. He has a passion for research and exploring new ideas to expand his knowledge in computer science and economics.\n\nIn addition, Laerk also serves as a Product Manager at the non-profit Hack4Impact chapter at Boston University, where he works to help Latin American communities in the Boston area connect with one another, develop their businesses, and thrive. Furthermore, Laerk serves as the Vice President of the Albanian Student Association at BU, contributing to the growth and development of the Greater Boston Albanian community.\n\nIn addition to his leadership role, Laerk actively competes in hackathons, leveraging his skills to innovate and create solutions in team settings. You can find his work on [Github](https://www.github.com/laerk23/)."
+  },
+  {
+    "id": "lauren",
+    "name": "Lauren Ji",
+    "role": "Undergraduate Student",
+    "joined": 8,
+    "contact": null,
+    "linkedin": null,
+    "description": "Hi, I’m Lauren! I am a second-year at Georgia Tech studying Computer Science, with a focus on systems and architecture + information. In Summer 2024, I worked with my team to test, build out, and deploy one-player games on the consumer side. I’m excited to continue developing my skills as a software engineer who creates technology for innovation, social good, and fun!"
+  },
+  {
+    "id": "oscar",
+    "name": "Oscar Fang",
+    "role": "Undergraduate Student",
+    "joined": 2,
+    "contact": null,
+    "linkedin": null,
+    "description": "Hi! I’m a third-year student at Boston University majoring in Computer Science. With a focus on algorithm design, machine learning, and data security, I’m dedicated to solving complex problems through research and innovation!"
+  },
+  {
+    "id": "quang",
+    "name": "Quang Nguyen",
+    "role": "Undergraduate Student",
+    "joined": null,
+    "contact": "quangbu@bu.edu",
+    "linkedin": null,
+    "description": "Quang Nguyen is a senior majoring in Mathematics and Computer Science at Boston University, graduating in January 2025. As an active researcher at the Platform Governance Research Lab, Quang serves as a Team Lead, Backend Engineer, and Data Analyst. He contributes to developing and deploying an online digital marketplace where human producers strategize to maximize earnings against bot consumers, conducting experiments with real-world users, and performing subsequent scientific data analysis.\n\n### Research Interests\nQuang is interested in both the theoretical and applied aspects of computer science, with an active focus on the theory and application of graph-theoretic and probabilistic models, as well as large language models."
+  },
+  {
+    "id": "seamus",
+    "name": "Seamus Dallman",
+    "role": "Undergraduate Student",
+    "joined": 3,
+    "contact": null,
+    "linkedin": null,
+    "description": "Séamus is a Computer Science student at Boston University, expected class of 2026, with a Minor in Philosophy. He has experience in software development, where he is working towards creating an interactive simulation to study misinformation as a Research Project Developer here at the Platform Governance Research Lab. Additional responsibilities include maintaining this website. Séamus has also interned at BU’s IS&T Research Computing Services, where he helped validate and ensure the integrity of research software.\n\nIn addition to his academic pursuits, Séamus is a dedicated athlete, competing for Boston University’s Men’s Rowing team.\n\nOutside of academics and sports, Séamus has a background in music, having performed as a violinist with the Phillips Academy Amadeus Chamber Orchestra and the New England Conservatory Preparatory School. He enjoys travel, outdoor activities, and cycling."
+  },
+  {
+    "id": "suneh",
+    "name": "Suneh Bhatia",
+    "role": "Undergraduate Student",
+    "joined": 2024,
+    "contact": "sunehbhatia@gmail.com",
+    "linkedin": null,
+    "description": "Suneh is a senior at Boston University, majoring in Computer Science.\n\n### Research Interests\nSuneh has an avid interest in using software development to enhance in-game experiences."
+  },
+  {
+    "id": "tony",
+    "name": "Tony Ponomarev",
+    "role": "Undergraduate Student",
+    "joined": 8,
+    "contact": null,
+    "linkedin": null,
+    "description": "I'm Tony Ponomarev, and I’m a rising senior at Boston University studying Computer Science and Math! I’ve spent a lot of my time developing the backend code for a version of the game that involves multiple humans playing against one another. I spend a lot of my free time hanging out with friends, playing basketball, and swimming competitively."
+  },
+  {
+    "id": "vedant",
+    "name": "Vedant Kejariwal",
+    "role": "Undergraduate Student",
+    "joined": 15,
+    "contact": null,
+    "linkedin": "vedantkejariwal",
+    "description": "Vedant is a sophomore at Boston University, majoring in Computer Science with a strong focus on research and advancing his technical skills in the field.\n\nIn addition to his academic pursuits, Vedant serves as an Executive Board member and Varsity Debater at the Boston University Debating Society. He leads strategic initiatives to enhance member engagement and drive recruitment efforts. Vedant has also designed and developed a variety of mobile and web applications. You can find his work on [GitHub](https://github.com/VedantKejariwal/)."
+  }
+]

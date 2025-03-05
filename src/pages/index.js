@@ -4,14 +4,13 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
-import background from '../assets/background.webp';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
       <div>
           <div className="image-container">
-              <img src={background} alt="background" />
+              <img src={require('@site/static/img/background.webp').default} alt="background" />
           </div>
           <header className={clsx('hero hero--primary', styles.heroBanner)}>
               <div className="container">

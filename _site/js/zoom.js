@@ -144,7 +144,7 @@
 
   Zoom.prototype._zoomOriginal = function () {
     this._targetImageWrap           = document.createElement('div')
-    this._targetImageWrap.className = 'zoom-img-wrap'
+    this._targetImageWrap.className = 'zoom-headshot-wrap'
 
     this._targetImage.parentNode.insertBefore(this._targetImageWrap, this._targetImage)
     this._targetImageWrap.appendChild(this._targetImage)
