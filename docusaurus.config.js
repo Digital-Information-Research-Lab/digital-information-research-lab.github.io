@@ -6,7 +6,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Digital Information Research Docs', // Title of the site
   tagline: 'Empirica Marketplace Simulation Documentation', // Short description
-  favicon: 'headshot/favicon.png', // Path to the site icon
+  favicon: 'img/favicon.png', // Path to the site icon
 
   url: 'https://truthmarket.com/',
   baseUrl: '/',
@@ -50,7 +50,7 @@ const config = {
 
   // Theme Configuration
   themeConfig: ({
-    image: 'headshot/favicon.png', // Social media card image
+    image: 'img/favicon.png', // Social media card image
     navbar: {
       title: 'Platform Governance Research Lab',
       style: 'primary',
