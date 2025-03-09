@@ -147,3 +147,22 @@ For each person, a dedicated profile page is generated dynamically.
 - **Site Metadata**:  
   Managed in `docusaurus.config.js`.
 ---
+
+
+
+# Adding a New Page to the Website
+
+## 1. Add the Page to the Navbar
+- Open `docusaurus.config.js`.
+- Locate `themeConfig > navbar > items` and add:
+
+  ```javascript
+  {
+    to: '/newPage', 
+    position: 'right',
+    label: 'NewPage'
+  },
+ 
+### 2. Create the Page
+- Navigate to `src/pages/` and create `newPage.md` or `newPage.js`
+- Add content to the page
