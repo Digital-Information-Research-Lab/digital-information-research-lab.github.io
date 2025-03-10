@@ -117,14 +117,6 @@ The main **People** page (`src/pages/people.js`) is responsible for:
 - Rendering the **ProfileCard** components inside categories.
 - Implementing a **popup modal** to show additional details when a profile is clicked.
 
-### **5. Individual Profile Pages**
-For each person, a dedicated profile page is generated dynamically.
-
-- **`src/templates/PersonPage.js`**  
-  - Fetches the person’s information from `people.json` based on their `id`.
-  - Displays details such as **name, role, bio, contact, and profile picture**.
-  - If the profile does not exist, it displays a "Person Not Found" message.
-
 ---
 
 ### **Summary of File Structure**
@@ -138,7 +130,6 @@ For each person, a dedicated profile page is generated dynamically.
 | `src/data/people/grad.json` | Data file containing Graduate Students. |
 | `src/data/people/undergrad.json` | Data file containing Undergraduate Students. |
 | `src/pages/people.js` | Displays all people, categorizes them, and implements a modal popup. |
-| `src/templates/PersonPage.js` | Generates dynamic profile pages for each individual. |
 
 ##  Configurations and Styling
 
@@ -166,3 +157,21 @@ For each person, a dedicated profile page is generated dynamically.
 ### 2. Create the Page
 - Navigate to `src/pages/` and create `newPage.md` or `newPage.js`
 - Add content to the page
+
+---
+
+# Image Storage and Access
+
+All images and static assets are stored in the `static/` folder, which serves as the root (`/`) in the generated website.
+
+## Storage Locations
+- General images: `static/img/`
+- Headshots: `static/headshot/`
+
+## Accessing Images
+```javascript
+const myImage = require('@site/static/img/example.png');
+
+function ImageComponent() {
+  return <img src={myImage} alt="Example" />;
+}
