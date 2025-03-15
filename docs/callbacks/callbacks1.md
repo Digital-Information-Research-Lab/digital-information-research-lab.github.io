@@ -20,9 +20,7 @@ It utilizes Empirica's **`ClassicListenersCollector`** to manage game lifecycle 
 
 ---
 
-## <span class="h2style">Variables</span>
-
-### <span class="custom-heading">Explanation</span>
+## <span class="h2style">Explanation</span>
 
 1. **Imported Constants and Modules**:
    - The game **imports multiple constants** from `constants.js`, which store **predefined values** such as:
