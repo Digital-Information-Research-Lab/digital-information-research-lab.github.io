@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 ---
+import H2HFlowchart from '@theme/H2HFlowchart';
+import H2HArchitectureFlow from '@theme/H2HArchitectureFlow';
+
 # Introduction
 
 Welcome to the documentation for **MVA h2h marketplace**!
@@ -8,6 +11,23 @@ Welcome to the documentation for **MVA h2h marketplace**!
 This documentation will guide you through the **features, setup, and usage** of the project. Below, you will find a structured list of all the sections included in this documentation for the project.
 
 ---
+
+# H2H Market System Flowchart
+
+Below is an interactive flowchart explaining the architecture of the H2H Market system:
+
+<H2HArchitectureFlow />
+
+---
+
+# H2H Market Architecture Flowchart
+
+Below is an interactive flowchart explaining the architecture of the H2H Market system:
+
+<H2HFlowchart />
+
+---
+
 
 ## **About This Documentation**
 The **H2H Market Documentation** website is a guide for understanding how the **Empirica Marketplace Simulation** works.
