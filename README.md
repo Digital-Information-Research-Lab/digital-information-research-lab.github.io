@@ -24,6 +24,14 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+### Test Production Site Locally
+
+```
+$ yarn build npx serve build
+```
+
+This tests your site in production (can test issues that may come up in production but not locally)
+
 ### Deployment
 
 Using SSH:

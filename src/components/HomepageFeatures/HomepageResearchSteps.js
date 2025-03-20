@@ -36,8 +36,9 @@ const stepsData = [
       function handleScroll() {
         if (!containerRef.current) return;
   
-        const containerHeight = containerRef.current.offsetHeight;
-        const containerTop = containerRef.current.offsetTop;
+        const rect = containerRef.current.getBoundingClientRect();
+        const containerTop = rect.top + window.scrollY;
+        const containerHeight = rect.height;
         const scrollY = window.scrollY;
   
         const scrollFraction =
@@ -45,10 +46,19 @@ const stepsData = [
         const clampedScroll = Math.max(0, Math.min(1, scrollFraction));
   
         const totalSteps = stepsData.length;
-        const stepSize = 1 / (totalSteps * 0.75); 
+        const stepSize = 1 / (totalSteps); 
         const newIndex = Math.floor(clampedScroll / stepSize);
   
         setActiveIndex(Math.min(totalSteps - 1, Math.max(0, newIndex)));
+        console.log({
+          rect,
+          containerTop,
+          containerHeight,
+          scrollY,
+          scrollFraction,
+          newIndex
+        });
+        
       }
   
       window.addEventListener('scroll', handleScroll);
@@ -79,11 +89,13 @@ const stepsData = [
                 <div className={styles.innerWrapper}>
                 {stepsData.map((step, idx) => (
                   <div
-                    key={idx}
-                    className={`${styles.stepContent} ${
-                      idx === activeIndex ? styles.activeStep : ''
-                    } ${styles[`step${idx}`]}`}
-                  >
+                  key={idx}
+                  className={`${styles.stepContent} ${
+                    idx === activeIndex ? styles.activeStep : ''
+                  } ${styles[`step${idx}`]}`}
+                  data-active={idx === activeIndex}
+                >
+                
                     <div className={styles.stepWrapper}>
                       <div className={styles.stepText}>
                         <div className={styles.stepTitleBox}>
