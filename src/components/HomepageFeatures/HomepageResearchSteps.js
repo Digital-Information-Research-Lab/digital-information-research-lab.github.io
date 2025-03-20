@@ -77,23 +77,32 @@ const stepsData = [
                   ))}
                 </div>
                 <div className={styles.innerWrapper}>
-                  {stepsData.map((step, idx) => (
-                    <div
-                      key={idx}
-                      className={`${styles.stepContent} ${
-                        idx === activeIndex ? styles.activeStep : ''
-                      }`}
-                    >
-                      <h2>{step.title}</h2>
-                      <p>{step.description}</p>
-                      <img
-                        src={step.imgSrc}
-                        alt={step.title}
-                        style={{ maxWidth: '400px', borderRadius: '8px' }}
-                      />
+                {stepsData.map((step, idx) => (
+                  <div
+                    key={idx}
+                    className={`${styles.stepContent} ${
+                      idx === activeIndex ? styles.activeStep : ''
+                    } ${styles[`step${idx}`]}`}
+                  >
+                    <div className={styles.stepWrapper}>
+                      <div className={styles.stepText}>
+                        <div className={styles.stepTitleBox}>
+                          <h2>{step.title}</h2>
+                        </div>
+                        <p>{step.description}</p>
+                                {/* Image */}
+                      <div className={styles.imageContainer}>
+                        <img
+                          src={step.imgSrc}
+                          alt={step.title}
+                          className={styles.stepImage}
+                        />
+                      </div>
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
               </div>
             </div>
           </div>
