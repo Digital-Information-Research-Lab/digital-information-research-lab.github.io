@@ -27,7 +27,7 @@ This command generates static content into the `build` directory and can be serv
 ### Test Production Site Locally
 
 ```
-$ yarn build npx serve build
+$ yarn build && npx serve build
 ```
 
 This tests your site in production (can test issues that may come up in production but not locally)

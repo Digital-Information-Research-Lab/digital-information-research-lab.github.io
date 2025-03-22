@@ -3,8 +3,8 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
   width: 100%;
+  padding: 2rem 0;
 }
 
 .featureSvg {
@@ -31,36 +31,3 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.supportedBySection {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.supportedBySection h3 {
-  padding: 2rem;
-  text-align: center;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-}
-
-.logosContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
-}
-
-.supportedLogo {
-  max-height: 90px;
-  width: auto;
-}
-
-@media (max-width: 768px) {
-  .logosContainer {
-    flex-direction: column;
-  }
-}

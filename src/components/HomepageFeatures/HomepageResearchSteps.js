@@ -50,15 +50,6 @@ const stepsData = [
         const newIndex = Math.floor(clampedScroll / stepSize);
   
         setActiveIndex(Math.min(totalSteps - 1, Math.max(0, newIndex)));
-        console.log({
-          rect,
-          containerTop,
-          containerHeight,
-          scrollY,
-          scrollFraction,
-          newIndex
-        });
-        
       }
   
       window.addEventListener('scroll', handleScroll);
@@ -67,11 +58,11 @@ const stepsData = [
   
     return (
         <>
-          <div className={styles.sectionHeading}>
+        <div ref={containerRef} className={styles.container}>
+          <div className={styles.sectionHeading} data-aos="zoom-in">
             <h2>Replicable Behavioral Economics Research</h2>
             <h3>Our Research Process in Four Steps</h3>
           </div>
-          <div ref={containerRef} className={styles.container}>
             <div className={styles.scrollWrapper}>
               <div className={styles.stickyPanel}>
                 <div className={styles.timeline}>
@@ -118,6 +109,13 @@ const stepsData = [
               </div>
             </div>
           </div>
+          <section className={styles.supportedBySection} data-aos="zoom-in">
+                  <h3>Supported By</h3>
+                  <div className={styles.logosContainer}>
+                    <img src="/img/InstituteMark_DBI_RGB.png" alt="Logo" className={styles.supportedLogo} />
+                    <img src="/img/NSF_Logo.png" alt="Logo 2" className={styles.supportedLogo} />
+                  </div>
+                </section>
         </>
       );
     }      

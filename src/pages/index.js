@@ -10,25 +10,26 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
       <div>
-          <div className="image-container">
+          {/* <div className="image-container">
               <img src={require('@site/static/img/background.webp').default} alt="background" />
-          </div>
-          <header className={clsx('hero hero--primary', styles.heroBanner)}>
-              <div className="container">
-                  <div className="title">
-                      Curbing <div className="underline">misleading claims</div> through market solutions
-                  </div>
-                  <div className="description">
-                      Our research explores how platforms can <br />
-                      <div className="bold">balance</div> the rights of <div className="bold">speakers</div> and
-                      <div className="bold">&nbsp;listeners</div> <br /> while
-                      combating <div className="italic">dishonest assertions</div>.
-                  </div>
-              </div>
-              <div className="container">
-                  {/* Video Goes Here */}
-              </div>
-          </header>
+              <h1 className="overlayText">Platform Governance Research Lab</h1>
+          </div> */}
+          <header
+            className={clsx("hero", styles.heroBanner)}
+            style={{
+                backgroundImage: `url(${require("@site/static/img/background.webp").default})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
+            >
+            <div className="container">
+                <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
+                <p className={styles.heroSubtitle}>
+                Curbing <strong>misleading claims</strong> through market solutions
+                </p>
+            </div>
+            </header>
+
       </div>
   );
 }

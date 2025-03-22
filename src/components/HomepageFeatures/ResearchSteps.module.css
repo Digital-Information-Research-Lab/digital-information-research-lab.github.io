@@ -1,12 +1,17 @@
 .container {
   height: auto; 
   width: 100%;
-  margin: 0;
   max-width: none;
   position: relative;
-  background: #006AB5;
   border-radius: 12px;
   justify-content: center;
+  background: radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.08),
+      rgba(0,106,181, 0.8) 60%
+    ),
+    #006AB5;
+  border-radius: 0;
 }
 
 .scrollWrapper {
@@ -15,37 +20,48 @@
 }
 
 .sectionHeading {
+  background-color: #006AB5;
   text-align: center;
-  color:black ; 
-  font-size: 1.5rem;
+  color:white ; 
+  font-size: 5rem;
   position: relative; 
   z-index: 10; 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.sectionHeading h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sectionHeading h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .stepContent {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.95);
   opacity: 0;
-  transition: opacity 0.6s ease;
-  width: 60%; 
-  max-width: 500px; 
+  transition: opacity 0.8s ease, transform 0.8s ease; /* slower fade */
+  width: 60%;
+  max-width: 500px;
   text-align: center;
-  padding: 1rem;
-  z-index: 0;
   pointer-events: none;
+}
+
+.activeStep {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
 }
 
 .stepContent img {
   max-width: 250px; 
   border-radius: 8px;
-}
-
-.activeStep {
-  opacity: 1;
-  z-index: 10;
-  pointer-events: auto;
 }
 
 .stickyPanel {
@@ -102,6 +118,9 @@
     transform: scale(1.2);
     box-shadow: 0 0 10px rgba(255,255,255,0.5);
   }
+
+  
+  
   
 
   .stepWrapper {
@@ -148,6 +167,15 @@
   }
 
   .stepText {
+    background: transparent;
+    border-radius: 0;     
+    width: auto;          
+    height: auto;
+    padding: 2rem;       
+    text-align: center;
+  }
+
+  .stepText {
     border-radius: 50%;
     width: 500px;
     height: 500px;
@@ -159,7 +187,7 @@
     aspect-ratio: 1;
   }
   
-  /* Adjust for medium screens (tablets) */
+  
   @media (min-width: 768px) {
     .stepWrapper {
       justify-content: space-between;
@@ -168,7 +196,7 @@
     }
   
     .textContainer {
-      max-width: 700px; /* Make text wider */
+      max-width: 700px; 
       width: 700px;
     }
   
@@ -231,3 +259,38 @@
       height: 700px;
     }
   }
+
+  .supportedBySection {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .supportedBySection h3 {
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    /* text-shadow: 0 0 8px rgba(255, 130, 57, 0.8); */
+  }
+  
+  .logosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  
+  .supportedLogo {
+    max-height: 90px;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .logosContainer {
+      flex-direction: column;
+    }
+  }
+  

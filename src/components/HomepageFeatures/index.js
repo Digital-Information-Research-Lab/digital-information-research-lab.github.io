@@ -1,6 +1,10 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import React, { useEffect } from 'react';
+
 
 const FeatureList = [
   {
@@ -48,9 +52,15 @@ function Feature({imgSrc, title, description}) {
 }
 
 export default function HomepageFeatures() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, 
+      once: true,    
+    });
+  }, []);
   return (
     <div>
-      <section className={styles.features}>
+      <section className={styles.features} data-aos="zoom-in">
         <div className="container">
           <div className="row">
             {FeatureList.map((props, idx) => (
@@ -59,15 +69,6 @@ export default function HomepageFeatures() {
           </div>
         </div>
       </section>
-      <section className={styles.supportedBySection} data-aos="zoom-in">
-        <h3>Supported By</h3>
-        <div className={styles.logosContainer}>
-          <img src="/img/InstituteMark_DBI_RGB.png" alt="Logo" className={styles.supportedLogo} />
-          <img src="/img/NSF_Logo.png" alt="Logo 2" className={styles.supportedLogo} />
-        </div>
-      </section>
-
-      
     </div>
   );
 }
