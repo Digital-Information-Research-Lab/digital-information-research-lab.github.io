@@ -123,12 +123,17 @@ export default function HomepageResearchSteps() {
                 <div className={styles.logosContainer}>
                   <img src="/img/InstituteMark_DBI_RGB.png" alt="Logo" className={styles.supportedLogo} />
                   <img src="/img/NSF_Logo.png" alt="Logo 2" className={styles.supportedLogo} />
-              <img 
-            src="/img/empirica_logo.png"
-            alt="Logo 3"
-            className={styles.supportedLogo}
-          />
                 </div>
+              </section>
+              <section className={styles.supportedBySection} data-aos="zoom-in">
+                <h3>Technology Partners</h3>
+                <div className={styles.logosContainer}>
+              <img 
+                src="/img/empirica_logo.png"
+                alt="Logo 3"
+                className={styles.supportedLogo}
+                />
+              </div>
               </section>
       </>
     );
