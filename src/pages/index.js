@@ -25,7 +25,7 @@ function HomepageHeader() {
             <div className="container">
                 <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
                 <p className={styles.heroSubtitle}>
-                Curbing <strong>misleading claims</strong> through market solutions
+                The Platform Governance Research Lab focuses on decentralized governance of marketplaces to curb misleading claims and digital harm.
                 </p>
             </div>
             </header>
