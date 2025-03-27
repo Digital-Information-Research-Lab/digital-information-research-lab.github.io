@@ -39,10 +39,8 @@
   background: linear-gradient(135deg, #5E84AF, #3F6B8A);
 }
 
-
-
 .scrollWrapper {
-  height: 450vh; 
+  height: 450vh;
   position: relative;
 }
 
@@ -240,8 +238,8 @@
       max-width: 400px;
       min-height: 400px;
     }
-  }
-  
+}
+
   @media (min-width: 1200px) {
     .stepWrapper {
       justify-content: flex-start;
@@ -364,20 +362,41 @@
 .arrowLeft,
 .arrowRight {
   font-size: 2.5rem;
-  color: white;
   cursor: pointer;
   padding: 1rem;
   user-select: none;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .arrowLeft {
   margin-right: 1rem;
+  margin-left: 2rem;
 }
 
 .arrowRight {
   margin-left: 1rem;
+  margin-right: 2rem;
 }
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.arrowLeft:disabled,
+.arrowRight:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 
 .stepText {
   background: #B5D0EC;

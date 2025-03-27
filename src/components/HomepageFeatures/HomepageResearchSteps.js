@@ -58,14 +58,16 @@ export default function HomepageResearchSteps() {
 
         {/* Arrows & Horizontal Slider */}
         <div className={styles.horizontalContainer}>
-          <button
-            className={styles.arrowLeft}
-            onClick={handlePrev}
-            disabled={activeIndex === 0}
-            aria-label="Previous step"
-          >
-            &#8592;
-          </button>
+        <button
+          className={styles.arrowLeft}
+          onClick={handlePrev}
+          disabled={activeIndex === 0}
+          aria-label="Previous step"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
 
           <div className={styles.sliderWrapper}>
             <div
@@ -100,7 +102,9 @@ export default function HomepageResearchSteps() {
             disabled={activeIndex === stepsData.length - 1}
             aria-label="Next step"
           >
-            &#8594;
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 6L15 12L9 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
         </div>
       </div>
