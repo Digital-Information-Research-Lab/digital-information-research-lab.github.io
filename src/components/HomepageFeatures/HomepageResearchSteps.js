@@ -1,8 +1,7 @@
-import React, { useEffect,useRef,useState } from 'react';
+import React, { useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import clsx from 'clsx';
-import styles from './ResearchSteps.module.css'; 
+import styles from './ResearchSteps.module.css';
 
 const stepsData = [
   {
@@ -27,38 +26,21 @@ const stepsData = [
   },
 ];
 
-
 export default function HomepageResearchSteps() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const containerRef = useRef(null);
 
-  useEffect(() => {
-    function handleScroll() {
-      if (!containerRef.current) return;
+  const handlePrev = () => {
+    setActiveIndex((prev) => Math.max(prev - 1, 0));
+  };
 
-      const rect = containerRef.current.getBoundingClientRect();
-      const containerTop = rect.top + window.scrollY;
-      const containerHeight = rect.height;
-      const scrollY = window.scrollY;
-
-      const scrollFraction =
-        (scrollY - containerTop) / (containerHeight - window.innerHeight);
-      const clampedScroll = Math.max(0, Math.min(1, scrollFraction));
-
-      const totalSteps = stepsData.length;
-      const stepSize = 1 / (totalSteps); 
-      const newIndex = Math.floor(clampedScroll / stepSize);
-
-      setActiveIndex(Math.min(totalSteps - 1, Math.max(0, newIndex)));
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleNext = () => {
+    setActiveIndex((prev) => Math.min(prev + 1, stepsData.length - 1));
+  };
 
   return (
-      <>
-      <div ref={containerRef} className={[
+    <>
+      <div
+        className={[
           styles.container,
           activeIndex === 0 && styles.step0Active,
           activeIndex === 1 && styles.step1Active,
@@ -68,76 +50,93 @@ export default function HomepageResearchSteps() {
           .filter(Boolean)
           .join(' ')}
       >
-         <div className={styles.sectionHeading} data-aos="zoom-in">
-           <h2>Replicable Behavioral Economics Research</h2>
-           <h3>Our Research Process in Four Steps</h3>
-         </div>
-           <div className={styles.scrollWrapper}>
-            <div className={styles.stickyPanel}>
-              {/* <div className={styles.timeline}>
-                 {stepsData.map((_, idx) => (
-                  <div
-                    key={idx}
-                    className={`${styles.dot} ${
-                      idx === activeIndex ? styles.activeDot : ''
-                    }`}
-                  >
-                    {idx + 1 }
-                  </div>
-                ))}
-              </div> */}
-              <div className={styles.innerWrapper}>
+        {/* Section Heading */}
+        <div className={styles.sectionHeading} data-aos="zoom-in">
+          <h2>Replicable Behavioral Economics Research</h2>
+          <h3>Our Research Process in Four Steps</h3>
+        </div>
+
+        {/* Arrows & Horizontal Slider */}
+        <div className={styles.horizontalContainer}>
+          <button
+            className={styles.arrowLeft}
+            onClick={handlePrev}
+            disabled={activeIndex === 0}
+            aria-label="Previous step"
+          >
+            &#8592;
+          </button>
+
+          <div className={styles.sliderWrapper}>
+            <div
+              className={styles.sliderTrack}
+              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            >
               {stepsData.map((step, idx) => (
-                <div
-                key={idx}
-                className={`${styles.stepContent} ${
-                  idx === activeIndex ? styles.activeStep : ''
-                } ${styles[`step${idx}`]}`}
-                data-active={idx === activeIndex}
-              >
-              
+                <div className={styles.stepSlide} key={idx}>
                   <div className={styles.stepWrapper}>
                     <div className={styles.stepText}>
                       <div className={styles.stepTitleBox}>
                         <h2>{step.title}</h2>
                       </div>
                       <p>{step.description}</p>
-                              {/* Image */}
-                    <div className={styles.imageContainer}>
-                      <img
-                        src={step.imgSrc}
-                        alt={step.title}
-                        className={styles.stepImage}
-                      />
+                      <div className={styles.imageContainer}>
+                        <img
+                          src={step.imgSrc}
+                          alt={step.title}
+                          className={styles.stepImage}
+                        />
+                      </div>
                     </div>
-                     </div>
-                   </div>
-                 </div>
+                  </div>
+                </div>
               ))}
             </div>
-            </div>
           </div>
+
+          <button
+            className={styles.arrowRight}
+            onClick={handleNext}
+            disabled={activeIndex === stepsData.length - 1}
+            aria-label="Next step"
+          >
+            &#8594;
+          </button>
         </div>
-        <section className={styles.supportedBySection} data-aos="zoom-in">
-                <h3>Supported By</h3>
-                <div className={styles.logosContainer}>
-                  <img src="/img/InstituteMark_DBI_RGB.png" alt="Logo" className={styles.supportedLogo} />
-                  <img src="/img/NSF_Logo.png" alt="Logo 2" className={styles.supportedLogo} />
-                </div>
-              </section>
-              <section className={styles.supportedBySection} data-aos="zoom-in">
-                <h3>Technology Partners</h3>
-                <div className={styles.logosContainer}>
-              <img 
-                src="/img/empirica_logo.png"
-                alt="Logo 3"
-                className={styles.supportedLogo}
-                />
-              </div>
-              </section>
-      </>
-    );
-  }      
+      </div>
+
+      {/* Supported By Section */}
+      <section className={styles.supportedBySection} data-aos="zoom-in">
+        <h3>Supported By</h3>
+        <div className={styles.logosContainer}>
+          <img
+            src="/img/InstituteMark_DBI_RGB.png"
+            alt="Logo"
+            className={styles.supportedLogo}
+          />
+          <img
+            src="/img/NSF_Logo.png"
+            alt="Logo 2"
+            className={styles.supportedLogo}
+          />
+        </div>
+      </section>
+
+      {/* Technology Partners Section */}
+      <section className={styles.supportedBySection} data-aos="zoom-in">
+        <h3>Technology Partners</h3>
+        <div className={styles.logosContainer}>
+          <img
+            src="/img/empirica_logo.png"
+            alt="Logo 3"
+            className={styles.supportedLogo}
+          />
+        </div>
+      </section>
+    </>
+  );
+}
+
 
 
 // ALTERNATE RESEARCH STEPS- THE HEADING TEXT IS BROKEN RIGHT NOW IN THIS
