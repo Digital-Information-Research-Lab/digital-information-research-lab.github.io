@@ -39,7 +39,7 @@ Using SSH:
 ```
 $ USE_SSH=true yarn deploy
 ```
-
+Warning: This will erase the domain name https://truthmarket.com temporarily, and you'll have to go to Github Settings/Pages and re-enter the domain name there
 Not using SSH:
 
 ```
