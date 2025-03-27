@@ -74,7 +74,7 @@ export default function HomepageResearchSteps() {
          </div>
            <div className={styles.scrollWrapper}>
             <div className={styles.stickyPanel}>
-              <div className={styles.timeline}>
+              {/* <div className={styles.timeline}>
                  {stepsData.map((_, idx) => (
                   <div
                     key={idx}
@@ -85,7 +85,7 @@ export default function HomepageResearchSteps() {
                     {idx + 1 }
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className={styles.innerWrapper}>
               {stepsData.map((step, idx) => (
                 <div

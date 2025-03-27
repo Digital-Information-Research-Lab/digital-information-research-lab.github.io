@@ -128,7 +128,6 @@
   .dot {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
     background: #bbb; 
     display: flex;
     align-items: center;
@@ -145,11 +144,6 @@
     transform: scale(1.2);
     box-shadow: 0 0 10px rgba(255,255,255,0.5);
   }
-
-  
-  
-  
-  
 
   .stepWrapper {
     display: flex;
@@ -196,26 +190,19 @@
 
   .stepText {
     background: transparent;
-    border-radius: 0;     
-    width: auto;          
-    height: auto;
-    padding: 2rem;       
+    border-radius: 5%;
+    width: 50vw; /* Start with 90% of viewport width for mobile */
+    max-width: 400px;
+    min-height: 300px; /* Minimum height to ensure content fits */
+    padding: clamp(1rem, 4vw, 4rem);
     text-align: center;
-  }
-
-  .stepText {
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
-    padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1;
   }
   
-  
+  /*bigger screens*/
   @media (min-width: 768px) {
     .stepWrapper {
       justify-content: space-between;
@@ -247,8 +234,9 @@
     }
 
     .stepText {
-      width: 600px;
-      height: 600px;
+      width: 50vw;
+      max-width: 400px;
+      min-height: 400px;
     }
   }
   
@@ -280,11 +268,6 @@
     }
     .step3 .stepText {
       background: #5E84AF;
-    }
-
-    .stepText {
-      width: 700px;
-      height: 700px;
     }
   }
 
@@ -347,4 +330,3 @@
   }
 }
 
-  
