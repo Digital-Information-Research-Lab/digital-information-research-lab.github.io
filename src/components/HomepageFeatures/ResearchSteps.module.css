@@ -23,22 +23,6 @@
   /* etc. */
 }
 
-.step0Active {
-  background: linear-gradient(135deg, #B5D0EC, #94B5D8);
-}
-
-.step1Active {
-  background: linear-gradient(135deg, #94B5D8, #7A9CC3);
-}
-
-.step2Active {
-  background: linear-gradient(135deg, #7A9CC3, #5E84AF);
-}
-
-.step3Active {
-  background: linear-gradient(135deg, #5E84AF, #3F6B8A);
-}
-
 .scrollWrapper {
   height: 450vh;
   position: relative;
@@ -52,9 +36,9 @@
   position: relative; 
   z-index: 10; 
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-  padding-bottom: 1rem;
   padding-top: 1rem;
 }
+
 .sectionHeading h2 {
   font-size: clamp(2.5rem, 4vw, 3rem);
   font-weight: 700;
@@ -62,6 +46,7 @@
 }
 
 .sectionHeading h3 {
+  background-color: #006AB5;
   font-size: clamp(1.5rem, 2.5vw, 2.25rem);
   font-weight: 700;
   color: white;
@@ -165,7 +150,7 @@
   /* Ensure image scales independently */
   .imageContainer {
     width: 100%;
-    max-width: 400px;
+    max-width: 200px;
   }
   
   /* Image styling */
@@ -192,7 +177,7 @@
     background: transparent;
     border-radius: 5%;
     width: 50vw; /* Start with 90% of viewport width for mobile */
-    max-width: 400px;
+    max-width: 300px;
     min-height: 300px; /* Minimum height to ensure content fits */
     padding: clamp(1rem, 4vw, 4rem);
     text-align: center;
@@ -217,26 +202,12 @@
   
     .imageContainer {
       flex-shrink: 0;
-      width: 500px;
-    }
-
-    .step0 .stepText {
-      background: #B5D0EC;
-    }
-    .step1 .stepText {
-      background: #94B5D8;
-    }
-    .step2 .stepText {
-      background: #7A9CC3;
-    }
-    .step3 .stepText {
-      background: #5E84AF;
+      width: 200px;
     }
 
     .stepText {
       width: 50vw;
-      max-width: 400px;
-      min-height: 400px;
+      max-width: 500px;
     }
 }
 
@@ -253,8 +224,8 @@
     }
   
     .imageContainer {
-      width: 600px;
-      max-width: 700px;
+      width: 200px;
+      max-width: 200px;
     }
 
     .step0 .stepText {
@@ -337,8 +308,9 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
-  padding: 2rem 0;
   background: #006AB5;
+  min-height: 400px;
+  max-height: 400px;
 }
 
 .sliderWrapper {

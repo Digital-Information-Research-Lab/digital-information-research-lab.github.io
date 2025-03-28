@@ -51,8 +51,7 @@ export default function HomepageResearchSteps() {
           .join(' ')}
       >
         {/* Section Heading */}
-        <div className={styles.sectionHeading} data-aos="zoom-in">
-          <h2>Replicable Behavioral Economics Research</h2>
+        <div className={styles.sectionHeading} >
           <h3>Our Research Process in Four Steps</h3>
         </div>
 
@@ -76,20 +75,26 @@ export default function HomepageResearchSteps() {
             >
               {stepsData.map((step, idx) => (
                 <div className={styles.stepSlide} key={idx}>
+                  
                   <div className={styles.stepWrapper}>
                     <div className={styles.stepText}>
-                      <div className={styles.stepTitleBox}>
-                        <h2>{step.title}</h2>
-                      </div>
-                      <p>{step.description}</p>
+                      
                       <div className={styles.imageContainer}>
-                        <img
-                          src={step.imgSrc}
-                          alt={step.title}
-                          className={styles.stepImage}
-                        />
+                          <img
+                            src={step.imgSrc}
+                            alt={step.title}
+                            className={styles.stepImage}
+                          />
                       </div>
+
+                    <div className={styles.stepTitleBox}>
+                      <h2>{step.title}</h2>
                     </div>
+                      <p>{step.description}</p>
+
+                  </div>
+
+                  
                   </div>
                 </div>
               ))}
