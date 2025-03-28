@@ -4,12 +4,12 @@
  */
  .heroBanner {
   background-color: transparent; 
-  min-height: 200px;         
+  min-height: 300px;         
   display: flex;
   align-items: center;         
   justify-content: center;
   position: relative;          
-  margin-bottom: 2rem;          
+  margin-bottom: 0;          
 }
 
 .heroBanner::before {
@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    margin-bottom: 0;
   }
 }
 

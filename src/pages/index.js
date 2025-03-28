@@ -5,6 +5,8 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 import HomepageResearchSteps from '../components/HomepageFeatures/HomepageResearchSteps';
+// import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -43,6 +45,7 @@ export default function Home() {
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
+                {/* <HomepageVideo/> */}
                 <HomepageResearchSteps/>
             </main>
         </Layout>
