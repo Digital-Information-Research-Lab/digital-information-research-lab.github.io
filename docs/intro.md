@@ -32,7 +32,10 @@ Below is an interactive flowchart explaining the architecture of the H2H Market 
 Join our digital marketplace in interactive mode, either advertising products or buying high quality ones.  
 Advertisers can advertise product quality honestly or decide to mislead buyers through false ads to maximize their profits.  
 Buyers must purchase high quality products to maximize their score
-<img src="/img/login.gif" alt="LLM Consumer Log In" width="372" height="260"/>
+<div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+  <img src="/img/fullgif.gif" alt="LLM Consumer" width="374" height="256" />
+  <img src="/img/prodfullgif.gif" alt="LLM Producer" width="374" height="256" />
+</div>
 
 ---
 
