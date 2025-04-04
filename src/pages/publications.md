@@ -4,6 +4,10 @@ title: Publications
 
 # Research Papers
 
+- [Free Speech vs. Free Ride: Navigating the Supreme Court’s Social Media Paradox](https://truthmarket.com/papers/free_speech_vs_free_ride.pdf)  
+  **Authors:** Marshall W. Van Alstyne  
+  **Abstract:** This paper examines the contradictory legal status of social media platforms, which claim both publisher rights and common carrier protections, and proposes a solution grounded in user choice and filter accountability. By emphasizing listener rights and applying marketplace and pollution analogies, it offers a path toward clearer regulation without government censorship.
+
 - [Free Speech & the Fake News Problem](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261)  
   **Authors:** Marshall W. Van Alstyne  
   **Abstract:** This paper explores the intersection of free speech and the rise of fake news. We examine regulatory solutions and propose new frameworks for addressing this issue in online media.
