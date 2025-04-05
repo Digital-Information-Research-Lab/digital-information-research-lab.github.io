@@ -87,9 +87,7 @@ export default function HomepageResearchSteps() {
                           />
                       </div>
 
-                    <div className={styles.stepTitleBox}>
                       <h2>{step.title}</h2>
-                    </div>
                       <p>{step.description}</p>
 
                   </div>
