@@ -14,10 +14,6 @@ function HomepageHeader() {
               <img src={require('@site/static/img/background.webp').default} alt="background" />
               <h1 className="overlayText">Platform Governance Research Lab</h1>
           </div> */}
-          <link rel="preload" href="/font/public-sans-normal.woff2" as="font" type="font/woff2"
-                crossOrigin="anonymous"/>
-          <link rel="preload" href="/font/public-sans-italic.woff2" as="font" type="font/woff2"
-                crossOrigin="anonymous"/>
           <header
               className={clsx("hero", styles.heroBanner)}
               style={{
