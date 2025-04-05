@@ -14,21 +14,26 @@ function HomepageHeader() {
               <img src={require('@site/static/img/background.webp').default} alt="background" />
               <h1 className="overlayText">Platform Governance Research Lab</h1>
           </div> */}
+          <link rel="preload" href="/font/public-sans-normal.woff2" as="font" type="font/woff2"
+                crossOrigin="anonymous"/>
+          <link rel="preload" href="/font/public-sans-italic.woff2" as="font" type="font/woff2"
+                crossOrigin="anonymous"/>
           <header
-            className={clsx("hero", styles.heroBanner)}
-            style={{
-                backgroundImage: `url(${require("@site/static/img/background.webp").default})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-            >
-            <div className="container">
-                <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
-                <p className={styles.heroSubtitle}>
-                The Platform Governance Research Lab focuses on decentralized governance of marketplaces to curb misleading claims and digital harm.
-                </p>
-            </div>
-            </header>
+              className={clsx("hero", styles.heroBanner)}
+              style={{
+                  backgroundImage: `url(${require("@site/static/img/background.webp").default})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+              }}
+          >
+              <div className="container">
+                  <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
+                  <p className={styles.heroSubtitle}>
+                      The Platform Governance Research Lab focuses on decentralized governance of marketplaces to curb
+                      misleading claims and digital harm.
+                  </p>
+              </div>
+          </header>
 
       </div>
   );
