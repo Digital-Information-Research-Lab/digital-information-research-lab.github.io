@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 import H2HFlowchart from '@theme/H2HFlowchart';
 import H2HArchitectureFlow from '@theme/H2HArchitectureFlow';
+import AutoPlayVideo from '@site/src/components/AutoPlay';
 
 # Introduction
 
@@ -28,17 +29,14 @@ Below is an interactive flowchart explaining the architecture of the H2H Market 
 
 ---
 
-## **Observe: LLM Consumer Experience**
-Join our digital marketplace in interactive mode, either advertising products or buying high quality ones.  
-Advertisers can advertise product quality honestly or decide to mislead buyers through false ads to maximize their profits.  
-Buyers must purchase high quality products to maximize their score
+## **Multiplayer Online Marketplaces**
+We build two-sided marketplace games to test human behavior in online games versus other humans to model market dynamics in real time. Producers can advertise product quality honestly or decide to mislead buyers through false ads to maximize their profits. Consumers must purchase high quality products to maximize their score
 <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-  <img src="/img/fullgif.gif" alt="LLM Consumer" width="374" height="256" />
-  <img src="/img/prodfullgif.gif" alt="LLM Producer" width="374" height="256" />
+  <AutoPlayVideo src="/vid/prodvid.mp4" width="494" height="338" />
+  <AutoPlayVideo src="/vid/cvid.mp4" width="494" height="338" />
 </div>
 
 ---
-
 
 ## **About This Documentation**
 The **H2H Market Documentation** website is a guide for understanding how the **Empirica Marketplace Simulation** works.
