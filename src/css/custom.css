@@ -308,3 +308,30 @@ body.modal-open {
   padding-left: 2rem;
   /* Adjust these values as needed */
 }
+
+.learn-more-btn {
+  display: flex;
+  /* Use flex layout */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  padding: 5px;
+  /* Adjust padding as needed */
+  background-color: #0075c0;
+  /* Background color */
+  color: #ffffff;
+  /* Text color */
+  border: none;
+  /* No border */
+  border-radius: 4px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: bold;
+}
+
+
+.custom-learn-more-btn:hover {
+  background-color: #0063a3;
+}
