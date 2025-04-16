@@ -5,15 +5,12 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 import HomepageResearchSteps from '../components/HomepageFeatures/HomepageResearchSteps';
+import Link from '@docusaurus/Link';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
       <div>
-          {/* <div className="image-container">
-              <img src={require('@site/static/img/background.webp').default} alt="background" />
-              <h1 className="overlayText">Platform Governance Research Lab</h1>
-          </div> */}
           <header
               className={clsx("hero", styles.heroBanner)}
               style={{
@@ -27,7 +24,7 @@ function HomepageHeader() {
                   <p className={styles.heroSubtitle}>
                       The Platform Governance Research Lab focuses on decentralized governance of marketplaces to curb
                       misleading claims and digital harm.
-                  </p>
+                  </p>         
               </div>
           </header>
 
