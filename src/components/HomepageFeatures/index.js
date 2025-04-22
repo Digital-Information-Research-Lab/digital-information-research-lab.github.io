@@ -4,6 +4,37 @@ import styles from './styles.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import React, { useEffect } from 'react';
+import AboutProject from './AboutProject';
+import Link from '@docusaurus/Link';
+
+function IntroButton() {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
+      <Link to="/docs/intro"
+        style={{
+          backgroundColor: 'darkblue',
+          color: 'white',
+          textDecoration: 'none',
+          padding: '10px 20px',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          display: 'inline-block',
+        }}
+      >
+        Go to Documentation
+      </Link>
+    </div>
+  );
+}
+
+function Homepage() {
+
+  return (
+    <main>
+       <AboutProject />
+    </main>
+  );
+}
 
 
 const FeatureList = [
@@ -60,6 +91,8 @@ export default function HomepageFeatures() {
   }, []);
   return (
     <div>
+      <Homepage />
+      <IntroButton />
       <section className={styles.features} data-aos="zoom-in">
         <div className="container">
           <div className="row">
@@ -72,5 +105,3 @@ export default function HomepageFeatures() {
     </div>
   );
 }
-
-

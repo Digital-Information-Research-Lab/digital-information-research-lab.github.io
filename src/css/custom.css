@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(font.css);
 
 /**
  * Any CSS included here will be global. The classic template
@@ -37,43 +37,60 @@
   background-color: #00b3ff;
   color: white;
   border-radius: 20px;
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: bold;
   display: inline-block;
 }
 
 .custom-function-heading {
-  color: #4c87af; 
+  color: #4c87af;
   font-weight: bold;
   border-bottom: 2px solid #2b7fc8;
 }
 
 /* Style for # (H1) */
 .h1style {
-  color: #4c87af; /* Green color */
-  font-size: 2.5rem; /* Larger font size */
-  font-weight: bold; /* Bold text */
-  text-align: center; /* Center alignment */
-  border-bottom: 3px solid #2b7fc8; /* Bottom border */
-  padding-bottom: 10px; /* Padding below text */
-  margin-bottom: 20px; /* Spacing below the heading */
+  color: #4c87af;
+  /* Green color */
+  font-size: 2.5rem;
+  /* Larger font size */
+  font-weight: bold;
+  /* Bold text */
+  text-align: center;
+  /* Center alignment */
+  border-bottom: 3px solid #2b7fc8;
+  /* Bottom border */
+  padding-bottom: 10px;
+  /* Padding below text */
+  margin-bottom: 20px;
+  /* Spacing below the heading */
 }
 
 /* Style for ## (H2) */
 .h2style {
-  color: #4c87af; /* Blue color */
-  font-size: 2rem; /* Medium font size */
-  font-weight: 600; /* Slightly bold */ 
+  color: #4c87af;
+  /* Blue color */
+  font-size: 2rem;
+  /* Medium font size */
+  font-weight: 600;
+  /* Slightly bold */
 }
 
 .custom-code-block {
-  max-height: 400px; /* Adjust the height as needed */
-  overflow-y: auto; /* Adds vertical scrolling */
-  border: 1px solid #ddd; /* Optional: Add a border for clarity */
-  padding: 10px; /* Add padding inside the block */
-  background-color: #f9f9f9; /* Optional: Background color */
-  border-radius: 5px; /* Optional: Rounded corners */
-  font-family: monospace; /* Use a monospace font */
+  max-height: 400px;
+  /* Adjust the height as needed */
+  overflow-y: auto;
+  /* Adds vertical scrolling */
+  border: 1px solid #ddd;
+  /* Optional: Add a border for clarity */
+  padding: 10px;
+  /* Add padding inside the block */
+  background-color: #f9f9f9;
+  /* Optional: Background color */
+  border-radius: 5px;
+  /* Optional: Rounded corners */
+  font-family: monospace;
+  /* Use a monospace font */
 }
 
 .navbar {
@@ -92,7 +109,8 @@
 
 .navbar__inner {
   display: flex;
-  justify-content: space-between; /* Keeps items spaced properly */
+  justify-content: space-between;
+  /* Keeps items spaced properly */
   padding: 0 100px;
   max-width: 1200px;
   margin: 0 auto;
@@ -294,4 +312,36 @@ body.modal-open {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.container {
+  padding-left: 2rem;
+  /* Adjust these values as needed */
+}
+
+.learn-more-btn {
+  display: flex;
+  /* Use flex layout */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  padding: 5px;
+  /* Adjust padding as needed */
+  background-color: #0075c0;
+  /* Background color */
+  color: #ffffff;
+  /* Text color */
+  border: none;
+  /* No border */
+  border-radius: 4px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: bold;
+}
+
+
+.custom-learn-more-btn:hover {
+  background-color: #0063a3;
 }
