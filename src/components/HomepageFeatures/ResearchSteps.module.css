@@ -14,14 +14,22 @@
   border-radius: 0;
 } */
 .container {
+  /* Apple-like background */
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ), 
+    url('/img/background5.png') 
+    no-repeat center center fixed;
+  background-size: cover;
+  transition: background-position 0.8s ease;
   
-  background: #006AB5;
-  transition: background 0.8s ease;
-  /* The rest of your container’s styles: */
   position: relative;
   width: 100%;
-  /* etc. */
+  /* Keep the rest of your container’s existing properties */
 }
+
 
 .scrollWrapper {
   height: 450vh;
@@ -29,7 +37,7 @@
 }
 
 .sectionHeading {
-  background-color: #006AB5;
+  background-color: transparent;
   text-align: center;
   color:white ; 
   font-size: 2.5rem;
@@ -46,11 +54,26 @@
 }
 
 .sectionHeading h3 {
-  background-color: #006AB5;
+  background-color: transparent;
   font-size: clamp(1.5rem, 2.5vw, 2.25rem);
   font-weight: 700;
   color: white;
+
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out forwards 0.2s; 
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .stepContent {
   position: absolute;
@@ -58,7 +81,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(0.95);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease; /* slower fade */
+  transition: opacity 0.8s ease, transform 0.8s ease; 
   width: 60%;
   max-width: 500px;
   text-align: center;
@@ -140,20 +163,17 @@
     margin: auto;
   }
   
-  /* Ensure text scales independently */
   .textContainer {
-    max-width: 500px; /* Default width for small screens */
+    max-width: 500px; 
     width: 90%;
     text-align: center;
   }
   
-  /* Ensure image scales independently */
   .imageContainer {
     width: 100%;
     max-width: 200px;
   }
   
-  /* Image styling */
   .stepImage {
     width: 100%;
     height: auto;
@@ -174,20 +194,26 @@
   }
 
   .stepText {
-    background: transparent;
-    border-radius: 5%;
-    width: 50vw; /* Start with 90% of viewport width for mobile */
+    background: rgba(255, 255, 255, 0.28) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff; /* White text */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    width: 50vw; 
     max-width: 300px;
-    min-height: 300px; /* Minimum height to ensure content fits */
+    min-height: 300px;
     padding: clamp(1rem, 4vw, 4rem);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   }
   
-  /*bigger screens*/
   @media (min-width: 768px) {
     .stepWrapper {
       justify-content: space-between;
@@ -242,30 +268,46 @@
     }
   }
 
-  .supportedBySection {
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
+  /* .supportedBySection {
+    position: relative;
+    background: url("/img/background3.webp") no-repeat center center fixed;
+    background-size: cover;
+    padding: 2rem; /* Adjust padding as needed */
+    /* margin: 0;
+    z-index: 1;
+    color: black; /* Ensures text remains white */
+  /* } */
+   
+  /* .supportedBySection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Faded white overlay */
+    /* z-index: -1; Places overlay behind the content */
+  /* } */
+   
   
-  .supportedBySection h3 {
+  /* .supportedBySection h3 {
     text-align: center;
     font-family: 'Public Sans', sans-serif;
     font-size: 36px;
     font-weight: 700;
     /* text-shadow: 0 0 8px rgba(255, 130, 57, 0.8); */
-  }
+  /* } */ 
   
-  .logosContainer {
+  /* .logosContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 150px;
     flex-wrap: wrap;
     padding-bottom: 2rem;
-  }
+  } */
   
-  .supportedLogo {
+  /* .supportedLogo {
     max-height: 90px;
     width: auto;
   }
@@ -274,7 +316,58 @@
     .logosContainer {
       flex-direction: column;
     }
-  }
+  } */ 
+  /* Unified Partners Section */
+.partnersSection {
+  position: relative;
+  /* background: url("/img/background5.png") no-repeat center center fixed; */
+  background-size: cover;
+  padding: 2rem;
+  margin: 0;
+  z-index: 1;
+  color: black;
+}
+
+.partnersSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2); 
+  z-index: -1;
+}
+
+.supportedBy,
+.techPartners {
+  margin-bottom: 2rem;
+}
+
+.supportedBy h3,
+.techPartners h3 {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.logosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.supportedLogo {
+  max-height: 90px;
+  width: auto;
+}
+
+  
 
 
 .typewriterHeading {
@@ -308,7 +401,7 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
-  background: #006AB5;
+  background: transparent;
   min-height: 400px;
   max-height: 400px;
 }
@@ -373,7 +466,18 @@
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
+
+  /* NEW: "floating card" styling */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.stepText:hover {
+  /* NEW: Slight hover effect */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
 
 .stepImage {
   width: 100%;
@@ -381,3 +485,4 @@
   margin-top: 1rem;
   border-radius: 12px;
 }
+

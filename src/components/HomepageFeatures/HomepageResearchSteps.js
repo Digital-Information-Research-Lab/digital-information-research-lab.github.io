@@ -51,22 +51,28 @@ export default function HomepageResearchSteps() {
           .join(' ')}
       >
         {/* Section Heading */}
-        <div className={styles.sectionHeading} >
+        <div className={styles.sectionHeading}>
           <h3>Our Research Process in Four Steps</h3>
         </div>
 
         {/* Arrows & Horizontal Slider */}
         <div className={styles.horizontalContainer}>
-        <button
-          className={styles.arrowLeft}
-          onClick={handlePrev}
-          disabled={activeIndex === 0}
-          aria-label="Previous step"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
+          <button
+            className={styles.arrowLeft}
+            onClick={handlePrev}
+            disabled={activeIndex === 0}
+            aria-label="Previous step"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
 
           <div className={styles.sliderWrapper}>
             <div
@@ -75,26 +81,20 @@ export default function HomepageResearchSteps() {
             >
               {stepsData.map((step, idx) => (
                 <div className={styles.stepSlide} key={idx}>
-                  
                   <div className={styles.stepWrapper}>
                     <div className={styles.stepText}>
-                      
                       <div className={styles.imageContainer}>
-                          <img
-                            src={step.imgSrc}
-                            alt={step.title}
-                            className={styles.stepImage}
-                          />
+                        <img
+                          src={step.imgSrc}
+                          alt={step.title}
+                          className={styles.stepImage}
+                        />
                       </div>
-
-                    <div className={styles.stepTitleBox}>
-                      <h2>{step.title}</h2>
-                    </div>
+                      <div className={styles.stepTitleBox}>
+                        <h2>{step.title}</h2>
+                      </div>
                       <p>{step.description}</p>
-
-                  </div>
-
-                  
+                    </div>
                   </div>
                 </div>
               ))}
@@ -108,38 +108,44 @@ export default function HomepageResearchSteps() {
             aria-label="Next step"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M9 6L15 12L9 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path
+                d="M9 6L15 12L9 18"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </button>
         </div>
       </div>
 
-      {/* Supported By Section */}
-      <section className={styles.supportedBySection} data-aos="zoom-in">
-        <h3>Supported By</h3>
-        <div className={styles.logosContainer}>
-          <img
-            src="/img/InstituteMark_DBI_RGB.png"
-            alt="Logo"
-            className={styles.supportedLogo}
-          />
-          <img
-            src="/img/NSF_Logo.png"
-            alt="Logo 2"
-            className={styles.supportedLogo}
-          />
+      {/* Combined Supported By and Technology Partners Section */}
+      <section className={styles.partnersSection}>
+        <div className={styles.supportedBy}>
+          <h3>Supported By</h3>
+          <div className={styles.logosContainer}>
+            <img
+              src="/img/InstituteMark_DBI_RGB.png"
+              alt="Digital Business Institute"
+              className={styles.supportedLogo}
+            />
+            <img
+              src="/img/NSF_Logo.png"
+              alt="NSF Logo"
+              className={styles.supportedLogo}
+            />
+          </div>
         </div>
-      </section>
-
-      {/* Technology Partners Section */}
-      <section className={styles.supportedBySection} data-aos="zoom-in">
-        <h3>Technology Partners</h3>
-        <div className={styles.logosContainer}>
-          <img
-            src="/img/empirica_logo.png"
-            alt="Logo 3"
-            className={styles.supportedLogo}
-          />
+        <div className={styles.techPartners}>
+          <h3>Technology Partners</h3>
+          <div className={styles.logosContainer}>
+            <img
+              src="/img/empirica_logo.png"
+              alt="Empirica Logo"
+              className={styles.supportedLogo}
+            />
+          </div>
         </div>
       </section>
     </>

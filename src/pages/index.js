@@ -5,7 +5,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 import HomepageResearchSteps from '../components/HomepageFeatures/HomepageResearchSteps';
-// import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
+import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
 
 
 function HomepageHeader() {
@@ -19,7 +19,7 @@ function HomepageHeader() {
           <header
             className={clsx("hero", styles.heroBanner)}
             style={{
-                backgroundImage: `url(${require("@site/static/img/background.webp").default})`,
+                backgroundImage: `url(${require("@site/static/img/background8.png").default})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
@@ -27,8 +27,23 @@ function HomepageHeader() {
             <div className="container">
                 <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
                 <p className={styles.heroSubtitle}>
-                The Platform Governance Research Lab focuses on decentralized governance of marketplaces to curb misleading claims and digital harm.
+                We are a research group at Boston University, focusing on decentralized governance of marketplaces to curb misleading claims and digital harm.
                 </p>
+                <div className={styles.buttons}>
+                <a
+                className="button button--primary button--lg"
+                href="/docs/intro" // <- Change this to your target page route
+                >
+                Explore The Docs
+                </a>
+                <a
+                className="button button--secondary button--lg"
+                href="/people"
+                style={{ marginLeft: '1rem' }}
+                >
+                Meet the Team
+                </a>
+            </div>
             </div>
             </header>
 
@@ -45,7 +60,7 @@ export default function Home() {
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
-                {/* <HomepageVideo/> */}
+                <HomepageVideo/>
                 <HomepageResearchSteps/>
             </main>
         </Layout>
