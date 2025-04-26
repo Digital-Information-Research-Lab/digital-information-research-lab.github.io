@@ -2,9 +2,27 @@
 sidebar_position: 2
 ---
 
+import AutoPlayVideo from '@site/src/components/AutoPlay';
+import Link from '@docusaurus/Link';
+
 # LLM Gameplay
 
 Welcome to the gameplay workflow documentation page! Here you'll find a concise overview of our interactive digital marketplace game. This guide explains each step of the gameplay process—from. Whether you’re a new player or a developer, this page will help you understand the core mechanics and flow of the game.
+
+## **Multiplayer Online Marketplaces**
+We build two-sided marketplace games to test human behavior in online games versus other humans to model market dynamics in real time. Producers can advertise product quality honestly or decide to mislead buyers through false ads to maximize their profits. Consumers must purchase high quality products to maximize their score
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+  <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+    <div style={{ textAlign: 'center' }}>
+      <p><strong>Producer</strong></p>
+      <AutoPlayVideo src="/vid/pvidnew.mp4" width="450" height="450" />
+    </div>
+    <div style={{ textAlign: 'center' }}>
+      <p><strong>Consumer</strong></p>
+      <AutoPlayVideo src="/vid/cvid3.mp4" width="450" height="450" />
+    </div>
+  </div>
+</div>
 
 ## **LLM Experience: Login and Tutorial**
 Users log in by entering their unique BU ID, ensuring secure and personalized access. Once authenticated, the system launches a brief, step-by-step tutorial that guides users through the platform's core features. Checking for understanding at the end.

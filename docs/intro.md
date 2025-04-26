@@ -31,25 +31,7 @@ Below is an interactive flowchart explaining the architecture of the H2H Market 
 
 ---
 
-## **Multiplayer Online Marketplaces**
-We build two-sided marketplace games to test human behavior in online games versus other humans to model market dynamics in real time. Producers can advertise product quality honestly or decide to mislead buyers through false ads to maximize their profits. Consumers must purchase high quality products to maximize their score
-<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-  <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-    <div style={{ textAlign: 'center' }}>
-      <p><strong>Producer</strong></p>
-      <AutoPlayVideo src="/vid/pvidnew.mp4" width="450" height="450" />
-    </div>
-    <div style={{ textAlign: 'center' }}>
-      <p><strong>Consumer</strong></p>
-      <AutoPlayVideo src="/vid/cvid3.mp4" width="450" height="450" />
-    </div>
-  </div>
-  <div style={{ marginTop: '20px' }}>
-    <Link to="./gameplay" className="learn-more-btn">
-      Learn More
-    </Link>
-  </div>
-</div>
+
 
 
 

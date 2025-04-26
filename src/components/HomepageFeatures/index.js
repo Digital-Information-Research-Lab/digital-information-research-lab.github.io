@@ -6,6 +6,8 @@ import 'aos/dist/aos.css'
 import React, { useEffect } from 'react';
 import AboutProject from './AboutProject';
 import Link from '@docusaurus/Link';
+import Layout from '@theme/Layout';
+import AutoPlayVideo from '@site/src/components/AutoPlay';
 
 function IntroButton() {
   return (
@@ -28,13 +30,28 @@ function IntroButton() {
 }
 
 function Homepage() {
-
   return (
-    <main>
-       <AboutProject />
-    </main>
-  );
+    <>
+      <main>
+        <AboutProject />
+      </main>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
+            <p><strong>Producer</strong></p>
+            <AutoPlayVideo src="/vid/h2hvid1.mp4" width="450" height="450" />
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <p><strong>Consumer</strong></p>
+            <AutoPlayVideo src="/vid/h2hvid2.mp4" width="450" height="450" />
+          </div>
+        </div>
+
+      </div>
+    </>
+  )
 }
+
 
 
 const FeatureList = [
@@ -52,7 +69,7 @@ const FeatureList = [
     imgSrc: '/img/55868.jpg',
     description: (
       <>
-      Our marketplace is interactive and real-time so participants can play in versus mode, simulating real-life advertising.
+        Our marketplace is interactive and real-time so participants can play in versus mode, simulating real-life advertising.
       </>
     ),
   },
@@ -67,15 +84,15 @@ const FeatureList = [
   },
 ];
 
-function Feature({imgSrc, title, description}) {
+function Feature({ imgSrc, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className={clsx(styles.featureCard, 'text--center')}>
-      <img src={imgSrc} alt={title} className={styles.featureImage} />
-      
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <img src={imgSrc} alt={title} className={styles.featureImage} />
+
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
         </div>
       </div>
     </div>
@@ -85,8 +102,8 @@ function Feature({imgSrc, title, description}) {
 export default function HomepageFeatures() {
   useEffect(() => {
     AOS.init({
-      duration: 800, 
-      once: true,    
+      duration: 800,
+      once: true,
     });
   }, []);
   return (
