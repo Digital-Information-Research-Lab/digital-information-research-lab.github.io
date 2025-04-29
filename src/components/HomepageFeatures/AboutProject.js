@@ -10,7 +10,7 @@ export default function AboutProject() {
   };
 
   return (
-    <div style={{ padding: '1rem' }}>
+    <div style={{ padding: '0rem' }}>
       <h2>What are we building?</h2>
       <p>
         Digital marketplaces like Amazon, Alibaba, and eBay are “two sided platforms” with one side
@@ -19,15 +19,8 @@ export default function AboutProject() {
         media platforms like Meta, X (Twitter), Reddit, and Bluesky. We are creating a platform to
         model such two-sided interactive marketplaces for the production and consumption of information
         and goods.
-        {!isExpanded && (
-          <span style={{ color: 'blue', cursor: 'pointer' }} onClick={() => setIsExpanded(true)}>
-            {' '}Read more
-          </span>
-        )}
-      </p>
-      {isExpanded && (
-        <>
-          <p>
+
+        <p>
             Our software platform bridges economic theory and user interface design, and allows us to
             explore mechanism design solutions to complex platform challenges that are impossible to study
             in the absence of human participant interactions. As a running example, we use the marketplace
@@ -71,6 +64,15 @@ export default function AboutProject() {
           <p><strong>Truth Warrants</strong> are promises made by sellers about their product claims, backed by money.
             If the seller’s claim is truthful, they keep the money. If it’s false, buyers can challenge the claim
             and win the money, ensuring sellers are accountable for honesty.</p>
+
+        {!isExpanded && (
+          <span style={{ color: 'blue', cursor: 'pointer' }} onClick={() => setIsExpanded(true)}>
+            {' '}Read more
+          </span>
+        )}
+      </p>
+      {isExpanded && (
+        <>
 
           <h3>Guarantees vs. Warrants</h3>
           <table align="center">

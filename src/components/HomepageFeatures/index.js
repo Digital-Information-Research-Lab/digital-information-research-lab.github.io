@@ -8,6 +8,7 @@ import AboutProject from './AboutProject';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import AutoPlayVideo from '@site/src/components/AutoPlay';
+import { motion } from 'framer-motion';
 
 function IntroButton() {
   return (
@@ -32,21 +33,62 @@ function IntroButton() {
 function Homepage() {
   return (
     <>
-      <main>
-        <AboutProject />
-      </main>
+    <div style={{ padding: '1rem' }}>
+    <div>
+  <motion.h2
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+  >
+    What are we building?
+  </motion.h2>
+  <motion.p
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, delay: 0.2 }}
+  >
+    Digital marketplaces like Amazon, Alibaba, and eBay are “two sided platforms” with one side
+    producing goods and services and the other side consuming them; whether that is the sale of
+    advertised products on these platforms, or the consumption of information on two-sided social
+    media platforms like Meta, X (Twitter), Reddit, and Bluesky. We are creating a platform to
+    model such two-sided interactive marketplaces for the production and consumption of information
+    and goods.
+  </motion.p>
+  <motion.p
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, delay: 0.4 }}
+  >
+    Our software platform bridges economic theory and user interface design, and allows us to
+    explore mechanism design solutions to complex platform challenges that are impossible to study
+    in the absence of human participant interactions. As a running example, we use the marketplace
+    to investigate a new design solution to limit fake news and misleading information in the
+    digital platforms. Our marketplace allows real human players to interact with each other in a
+    gamified online simulation of real-world e-commerce conditions.
+  </motion.p>
+  <motion.p
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, delay: 0.6 }}
+  >
+    In this interactive marketplace, participants are randomly assigned to play as either buyers or sellers.{' '}
+    <Link to="/docs/intro" style={{ color: 'blue', textDecoration: 'underline' }}>
+      Learn more about the project
+    </Link>
+  </motion.p>
+</div>
+</div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
-            <p><strong>Producer</strong></p>
+            <p><strong>Consumer</strong></p>
             <AutoPlayVideo src="/vid/h2hvid1.mp4" width="450" height="450" />
           </div>
           <div style={{ textAlign: 'center' }}>
-            <p><strong>Consumer</strong></p>
+            <p><strong>Producer</strong></p>
             <AutoPlayVideo src="/vid/h2hvid2.mp4" width="450" height="450" />
           </div>
         </div>
-
       </div>
     </>
   )

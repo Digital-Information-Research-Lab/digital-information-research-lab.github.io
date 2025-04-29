@@ -20,6 +20,7 @@
     "@xyflow/react": "^12.4.4",
     "aos": "^2.3.4",
     "clsx": "^2.0.0",
+    "framer-motion": "^12.9.2",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
