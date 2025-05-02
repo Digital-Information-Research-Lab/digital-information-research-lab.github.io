@@ -9,23 +9,30 @@ Follow the steps below to **install and run the Empirica experiment** on your lo
 
 ## **Prerequisites for Running an Empirica Experiment (OSX)**
 
-1. Try to clone and run the experiment from github: git clone git@github.com:Digital-Information-Research-Lab/take-home-summer-assignment.git (see [how to create public keys](https://docs.google.com/document/d/1T7Ha5S31H4mF5hlIpHFNMGZa5WqQINp88Hf3SHtJhkk/edit?tab=t.0#bookmark=kix.fugj8x5vvpr) since that might make your life easier and ensure you have provided Swapneel with your github username)
+1. Clone your experiment from GitHub using the command:
+```bash
+git clone [repo]
+```
 
-2. Node.js - this is the language the application is written in and that you will be developing the extended experiments in: [Install Node.js and npm using Homebrew on OS X](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x)
+2. Ensure Node.js is installed on your device. This is the language the application is written in and that you will be developing the extended experiments in: [Install Node.js and npm using Homebrew on OS X](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x)
+    a. For Macbook users, use [Homebrew](https://brew.sh) to install Node.js using:
+```bash
+brew install npm
+```
 
-    a. `brew install npm` works for me since I have installed the [Homebrew package manager](https://brew.sh/) for mac.
-
-    b. If you don’t want to use Homebrew then there are other ways to install node.js through the [Anaconda](https://anaconda.org/conda-forge/nodejs) package manager, if you have used this in the past.
+   b. If you don’t want to use Homebrew then there are other ways to install node.js through the [Anaconda](https://anaconda.org/conda-forge/nodejs) package manager.
 
 3. Empirica
 
-    a. Install Empirica following the instructions in [Setup - Empirica v2 Docs](https://docs.empirica.ly/getting-started/setup)
+   a. Install Empirica following the instructions in [Setup - Empirica v2 Docs](https://docs.empirica.ly/getting-started/setup)
 
-    b. REMEMBER: you need to `cd client && npm install` and `cd server && npm install` in order to install the packages in the `package.json` file in both the client/ and server/ directories.
-
-    c. Try [creating](https://docs.empirica.ly/getting-started/quick-start) and [running](https://docs.empirica.ly/getting-started/quick-test) a sample experiment on your machine following the instructions.
-
-    d. If things don’t work because of a Meteor error then follow the instructions to [Install Meteor.js](https://docs.meteor.com/install) via the Node package manager (npm)
+   b. After cloning your experiment, you need to install your modules in `package.json` for both your client and server directories. You can do all this in one command.
+```bash
+cd client && npm i && cd server && npm i
+```
+   c. Optional: try [creating](https://docs.empirica.ly/getting-started/quick-start) and [running](https://docs.empirica.ly/getting-started/quick-test) a sample experiment on your machine following the instructions. 
+   
+   d. If things don’t work because of a Meteor error then follow the instructions to [Install Meteor.js](https://docs.meteor.com/install) via the Node package manager (npm)
 
 4. Note: If you have an issue installing the most recent version of Empirica due to some GLIBC issues, please try to use a virtual machine with a recent version of Ubuntu (22.04 LTS) or Debian (12) which should have the updated drivers. You could also install a slightly older Empirica version so you can run it on your local system with less work going into this.
 
@@ -33,40 +40,60 @@ Follow the steps below to **install and run the Empirica experiment** on your lo
 
 1. Download and install [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-2. Install miniconda by finding the latest Linux installer from [this page](https://docs.conda.io/projects/miniconda/en/latest/).
+2. Install Miniconda by grabbing the latest Linux installer from [this page](https://docs.conda.io/projects/miniconda/en/latest/).
 
-    a. Inside a WSL terminal, use command:
-    
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   a. Inside a WSL terminal, run:
+   ```bash
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   ```
 
-    b. Then run:
-    
-    `bash Miniconda3-latest-Linux-x86_64.sh`
+   b. Then install it with:
+   ```bash
+   bash Miniconda3-latest-Linux-x86_64.sh
+   ```
+   Follow the prompts to initialize conda (this sets up your PATH so that your shell starts with the `base` environment activated).
 
-    And follow the instructions to install and initialize the conda environment on your system in Linux (initializing is the process of setting a path so that every time you open Linux, you launch a conda base environment to work out of. Ideally you need a separate conda environment for each project so let’s create one now).
+3. Create a project-specific conda environment:
+   ```bash
+   conda create -n empirica_env python=3.9
+   ```
+   a. This makes an environment named `empirica_env`.  
+   b. Activate it:
+   ```bash
+   conda activate empirica_env
+   ```
 
-3. Create a conda environment for your project: `conda create -n empirica_env python=3.9`
+4. Install Node.js inside that environment:
+   ```bash
+   conda install nodejs -c conda-forge
+   ```
 
-    a. This creates a named empirica environment for your system.
+## **Running the Empirica Experiment** ##
 
-    b. Activate the environment after it's installed: `conda activate empirica_env`
+To run the Empirica experiment, simply run:
+   ```bash
+   empirica
+   ```
 
-4. Now install nodejs inside the conda environment: `conda install nodejs -c conda-forge`
+### Troubleshooting
 
-## **Optional Step: Set up your Public Key on Github** ##
+   1. To reload settings, delete the `tajriba` state file:
+   ```bash
+   rm .empirica/local/tajriba.json
+   ```
 
-1. Follow this tutorial for generating a key: [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+   2. If Empirica still doesn’t start, ensure no processes are blocking port 3000:
+   ```bash
+   lsof -i :3000 -t | xargs kill -9
+   ```
+  
+## **Optional Step: Set up your SSH Public Key on GitHub** ##
 
-    i. Or just run the command ssh-keygen and it will generate one for you – follow the defaults saving it to the id_rsa file and setting a password of your choice for it – REMEMBER THIS PASSWORD!!!
+1. Generate a new SSH key (or follow GitHub’s guide [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)):
+   ```bash
+   ssh-keygen
+   ```
+   - Accept the defaults (it will save to `~/.ssh/id_rsa`).  
+   - Choose and remember a passphrase.
 
-    ii. Basically, you will generate a local SSH key from within WSL that you will use to tell github that you have permissions to access this private repository. The tutorial will walk you through adding it to ssh-agent but you don’t need to do that right now.
-
-2. Add this key to Github so github knows it exists. Follow that part in the tutorial linked above.
-
-
-
-
-
-
-
-
+2. Add your new key to your GitHub account per the linked tutorial so you can access private repos via SSH.
