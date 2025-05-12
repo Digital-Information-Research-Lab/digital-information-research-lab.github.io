@@ -4,7 +4,11 @@ title: Step 5 - Extract reputation and warrants dataframes
 sidebar_label: 'Step 5'
 sidebar_position: 6
 ---
+---
 
+import DAF5 from '@theme/DAF5';
+
+<DAF5 />
 ---
 
 <img src="/img/Step5DA.png"/>

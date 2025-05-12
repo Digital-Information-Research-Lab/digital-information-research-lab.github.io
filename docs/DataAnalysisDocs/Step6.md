@@ -4,7 +4,11 @@ title: Step 6 - Create Challenged and NumChallenges
 sidebar_label: 'Step 6'
 sidebar_position: 7
 ---
+---
 
+import DAF6 from '@theme/DAF6';
+
+<DAF6 />
 ---
 
 <img src="/img/Step6DA.png"/>

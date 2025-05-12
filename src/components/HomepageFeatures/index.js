@@ -81,7 +81,7 @@ function Homepage() {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
-            <p><strong>Consumer</strong></p>
+            <p><strong>Producer</strong></p>
             <AutoPlayVideo src="/vid/h2hvid1.mp4" width="450" height="450" />
           </div>
           <div style={{ textAlign: 'center' }}>

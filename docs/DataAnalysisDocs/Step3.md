@@ -4,7 +4,11 @@ title: Step 3 - Create Round arrays for each player
 sidebar_label: 'Step 3'
 sidebar_position: 4
 ---
+---
 
+import DAF3 from '@theme/DAF3';
+
+<DAF3 />
 ---
 
 <img src="/img/Step3DA.png"/>

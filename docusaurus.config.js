@@ -106,7 +106,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Digital Research Docs. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Platform Governance Reserach Lab`,
     },
     prism: {
       theme: prismThemes.github,

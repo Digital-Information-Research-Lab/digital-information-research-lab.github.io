@@ -4,6 +4,11 @@ title: Step 4 - Extract GoodRatings, BadRatings and compute NetRatings for each 
 sidebar_label: 'Step 4'
 sidebar_position: 5
 ---
+---
+
+import DAF4 from '@theme/DAF4';
+
+<DAF4 />
 
 ---
 

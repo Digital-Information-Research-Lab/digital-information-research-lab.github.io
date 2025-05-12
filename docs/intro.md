@@ -18,14 +18,6 @@ This documentation will guide you through the **features, setup, and usage** of 
 
 ---
 
-# H2H Market System Flowchart
-
-Below is an interactive flowchart explaining the architecture of the H2H Market system:
-
-<H2HArchitectureFlow />
-
----
-
 # H2H Market Architecture Flowchart
 
 Below is an interactive flowchart explaining the architecture of the H2H Market system:
@@ -35,30 +27,28 @@ Below is an interactive flowchart explaining the architecture of the H2H Market 
 ---
 
 
-
-
-
-
----
-
 ## **About This Documentation**
 The **H2H Market Documentation** website is a guide for understanding how the **Empirica Marketplace Simulation** works.
 
 ### **What it does:**
+- **Provides Tutorial Gameplays of all the Marketplaces** - gives an overview of different marketplaces' workflow
 - **Explains how the H2H market codebase works** – covers client folder, server folder, and mechanics.
 - **Breaks down the code** – details how different parts of the system function together.
 - **Helps developers** – modify and expand the codebase.
-- **Provides deployment instructions** – how to install, run, and use the simulation.
+- **Explains how the H2H market Data Analysis works** - details how diffreent steps in collect, modify and use the data.
+- **Provides deployment/ installation instructions** – how to install, run, and use the simulation.
 - **Documents each feature** – detailed info on stages, functions, and variables.
 
 This serves as a **resource** to make the H2H market simulation **easy to understand and use**.  
 Files are organized into the following folders:
+- **Gameplay Tutorials**
 - **Callbacks**
 - **Client Stages**
 - **Client Components**
+- **Data Analysis**
 - **Deployment**  
 
-> **Folder format matches the main branch of the h2h-market repository!**
+> **Callbacks, Client Stages, Client Components format matches the main branch of the h2h-market repository!**
 
 ---
 
@@ -79,7 +69,7 @@ The website is built using **Docusaurus** (https://docusaurus.io/docs). To contr
 ---
 
 ## **Documentation: Format to document code - Client Side**
-Each file in the **h2h-market** repository has a **corresponding file** in this documentation website.
+Each file in the **h2h-market** repository has a **corresponding file** in this documentation website. Remember to use **docstrings** in the codebase.
 
 ### **How to document a function:**
 1. **Add a description** – What the function does.
@@ -91,7 +81,7 @@ Each file in the **h2h-market** repository has a **corresponding file** in this 
 ---
 
 ## **Documentation: Format to document code - Callbacks.js**
-Each function in **callbacks.js** has a **separate file** in this documentation website.
+Each function in **callbacks.js** has a **separate file** in this documentation website. Remember to use **docstrings** in the codebase.
 
 ### **How to document a function in Callbacks.js:**
 - **Each function file is divided into conditions.**
@@ -102,6 +92,13 @@ Each function in **callbacks.js** has a **separate file** in this documentation 
 
 ---
 
+## **Gameplay Tutorials**
+This section explains each step of the **gameplay process** to understand the core mechanics and slow of the game.
+
+- [LLM Gameplay](/docs/Gameplay/Gameplay.md)
+
+---
+
 ## **Callbacks Docs**
 This section explains the core **callbacks** used in the game logic.
 
@@ -109,15 +106,6 @@ This section explains the core **callbacks** used in the game logic.
 - [Empirica.onGameStart()](/docs/callbacks/onGameStart())
 - [Empirica.onRoundStart()](/docs/callbacks/onRoundStart().md)
 - [Empirica.onStageEnded()](/docs/callbacks/onStageEnded().md)
-
----
-
-## **Client Components Docs**
-This section provides details on the client-side **React components** used in the project.
-
-- [FeedbackPage](/docs/clientComponents/feedbackPage.md)
-- [ProductCard](/docs/clientComponents/productCardPage.md)
-- [ResultsCard](/docs/clientComponents/resultsCard.md)
 
 ---
 
@@ -132,10 +120,27 @@ This section explains the **different game stages** in the client-side implement
 
 ---
 
-## **Deployment Docs**
-This section explains how to **deploy the marketplace** in Google Cloud Platform.
+## **Client Components Docs**
+This section provides details on the client-side **React components** used in the project.
 
-- [Setting up the Server](docs/documentationInstructions/SetUp.md)
+- [FeedbackPage](/docs/clientComponents/feedbackPage.md)
+- [ProductCard](/docs/clientComponents/productCardPage.md)
+- [ResultsCard](/docs/clientComponents/resultsCard.md)
+
+---
+
+## **Data Analysis Docs**
+This section explains the **Data Analysis** code used in the project.
+
+- [Data Analysis Overview](/docs/DataAnalysisDocs/overview.md)
+
+---
+
+## **Deployment/ Installtion Docs**
+This section explains how to **install the marketplace** and how to **deploy the marketplace** in Google Cloud Platform.
+
+- [Installation Guide](/docs/DeploymentInstructions/installation.md)
+- [Setting up the Server](/docs/documentationInstructions/SetUp.md)
 
 ---
 

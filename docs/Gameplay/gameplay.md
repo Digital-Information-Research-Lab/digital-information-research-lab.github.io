@@ -1,5 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+items: [
+        'docs/Gameplay/Gameplay',
+      ]
 ---
 
 import AutoPlayVideo from '@site/src/components/AutoPlay';

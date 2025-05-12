@@ -5,6 +5,11 @@ title: Step 2 - Count units sold per round for each player (SoldStock)
 sidebar_label: 'Step 2'
 sidebar_position: 3
 ---
+---
+
+import DAF2 from '@theme/DAF2';
+
+<DAF2 />
 
 ---
 

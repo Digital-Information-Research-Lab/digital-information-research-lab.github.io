@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Setting up the server
 This page will help you navigate to the right pages, settings, and installations to set up your server correctly. This page is verified by: *Laerk Ndreko*
 

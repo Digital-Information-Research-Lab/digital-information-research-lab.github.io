@@ -50,7 +50,7 @@ const H2HFlowchart = () => {
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), []);
 
   return (
-    <div style={{ width: '100%', height: '700px', background: '#eef5ff', padding: '10px', borderRadius: '10px' }}>
+    <div style={{ width: '100%', height: '500px', background: '#eef5ff', padding: '10px', borderRadius: '10px' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -60,7 +60,7 @@ const H2HFlowchart = () => {
         fitView
         attributionPosition="top-right"
       >
-        <MiniMap zoomable pannable />
+        <MiniMap zoomable pannable style ={{width: 100, height: 100}}/>
         <Controls />
         <Background color="#ccc" gap={12} />
       </ReactFlow>

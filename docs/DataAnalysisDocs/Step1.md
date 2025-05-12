@@ -7,6 +7,12 @@ sidebar_position: 2
 
 ---
 
+import DataAnalysisFlow1 from '@theme/DataAnalysisFlow1';
+
+<DataAnalysisFlow1 />
+
+---
+
 <img src="/img/Step1DA.png"/>
 
 ---
