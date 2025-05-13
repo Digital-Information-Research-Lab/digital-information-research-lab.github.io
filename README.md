@@ -39,11 +39,9 @@ Using SSH:
 ```
 $ USE_SSH=true yarn deploy
 ```
-Warning: This will erase the domain name https://truthmarket.com temporarily, and you'll have to go to Github Settings/Pages and re-enter the domain name there
-Not using SSH:
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
