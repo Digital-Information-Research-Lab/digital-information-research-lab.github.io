@@ -34,7 +34,7 @@ This tests your site in production (can test issues that may come up in producti
 
 ### Deployment
 
-**Please make sure to push it from the 'documentation' branch (not the 'gh-pages' branch) if you are using the follwing method.**
+**Please make sure to push it from the 'documentation' branch (not the 'gh-pages' branch) if you are using the following method.**
 
 Using SSH:
 
