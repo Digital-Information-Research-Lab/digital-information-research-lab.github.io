@@ -10,6 +10,7 @@ import {
 } from '@xyflow/react';
 
 import '@xyflow/react/dist/style.css';
+import FloatingEdge from './FloatingEdge';
 
 
 // Define color-coded nodes for Producers, Consumers, and Marketplace
@@ -116,7 +117,7 @@ const initialNodes = [
       },
       { 
         id: '6', 
-        position: { x: 250, y: 300 }, 
+        position: { x: 250, y: 320 }, 
         data: { 
           label: (
             <div style={{ textAlign: 'center' }}>
@@ -178,14 +179,18 @@ const initialNodes = [
 
 // Define labeled arrows (edges) between nodes
 const initialEdges = [
-  { id: 'e1-2', source: '1', target: '2', label: '' },
-  { id: 'e2-3', source: '2', target: '3', label: '' },
-  { id: 'e3-4', source: '3', target: '4', label: '' },
-  { id: 'e4-5', source: '4', target: '5', label: '' },
-  { id: 'e5-6', source: '5', target: '6', label: '' },
-  { id: 'e6-7', source: '6', target: '7', label: '' },
-  { id: 'e7-8', source: '7', target: '8', label: '' },
-];
+    { id: 'e1-2', source: '1', target: '2', type: 'floating', label: '' },
+    { id: 'e2-3', source: '2', target: '3', type: 'floating', label: '' },
+    { id: 'e3-4', source: '3', target: '4', type: 'floating', label: '' },
+    { id: 'e4-5', source: '4', target: '5', type: 'floating', label: '' },
+    { id: 'e5-6', source: '5', target: '6', type: 'floating', label: '' },
+    { id: 'e6-7', source: '6', target: '7', type: 'floating', label: '' },
+    { id: 'e7-8', source: '7', target: '8', type: 'floating', label: '' },
+  ];
+
+  const edgeTypes = {
+    floating: FloatingEdge,
+  };
 
 // Define the ReactFlow component with controls
 const DAFoverview = () => {
@@ -203,6 +208,7 @@ const DAFoverview = () => {
         onConnect={onConnect}
         fitView
         attributionPosition="top-right"
+        edgeTypes={edgeTypes} 
       >
         <MiniMap zoomable pannable style={{ width: 100, height: 100 }} />
         <Controls />

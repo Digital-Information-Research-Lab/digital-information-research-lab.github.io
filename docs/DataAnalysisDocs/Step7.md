@@ -4,7 +4,11 @@ title: Step 7 - Extract reputation and warrants dataframes
 sidebar_label: 'Step 7'
 sidebar_position: 8
 ---
+---
 
+import DAF7 from '@theme/DAF7';
+
+<DAF7 />
 ---
 
 <img src="/img/Step7DA.png"/>

@@ -10,6 +10,7 @@ import {
 } from '@xyflow/react';
 
 import '@xyflow/react/dist/style.css';
+import FloatingEdge from './FloatingEdge';
 
 // Define color-coded nodes for Producers, Consumers, and Marketplace
 const initialNodes = [
@@ -64,9 +65,13 @@ df_warrants['Rounds'] = df_warrants['treatment'].apply(lambda x: json.loads(x)['
 
 // Define labeled arrows (edges) between nodes
 const initialEdges = [
-  { id: 'e1-2', source: '1', target: '2', label: '' },
-  { id: 'e2-3', source: '2', target: '3', label: '' },
+  { id: 'e1-2', source: '1', target: '2', type: 'floating', label: '' },
+  { id: 'e2-3', source: '2', target: '3', type: 'floating', label: '' },
 ];
+
+const edgeTypes = {
+  floating: FloatingEdge,
+};
 
 // Define the ReactFlow component with controls
 const DAF3 = () => {
@@ -84,6 +89,7 @@ const DAF3 = () => {
         onConnect={onConnect}
         fitView
         attributionPosition="top-right"
+        edgeTypes={edgeTypes}
       >
         <MiniMap zoomable pannable style={{ width: 100, height: 100 }} />
         <Controls />

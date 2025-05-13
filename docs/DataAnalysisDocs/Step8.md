@@ -1,5 +1,5 @@
 ---
-title: Step 8
+title: Step 8 (work in progress)
 
 sidebar_label: 'Step 8'
 sidebar_position: 9
@@ -13,4 +13,4 @@ sidebar_position: 9
 
 ---
 
-The documentation for Step 8 is work in progress.
+The documentation for Step 8 is work in progress and will be updated soon!

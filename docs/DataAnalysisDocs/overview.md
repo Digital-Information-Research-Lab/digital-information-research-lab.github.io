@@ -9,13 +9,15 @@ items: [
 ---
 import DAFoverview from '@theme/DAFoverview';
 
-*Click on the boxes to for corresponding page for the step!*
+*Click on the boxes to go to the corresponding page for the step!*
 
 <DAFoverview />
 
 ---
 
 Welcome to the **Data Analysis Docs**! This section contains all the resources you need to understand the data analysis codebase.
+
+---
 
 
 <img src="/img/H2HDataAnalysis(1).png"/>
