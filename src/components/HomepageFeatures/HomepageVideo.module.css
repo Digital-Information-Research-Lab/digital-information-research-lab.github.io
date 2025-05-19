@@ -1,6 +1,6 @@
 .videoContainer {
   position: relative;
-  background: url("/img/background2.webp") no-repeat center center fixed;
+  background-color: rgba(255, 255, 255, 0.6);
   background-size: cover;
 
   

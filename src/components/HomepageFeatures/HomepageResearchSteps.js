@@ -50,9 +50,11 @@ export default function HomepageResearchSteps() {
           .filter(Boolean)
           .join(' ')}
       >
-        {/* Section Heading */}
+        Section Heading
         <div className={styles.sectionHeading}>
-          <h3>Our Research Process in Four Steps</h3>
+          <br />
+          <h3>Replicable Behavioral Experimentation</h3>
+          <br />
         </div>
 
         {/* Arrows & Horizontal Slider */}

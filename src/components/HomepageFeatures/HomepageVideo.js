@@ -49,13 +49,13 @@ export default function HomepageVideo() {
   return (
     <section className={styles.videoContainer}>
       <h2 className={styles.sectionTitle} data-aos="zoom-in">
-        Behavioral Experiments in Two-sided Marketplaces
+        Designing Multiagent Marketplaces
       </h2>
 
       <div className={styles.videosWrapper}>
         <div className={styles.videoItem} data-aos="zoom-in">
           <div className={styles.label} data-aos="fade-up" data-aos-delay="300">
-            Consumers
+            Seller Agents
           </div>
 
           <TiltFrame>
@@ -78,7 +78,7 @@ export default function HomepageVideo() {
 
         <div className={styles.videoItem} data-aos="zoom-in">
           <div className={styles.label} data-aos="fade-up" data-aos-delay="300">
-            Producers
+            Buyer Human Participants
           </div>
 
           <TiltFrame>

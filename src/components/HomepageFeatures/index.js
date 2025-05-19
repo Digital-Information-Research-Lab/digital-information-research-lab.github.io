@@ -71,7 +71,7 @@ function Homepage() {
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 1, delay: 0.6 }}
   >
-    In this interactive marketplace, participants are randomly assigned to play as either buyers or sellers.{' '}
+    In this interactive marketplace, participants are randomly assigned to play as either buyers or sellers accordingly performing one of the two actions shown in the videos that follow.{' '}
     <Link to="/docs/intro" style={{ color: 'blue', textDecoration: 'underline' }}>
       Learn more about the project
     </Link>
@@ -81,11 +81,11 @@ function Homepage() {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
-            <p><strong>Producer</strong></p>
+            <p><strong>Buy Advertised Products</strong></p>
             <AutoPlayVideo src="/vid/h2hvid1.mp4" width="450" height="450" />
           </div>
           <div style={{ textAlign: 'center' }}>
-            <p><strong>Producer</strong></p>
+            <p><strong>Sell Advertised Products</strong></p>
             <AutoPlayVideo src="/vid/h2hvid2.mp4" width="450" height="450" />
           </div>
         </div>
