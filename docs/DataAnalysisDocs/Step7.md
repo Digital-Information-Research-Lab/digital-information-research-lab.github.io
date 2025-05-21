@@ -9,9 +9,6 @@ sidebar_position: 8
 import DAF7 from '@theme/DAF7';
 
 <DAF7 />
----
-
-<img src="/img/Step7DA.png"/>
 
 ---
 
@@ -70,3 +67,5 @@ Output:
 RatingIndicator: [1, 0, 1]
 Step 8:
 ```
+
+---

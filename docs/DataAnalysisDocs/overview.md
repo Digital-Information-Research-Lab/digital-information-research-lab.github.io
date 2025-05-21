@@ -18,6 +18,3 @@ import DAFoverview from '@theme/DAFoverview';
 Welcome to the **Data Analysis Docs**! This section contains all the resources you need to understand the data analysis codebase.
 
 ---
-
-
-<img src="/img/H2HDataAnalysis(1).png"/>

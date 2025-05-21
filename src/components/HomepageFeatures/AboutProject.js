@@ -11,7 +11,6 @@ export default function AboutProject() {
 
   return (
     <div style={{ padding: '0rem' }}>
-      <h2>What are we building?</h2>
       <p>
         Digital marketplaces like Amazon, Alibaba, and eBay are “two sided platforms” with one side
         producing goods and services and the other side consuming them; whether that is the sale of

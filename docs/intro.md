@@ -14,11 +14,13 @@ Welcome to the documentation for **MVA h2h marketplace**!
 
 This documentation will guide you through the **features, setup, and usage** of the project. Below, you will find a structured list of all the sections included in this documentation for the project.
 
+## **What are we building**
+
 <AboutProject />
 
 ---
 
-# H2H Market Architecture Flowchart
+## **H2H Market Architecture Flowchart**
 
 Below is an interactive flowchart explaining the architecture of the H2H Market system:
 

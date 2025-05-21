@@ -11,10 +11,9 @@ import DataAnalysisFlow1 from '@theme/DataAnalysisFlow1';
 
 <DataAnalysisFlow1 />
 
----
-
-<img src="/img/Step1DA.png"/>
 
 ---
 
 In this step, the script extracts and combines data from multiple CSV files which has data from the emprica lab experiments (expirica export), to create two primary DataFrames: df_reputation and df_warrants. These DataFrames represent data from the Reputation Market and the Warrants Market, respectively.
+
+---

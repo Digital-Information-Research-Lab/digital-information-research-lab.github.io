@@ -9,9 +9,6 @@ sidebar_position: 4
 import DAF3 from '@theme/DAF3';
 
 <DAF3 />
----
-
-<img src="/img/Step3DA.png"/>
 
 ---
 
@@ -40,3 +37,5 @@ Round
 3  [1, 2, 3, 4, 5]
 4  [1, 2, 3, 4, 5]
 ```
+
+---

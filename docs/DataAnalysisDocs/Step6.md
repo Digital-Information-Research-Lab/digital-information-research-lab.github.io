@@ -9,9 +9,6 @@ sidebar_position: 7
 import DAF6 from '@theme/DAF6';
 
 <DAF6 />
----
-
-<img src="/img/Step6DA.png"/>
 
 ---
 
@@ -33,3 +30,5 @@ For each round in the challenges column:
 ## Step 6.1: Apply process_challenges to both dataframes
 
 Apply the process_challenges function to both df_reputation and df_warrants to process their challenges columns.
+
+---

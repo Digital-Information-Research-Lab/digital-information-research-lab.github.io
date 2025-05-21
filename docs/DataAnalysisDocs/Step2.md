@@ -11,9 +11,6 @@ import DAF2 from '@theme/DAF2';
 
 <DAF2 />
 
----
-
-<img src="/img/Step2DA.png"/>
 
 ---
 
@@ -36,3 +33,5 @@ In this step, the script calculates the number of items sold by each producer in
 ```
 
 Here ["c2", "c1"] means that producer A in round 1 sold 2 products, using the len function we add the number of elements in the list (c2, c1) = 2, this gives the number of products sold by Producer A in round 1.
+
+---

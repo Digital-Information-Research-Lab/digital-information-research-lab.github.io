@@ -10,9 +10,6 @@ import DAF4 from '@theme/DAF4';
 
 <DAF4 />
 
----
-
-<img src="/img/Step4DA.png"/>
 
 ---
 
@@ -44,3 +41,5 @@ Replace any missing (NaN) values in GoodRatings and BadRatings with 0.
 
 ## Step 4.3: Compute NetRatings = GoodRatings - BadRatings
 Calculate NetRatings as the difference: NetRatings = GoodRatings - BadRatings.
+
+---

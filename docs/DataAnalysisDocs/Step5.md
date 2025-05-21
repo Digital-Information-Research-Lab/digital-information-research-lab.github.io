@@ -9,9 +9,6 @@ sidebar_position: 6
 import DAF5 from '@theme/DAF5';
 
 <DAF5 />
----
-
-<img src="/img/Step5DA.png"/>
 
 ---
 
@@ -66,3 +63,5 @@ Condition: 1
 ProductCost: [2, 6, 2]
 ProductPrice: [12, 10, 12]
 ```
+
+---

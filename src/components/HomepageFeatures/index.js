@@ -33,7 +33,7 @@ function IntroButton() {
 function Homepage() {
   return (
     <>
-    <div style={{ padding: '1rem' }}>
+    <div style={{ padding: '5rem' }}>
     <div>
   <motion.h2
     initial={{ opacity: 0, x: -100 }}
@@ -151,7 +151,7 @@ export default function HomepageFeatures() {
   return (
     <div>
       <Homepage />
-      <IntroButton />
+      <div style={{height: "60px"}} />
       <section className={styles.features} data-aos="zoom-in">
         <div className="container">
           <div className="row">
