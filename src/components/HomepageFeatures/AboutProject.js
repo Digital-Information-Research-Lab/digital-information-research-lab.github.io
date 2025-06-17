@@ -255,14 +255,7 @@ export default function AboutProject() {
         ))}
       </div>
 
-      <div className={styles.ctaSection}>
-        <p className={styles.ctaText}>
-          Ready to learn more about our research methodology and experimental design?
-        </p>
-        <a href="/docs/intro" className={styles.ctaButton}>
-          Explore Our Documentation
-        </a>
-      </div>
+
     </section>
   );
 }

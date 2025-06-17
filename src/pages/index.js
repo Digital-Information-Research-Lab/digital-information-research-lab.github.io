@@ -4,7 +4,6 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
-import HomepageResearchSteps from '../components/HomepageFeatures/HomepageResearchSteps';
 import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
 
 /**
@@ -37,7 +36,7 @@ function HomepageHeader() {
                 className="button button--primary button--lg"
                 href="/docs/intro"
                 >
-                Explore Our Research
+                Explore Documentation
                 </a>
                 <a
                 className="button button--secondary button--lg"
@@ -64,7 +63,6 @@ export default function Home() {
             <main>
                 <HomepageVideo/>
                 <HomepageFeatures/>
-                <HomepageResearchSteps/>
             </main>
         </Layout>
     );
