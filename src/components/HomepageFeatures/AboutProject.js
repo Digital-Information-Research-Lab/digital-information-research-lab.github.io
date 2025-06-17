@@ -1,164 +1,268 @@
 import React, { useState } from 'react';
+import styles from './AboutProject.module.css';
 
+/**
+ * Enhanced AboutProject component using progressive disclosure accordion
+ * Focuses on e-commerce marketplace research and combating misleading product claims
+ */
 export default function AboutProject() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isCommunityNotesExpanded, setIsCommunityNotesExpanded] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
 
-  const resetToInitialState = () => {
-    setIsExpanded(false);
-    setIsCommunityNotesExpanded(false);
+  const toggleSection = (sectionId) => {
+    setActiveSection(activeSection === sectionId ? null : sectionId);
   };
 
-  return (
-    <div style={{ padding: '0rem' }}>
-      <p>
-        Digital marketplaces like Amazon, Alibaba, and eBay are “two sided platforms” with one side
-        producing goods and services and the other side consuming them; whether that is the sale of
-        advertised products on these platforms, or the consumption of information on two-sided social
-        media platforms like Meta, X (Twitter), Reddit, and Bluesky. We are creating a platform to
-        model such two-sided interactive marketplaces for the production and consumption of information
-        and goods.
-
-        <p>
-            Our software platform bridges economic theory and user interface design, and allows us to
-            explore mechanism design solutions to complex platform challenges that are impossible to study
-            in the absence of human participant interactions. As a running example, we use the marketplace
-            to investigate a new design solution to limit fake news and misleading information in the
-            digital platforms. Our marketplace allows real human players to interact with each other in a
-            gamified online simulation of real-world e-commerce conditions.
-          </p>
-          <p>In this interactive marketplace, participants are randomly assigned to play as either buyers or sellers.</p>
-
-          <table>
-            <thead>
-              <tr><th>Human buyers</th><th>Human sellers</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Purchase products based on advertisements, aiming to maximize their utility by acquiring high-quality items within a budget, purchasing a low-quality product is considered cheated.</td>
-                <td>Aim to maximize profits by producing either low or high-quality products, but all advertisements claim high quality.</td>
-              </tr>
-            </tbody>
-          </table>
-
+  const accordionSections = [
+    {
+      id: 'mission',
+      icon: '🎯',
+      title: 'Our Mission: Combating Misleading Product Claims',
+      preview: 'Building accountability mechanisms for honest e-commerce advertising',
+      content: (
+        <div>
           <p>
-            Just like on Amazon and eBay where consumers rate sellers after the purchase of their products,
-            in our Reputation market, human players in the role of consumers can add ratings to influence
-            the reputation—and likely future sales—of human players in the role of a producer.
+            Digital marketplaces like Amazon, Alibaba, and eBay are "two-sided platforms" where sellers advertise products 
+            and buyers make purchasing decisions. However, sellers often make misleading claims about product quality, 
+            features, or benefits to attract buyers.
           </p>
-          <p>We are introducing an intervention market that introduces "truth warrants."</p>
-
-          <table>
-            <thead>
-              <tr><th>Human buyers</th><th>Human sellers</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Challenge if they believe the claim is misleading /fake news/ misinformation.</td>
-                <td>Choose to warrant their claims by escrowing collateral.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p><strong>Truth Warrants</strong> are promises made by sellers about their product claims, backed by money.
-            If the seller’s claim is truthful, they keep the money. If it’s false, buyers can challenge the claim
-            and win the money, ensuring sellers are accountable for honesty.</p>
-
-        {!isExpanded && (
-          <span style={{ color: 'blue', cursor: 'pointer' }} onClick={() => setIsExpanded(true)}>
-            {' '}Read more
-          </span>
-        )}
-      </p>
-      {isExpanded && (
-        <>
-
-          <h3>Guarantees vs. Warrants</h3>
-          <table align="center">
-            <thead>
-              <tr><th>Feature</th><th>Guarantees ✅</th><th>Warrants ✅</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Linked to product</td><td>✔️</td><td>❌</td></tr>
-              <tr><td>Linked to specific claims about the product</td><td>❌</td><td>✔️</td></tr>
-              <tr><td>Financially backed claims</td><td>Sometimes</td><td>Always</td></tr>
-              <tr><td>Third-party verifiable</td><td>❌</td><td>✔️</td></tr>
-            </tbody>
-          </table>
-
-          <h3 style={{ marginTop: "2rem" }}>Community Notes vs. Warrants</h3>
-          <table>
-                <thead>
-                  <tr><th>Feature</th><th>Community Notes</th><th>Warrants</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Crowdsourced moderation</td><td>✔️</td><td>✔️ (via challenges)</td></tr>
-                  <tr><td>Direct financial accountability</td><td>❌</td><td>✔️</td></tr>
-                  <tr><td>Immediate penalty for deception</td><td>❌</td><td>✔️ (forfeited escrow)</td></tr>
-                  <tr><td>Rapid verification</td><td></td><td>✔️ (rapid challenge resolution)</td></tr>
-                  <tr><td>Verification</td><td>Could be biased</td><td>Never biased (Decentralized third party verification)</td></tr>
-                  <tr><td>Pollution & Negative externalities</td><td>Does not solve</td><td>✔️ Solves</td></tr>
-                </tbody>
-              </table>
-          {!isCommunityNotesExpanded && (
-            <span style={{ color: 'blue', cursor: 'pointer' }} onClick={() => setIsCommunityNotesExpanded(true)}>
-              {' '}Read more
-            </span>
-          )}
-          {isCommunityNotesExpanded && (
-            <>
-              <h2>Why build this project?</h2>
-  <p>
-    In today's online marketplaces, sellers often know more about their products than buyers do.
-    This imbalance lets some sellers use misleading advertisements, fake reviews, and false claims
-    to trick buyers into poor decisions. As a result, buyers can feel cheated, trust breaks down,
-    and overall satisfaction suffers. Our goal is to reduce this problem by creating a fairer,
-    more transparent marketplace. By holding sellers accountable for their claims, we aim to
-    rebuild consumer confidence and foster an online marketplace where honesty is rewarded and
-    trust thrives.
-  </p>
-
-  <h2>Challenges with Existing Methods</h2>
-  <h3>Why aren't existing interventions enough?</h3>
-  <ul>
-    <li>
-      Traditional methods rely on buyers or platforms to detect dishonesty, rather than holding
-      sellers accountable directly. "Traditional approaches to combating misleading claims in
-      two-sided marketplaces have shown limited efficacy..." (Truth Warrants Reduce Misleading Claims on Digital Platforms, 2025).
-    </li>
-    <li>
-      Current reputation and moderation systems can be manipulated by dishonest sellers.
-      “Sellers also buy fake reviews to solve the ‘cold start’ problem…” (Truth Warrants Reduce Misleading Claims, 2025).
-    </li>
-    <li>
-      Centralized moderation systems struggle to scale and may be biased.
-      For example, Facebook (Meta) uses both AI and human moderators (https://transparency.meta.com/).
-    </li>
-  </ul>
-
-  <h2>Opportunity for Real-world Testbeds</h2>
-  <h3>Why run virtual lab experiments?</h3>
-  <ul>
-    <li>Digital experiments let us test interventions quickly and repeatedly in controlled environments.</li>
-    <li>Tools like Empirica allow us to simulate and scale real-world behavior.</li>
-  </ul>
-
-  <h2>Designing Replicable Behavioral Experiments</h2>
-  <h3>Why is replication important?</h3>
-  <ul>
-    <li>Reliable results require experiments that can be reproduced.</li>
-    <li>Replicable experiments ensure interventions work across market conditions and users.</li>
-  </ul>
-            </>
-          )}
-          <div style={{ marginTop: '1rem' }}>
-            <span style={{ color: 'blue', cursor: 'pointer' }} onClick={resetToInitialState}>
-              {' '}Read less
-            </span>
+          <p>
+            Our research focuses on creating mechanisms that hold sellers accountable for their advertising claims, 
+            protecting consumers from deceptive practices that lead to poor purchasing decisions and market inefficiencies.
+          </p>
+          <div className={styles.highlightBox}>
+            <strong>Goal:</strong> Design interventions that ensure honest advertising in digital marketplaces, 
+            rebuilding consumer trust and market integrity.
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'marketplace',
+      icon: '🛒',
+      title: 'How Our E-commerce Marketplace Works',
+      preview: 'Real human participants simulate buying and selling with advertising claims',
+      content: (
+        <div>
+          <p>
+            Our platform bridges economic theory and user interface design, allowing us to study complex marketplace 
+            challenges through human participant interactions in a gamified online simulation of real-world e-commerce conditions.
+          </p>
+          
+          <div className={styles.roleComparison}>
+            <div className={styles.buyerSection}>
+              <h4>👥 Consumer Experience</h4>
+              <p className={styles.experienceDescription}>
+                Watch how buyers navigate product advertisements and make purchasing decisions in our marketplace simulation.
+              </p>
+              <ul>
+                <li>Browse product advertisements and evaluate claims</li>
+                <li>Make purchasing decisions within budget constraints</li>
+                <li>Challenge sellers if they believe claims are misleading</li>
+                <li>Rate sellers after purchases to build reputation systems</li>
+                <li>Learn from experience to avoid deceptive advertisements</li>
+              </ul>
+            </div>
+            
+            <div className={styles.sellerSection}>
+              <h4>🏪 Producer Experience</h4>
+              <p className={styles.experienceDescription}>
+                See how sellers create advertisements and manage their reputation in our experimental platform.
+              </p>
+              <ul>
+                <li>Create product advertisements with quality claims</li>
+                <li>Set quality levels and pricing strategies</li>
+                <li>Choose to warrant their claims with financial backing</li>
+                <li>Face consequences for misleading advertisements</li>
+                <li>Build reputation through honest business practices</li>
+              </ul>
+            </div>
           </div>
           
-        </>
-      )}
-    </div>
+          <p>
+            Just like real e-commerce platforms, our marketplace includes reputation systems, 
+            product reviews, and now introduces "Truth Warrants" as an innovative accountability mechanism.
+          </p>
+          
+          <div className={styles.experimentalNote}>
+            <strong>Experimental Design:</strong> Participants are randomly assigned to buyer or seller roles, 
+            creating authentic market dynamics where real human psychology and decision-making drive the outcomes.
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'warrants',
+      icon: '⚖️',
+      title: 'Truth Warrants: Financial Accountability for Sellers',
+      preview: 'Sellers back their advertising claims with money to ensure honesty',
+      content: (
+        <div>
+          <p>
+            <strong>Truth Warrants</strong> are our innovative solution to misleading product claims. 
+            Sellers can voluntarily escrow money to back their advertising claims, creating direct financial accountability.
+          </p>
+          
+          <div className={styles.warrantMechanism}>
+            <div className={styles.mechanismStep}>
+              <span className={styles.stepNumber}>1</span>
+              <div>
+                <strong>Seller Makes Claim:</strong> "This product has X feature" or "High quality guaranteed"
+              </div>
+            </div>
+            <div className={styles.mechanismStep}>
+              <span className={styles.stepNumber}>2</span>
+              <div>
+                <strong>Optional Warrant:</strong> Seller can escrow money to back their claim
+              </div>
+            </div>
+            <div className={styles.mechanismStep}>
+              <span className={styles.stepNumber}>3</span>
+              <div>
+                <strong>Buyer Challenge:</strong> If claim is false, buyer can challenge and win the escrowed money
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.comparisonTable}>
+            <h4>Truth Warrants vs. Traditional Guarantees</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Traditional Guarantees</th>
+                  <th>Truth Warrants</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Linked to specific claims</td>
+                  <td>❌ Usually product-wide</td>
+                  <td>✅ Specific advertising claims</td>
+                </tr>
+                <tr>
+                  <td>Financial backing</td>
+                  <td>⚠️ Sometimes</td>
+                  <td>✅ Always when warranted</td>
+                </tr>
+                <tr>
+                  <td>Third-party verification</td>
+                  <td>❌ Internal processes</td>
+                  <td>✅ Decentralized challenges</td>
+                </tr>
+                <tr>
+                  <td>Immediate consequences</td>
+                  <td>❌ Slow dispute resolution</td>
+                  <td>✅ Instant financial penalty</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'experiments',
+      icon: '🔬',
+      title: 'Why Virtual Lab Experiments Matter',
+      preview: 'Controlled environments reveal how interventions affect marketplace behavior',
+      content: (
+        <div>
+          <p>
+            Traditional approaches to combating misleading claims in marketplaces have shown limited efficacy. 
+            Our virtual laboratory allows us to test interventions in controlled environments before real-world implementation.
+          </p>
+          
+          <div className={styles.experimentBenefits}>
+            <div className={styles.benefit}>
+              <h4>🔄 Rapid Testing</h4>
+              <p>Test multiple intervention designs quickly and cost-effectively</p>
+            </div>
+            <div className={styles.benefit}>
+              <h4>📊 Controlled Variables</h4>
+              <p>Isolate the effects of specific mechanisms on marketplace behavior</p>
+            </div>
+            <div className={styles.benefit}>
+              <h4>🔍 Behavioral Insights</h4>
+              <p>Understand how real people respond to accountability mechanisms</p>
+            </div>
+            <div className={styles.benefit}>
+              <h4>📈 Scalable Solutions</h4>
+              <p>Design interventions that work across different market conditions</p>
+            </div>
+          </div>
+
+          <div className={styles.methodologyNote}>
+            <p>
+              <strong>Our Approach:</strong> Using tools like Empirica, we create replicable experiments 
+              that can be run multiple times with different participant groups, ensuring robust and 
+              generalizable results for platform governance solutions.
+            </p>
+          </div>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <section className={styles.aboutProjectSection}>
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.mainTitle}>What are we building?</h2>
+        <p className={styles.sectionDescription}>
+          Explore how our behavioral experiments reveal the mechanisms needed to combat 
+          misleading product claims in digital marketplaces.
+        </p>
+      </div>
+
+      <div className={styles.accordionContainer}>
+        {accordionSections.map((section) => (
+          <div 
+            key={section.id} 
+            className={`${styles.accordionItem} ${activeSection === section.id ? styles.active : ''}`}
+          >
+            <button
+              className={styles.accordionHeader}
+              onClick={() => toggleSection(section.id)}
+              aria-expanded={activeSection === section.id}
+              aria-controls={`content-${section.id}`}
+            >
+              <div className={styles.headerContent}>
+                <span className={styles.sectionIcon}>{section.icon}</span>
+                <div className={styles.headerText}>
+                  <h3 className={styles.sectionTitle}>{section.title}</h3>
+                  <p className={styles.sectionPreview}>{section.preview}</p>
+                </div>
+              </div>
+              <span className={styles.chevron}>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </span>
+            </button>
+            
+            {activeSection === section.id && (
+              <div 
+                id={`content-${section.id}`}
+                className={styles.accordionContent}
+                role="region"
+                aria-labelledby={`header-${section.id}`}
+              >
+                <div className={styles.contentWrapper}>
+                  {section.content}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.ctaSection}>
+        <p className={styles.ctaText}>
+          Ready to learn more about our research methodology and experimental design?
+        </p>
+        <a href="/docs/intro" className={styles.ctaButton}>
+          Explore Our Documentation
+        </a>
+      </div>
+    </section>
   );
 }

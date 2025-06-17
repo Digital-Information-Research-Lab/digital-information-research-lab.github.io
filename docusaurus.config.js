@@ -95,8 +95,6 @@ const config = {
           items: [
             { label: 'Free Speech & the Fake News Problem', href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261' },
             { label: 'Improving §230, Preserving Democracy & Protecting Free Speech', href: 'https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/' },
-            { label: 'Truth is Warranted: The Impact of Self-Certification on Misinformation', href: 'https://www.dropbox.com/scl/fi/nopf4dhw86fh5oej7rquw/Certifiably_True-The_Impact_Of_Self_Certification_On_Misinfo.pdf?rlkey=vp9rcew7hq98plmhh5asofy93&e=1&dl=0' },
-            { label: 'Secure Account Recovery for a Privacy-Preserving Web Service', href: 'https://www.usenix.org/system/files/usenixsecurity24-little.pdf' },
           ],
         },
         {
@@ -106,7 +104,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Platform Governance Reserach Lab`,
+      copyright: `Copyright © ${new Date().getFullYear()} Platform Governance Research Lab`,
     },
     prism: {
       theme: prismThemes.github,

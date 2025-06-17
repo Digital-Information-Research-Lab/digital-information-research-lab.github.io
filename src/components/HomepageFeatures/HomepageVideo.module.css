@@ -1,98 +1,100 @@
+/**
+ * Enhanced video section showcasing behavioral experiments
+ * Clean, professional design with focus on research impact
+ */
 .videoContainer {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.6);
-  background-size: cover;
-
-  
-  padding: 1rem 1rem 4rem 1rem;
-  
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 5rem 2rem;
   margin: 0;
   z-index: 1;
 }
 
-
-.videoContainer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6); 
-  z-index: -1; 
+.videoHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
 }
-
 
 .sectionTitle {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2.8rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  text-align: center;
-
-  background: linear-gradient(45deg, #1e2a78, #ff0080, #00ffe0);
-  -webkit-background-clip: text;
-  color: transparent;
-  
-  background-size: 200% 200%;
-  animation: subtleShift 3s ease-in-out infinite alternate;
+  color: #2c3e50;
+  line-height: 1.2;
 }
 
-@keyframes subtleShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+.sectionSubtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .videosWrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
-  width: 100%;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .videoItem {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  max-width: 550px;
 }
 
-.label {
+.videoInfo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.videoTitle {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
+  font-weight: 600;
+  color: #2c3e50;
   margin-bottom: 0.75rem;
+}
+
+.videoDescription {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .tiltFrameWrapper {
   perspective: 800px; 
+  width: 100%;
 }
 
-
 .frame {
-  width: 600px; 
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  width: 100%; 
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
   background-color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .frame:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .frameHeader {
-  height: 30px;
-  background-color: #f4f4f4;
+  height: 35px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 15px;
+  border-bottom: 1px solid #e9ecef;
 }
 
 .dot {
@@ -100,7 +102,7 @@
   height: 12px;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .red {
@@ -115,10 +117,106 @@
 
 .frameContent {
   padding: 0;
+  background-color: #fff;
 }
 
 .video {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/**
+ * Impact statement highlighting research value
+ */
+.impactStatement {
+  text-align: center;
+  max-width: 900px;
+  margin: 4rem auto 0 auto;
+  padding: 2rem;
+  background-color: rgba(52, 152, 219, 0.05);
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}
+
+.impactStatement p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.impactStatement strong {
+  color: #3498db;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 996px) {
+  .videoContainer {
+    padding: 4rem 1.5rem;
+  }
+  
+  .videosWrapper {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .videoItem {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .sectionTitle {
+    font-size: 2.4rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .videoContainer {
+    padding: 3rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .videoTitle {
+    font-size: 1.3rem;
+  }
+  
+  .videoDescription {
+    font-size: 0.95rem;
+  }
+  
+  .impactStatement {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .impactStatement p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .videoContainer {
+    padding: 2rem 0.75rem;
+  }
+  
+  .videoHeader {
+    margin-bottom: 3rem;
+  }
+  
+  .videosWrapper {
+    gap: 2.5rem;
+  }
 }

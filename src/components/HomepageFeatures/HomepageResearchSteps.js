@@ -38,119 +38,81 @@ export default function HomepageResearchSteps() {
   };
 
   return (
-    <>
-      <div
-        className={[
-          styles.container,
-          activeIndex === 0 && styles.step0Active,
-          activeIndex === 1 && styles.step1Active,
-          activeIndex === 2 && styles.step2Active,
-          activeIndex === 3 && styles.step3Active,
-        ]
-          .filter(Boolean)
-          .join(' ')}
-      >
-        Section Heading
-        <div className={styles.sectionHeading}>
-          <br />
-          <h3>Replicable Behavioral Experimentation</h3>
-          <br />
-        </div>
+    <div
+      className={[
+        styles.container,
+        activeIndex === 0 && styles.step0Active,
+        activeIndex === 1 && styles.step1Active,
+        activeIndex === 2 && styles.step2Active,
+        activeIndex === 3 && styles.step3Active,
+      ]
+        .filter(Boolean)
+        .join(' ')}
+    >
+      {/* Arrows & Horizontal Slider */}
+      <div className={styles.horizontalContainer}>
+        <button
+          className={styles.arrowLeft}
+          onClick={handlePrev}
+          disabled={activeIndex === 0}
+          aria-label="Previous step"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
 
-        {/* Arrows & Horizontal Slider */}
-        <div className={styles.horizontalContainer}>
-          <button
-            className={styles.arrowLeft}
-            onClick={handlePrev}
-            disabled={activeIndex === 0}
-            aria-label="Previous step"
+        <div className={styles.sliderWrapper}>
+          <div
+            className={styles.sliderTrack}
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M15 18L9 12L15 6"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-
-          <div className={styles.sliderWrapper}>
-            <div
-              className={styles.sliderTrack}
-              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-            >
-              {stepsData.map((step, idx) => (
-                <div className={styles.stepSlide} key={idx}>
-                  <div className={styles.stepWrapper}>
-                    <div className={styles.stepText}>
-                      <div className={styles.imageContainer}>
-                        <img
-                          src={step.imgSrc}
-                          alt={step.title}
-                          className={styles.stepImage}
-                        />
-                      </div>
-                      <div className={styles.stepTitleBox}>
-                        <h2>{step.title}</h2>
-                      </div>
-                      <p>{step.description}</p>
+            {stepsData.map((step, idx) => (
+              <div className={styles.stepSlide} key={idx}>
+                <div className={styles.stepWrapper}>
+                  <div className={styles.stepText}>
+                    <div className={styles.imageContainer}>
+                      <img
+                        src={step.imgSrc}
+                        alt={step.title}
+                        className={styles.stepImage}
+                      />
                     </div>
+                    <div className={styles.stepTitleBox}>
+                      <h2>{step.title}</h2>
+                    </div>
+                    <p>{step.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
-          <button
-            className={styles.arrowRight}
-            onClick={handleNext}
-            disabled={activeIndex === stepsData.length - 1}
-            aria-label="Next step"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M9 6L15 12L9 18"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
         </div>
+
+        <button
+          className={styles.arrowRight}
+          onClick={handleNext}
+          disabled={activeIndex === stepsData.length - 1}
+          aria-label="Next step"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 6L15 12L9 18"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
       </div>
-
-      {/* Combined Supported By and Technology Partners Section */}
-      <section className={styles.partnersSection}>
-        <div className={styles.supportedBy}>
-          <h3>Supported By</h3>
-          <div className={styles.logosContainer}>
-            <img
-              src="/img/InstituteMark_DBI_RGB.png"
-              alt="Digital Business Institute"
-              className={styles.supportedLogo}
-            />
-            <img
-              src="/img/NSF_Logo.png"
-              alt="NSF Logo"
-              className={styles.supportedLogo}
-            />
-          </div>
-        </div>
-        <div className={styles.techPartners}>
-          <h3>Technology Partners</h3>
-          <div className={styles.logosContainer}>
-            <img
-              src="/img/empirica_logo.png"
-              alt="Empirica Logo"
-              className={styles.supportedLogo}
-            />
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
 

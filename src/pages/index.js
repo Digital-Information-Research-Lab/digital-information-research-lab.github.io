@@ -7,7 +7,10 @@ import styles from './index.module.css';
 import HomepageResearchSteps from '../components/HomepageFeatures/HomepageResearchSteps';
 import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
 
-
+/**
+ * Enhanced header component that emphasizes our mission to combat misinformation
+ * in digital marketplaces through behavioral experiments.
+ */
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -23,14 +26,18 @@ function HomepageHeader() {
             <div className="container">
                 <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
                 <p className={styles.heroSubtitle}>
-                We are a research group at Boston University, focusing on decentralized governance of marketplaces to curb misleading claims and digital harm.
+                  Combating misinformation in digital marketplaces through gamified behavioral experiments. 
+                  We design two-sided platforms to study and prevent misleading claims that harm consumers and democracy.
+                </p>
+                <p className={styles.heroMission}>
+                  Bridging economic theory and user interface design to create research-driven solutions for platform governance.
                 </p>
                 <div className={styles.buttons}>
                 <a
                 className="button button--primary button--lg"
-                href="/docs/intro" // <- Change this to your target page route
+                href="/docs/intro"
                 >
-                Explore The Docs
+                Explore Our Research
                 </a>
                 <a
                 className="button button--secondary button--lg"
@@ -52,11 +59,11 @@ export default function Home() {
     return (
         <Layout
             title={`${siteConfig.title}`}
-            description="Platform Governance Research Lab">
+            description="Platform Governance Research Lab - Combating misinformation through behavioral experiments">
             <HomepageHeader/>
             <main>
-                <HomepageFeatures/>
                 <HomepageVideo/>
+                <HomepageFeatures/>
                 <HomepageResearchSteps/>
             </main>
         </Layout>
