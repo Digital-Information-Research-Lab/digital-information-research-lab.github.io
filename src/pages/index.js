@@ -25,11 +25,10 @@ function HomepageHeader() {
             <div className="container">
                 <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
                 <p className={styles.heroSubtitle}>
-                  Combating misinformation in digital marketplaces through gamified behavioral experiments. 
-                  We design two-sided platforms to study and prevent misleading claims that harm consumers and democracy.
+                  We devise decentralized governance mechanisms to limit misleading claims that harm consumers in digital marketplaces. 
                 </p>
                 <p className={styles.heroMission}>
-                  Bridging economic theory and user interface design to create research-driven solutions for platform governance.
+                  Bridging economic theory and behavioral experiment design to create research-driven solutions for platform governance.
                 </p>
                 <div className={styles.buttons}>
                 <a
