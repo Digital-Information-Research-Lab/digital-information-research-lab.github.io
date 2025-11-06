@@ -230,7 +230,7 @@ This will generate docs in the right folders — no manual setup needed. <br />
 ## **Gameplay Tutorials**
 This section explains each step of the **gameplay process** to understand the core mechanics and slow of the game.
 
-- [LLM Gameplay](/docs/Gameplay/Gameplay.md)
+- [LLM Gameplay](/docs/Gameplay/gameplay.md)
 
 ---
 
