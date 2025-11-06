@@ -4,8 +4,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Digital Information Research Docs', // Title of the site
-  tagline: 'Empirica Marketplace Simulation Documentation', // Short description
+  title: 'Digital Information Research Lab', // Title of the site
+  tagline: 'Behavioral Experiments in Digital Marketplaces', // Short description
   favicon: 'img/websitelogo.webp', // Path to the site icon
 
   url: 'https://truthmarket.com/',
@@ -14,7 +14,7 @@ const config = {
   // GitHub Repository Info
   organizationName: 'Digital-Information-Research-Lab', // GitHub Organization/User Name
   projectName: 'digital-information-research-lab.github.io', // Repository Name
-  deploymentBranch: 'deployment-temp', // The branch where GitHub Pages will deploy from
+  deploymentBranch: 'deploy', // The branch where GitHub Pages will deploy from
 
   // Handling broken links
   onBrokenLinks: 'warn',
