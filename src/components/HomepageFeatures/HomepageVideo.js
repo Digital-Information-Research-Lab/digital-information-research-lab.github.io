@@ -85,7 +85,7 @@ export default function HomepageVideo() {
               </div>
               <div className={styles.frameContent}>
                 <video
-                  src="/vid/seller_gameplay.mp4#t=12"
+                  src="/vid/seller_gameplay.mp4"
                   autoPlay
                   loop
                   muted
@@ -116,7 +116,7 @@ export default function HomepageVideo() {
               </div>
               <div className={styles.frameContent}>
                 <video
-                  src="/vid/buyer_gameplay.mp4#t=14"
+                  src="/vid/buyer_gameplay.mp4"
                   autoPlay
                   loop
                   muted
