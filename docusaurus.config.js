@@ -30,62 +30,84 @@ const config = {
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           path: 'docs', // Path where documentation files are stored
           routeBasePath: 'docs', // URL path for docs (e.g., /docs/)
           sidebarPath: require.resolve('./sidebars.js'), // Path to sidebar configuration
-          editUrl: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io/edit/documentation/',
+          editUrl:
+            'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io/edit/documentation/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io/edit/documentation/blog/',
+          routeBasePath: 'research',
+          editUrl:
+            'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io/edit/documentation/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'), // Path to custom styles
         },
-      }),
+      },
     ],
   ],
 
   // Theme Configuration
-  themeConfig: ({
+  themeConfig: {
     image: 'img/websitelogo.webp', // Social media card image
     navbar: {
       title: 'Platform Governance Research Lab',
-      style: 'primary',
       items: [
+        {
+          to: '/research',
+          position: 'right',
+          label: 'Research',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'right',
-          label: 'Documentation'
+          label: 'Documentation',
         },
         {
           to: '/publications',
           position: 'right',
-          label: 'Publications'
+          label: 'Publications',
         },
         {
           to: '/people',
           position: 'right',
-          label: 'People'
+          label: 'People',
         },
         {
           to: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io',
           label: 'GitHub',
           position: 'right',
-          target: '_self' },
+          target: '_self',
+        },
       ],
     },
     colorMode: {
-      defaultMode: "light",
+      defaultMode: 'light',
       disableSwitch: true,
-      respectPrefersColorScheme: false
+      respectPrefersColorScheme: false,
     },
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'Research',
+          items: [
+            {
+              label: 'Human-Human Marketplace',
+              to: '/research/human-human-marketplace',
+            },
+            {
+              label: 'Human-AI Marketplace',
+              to: '/research/human-ai-marketplace',
+            },
+            { label: 'AI-AI Marketplace', to: '/research/ai-ai-marketplace' },
+          ],
+        },
         {
           title: 'Docs',
           items: [{ label: 'Documentation', to: '/docs/intro' }],
@@ -93,14 +115,24 @@ const config = {
         {
           title: 'Publications',
           items: [
-            { label: 'Free Speech & the Fake News Problem', href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261' },
-            { label: 'Improving §230, Preserving Democracy & Protecting Free Speech', href: 'https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/' },
+            {
+              label: 'Free Speech & the Fake News Problem',
+              href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261',
+            },
+            {
+              label:
+                'Improving §230, Preserving Democracy & Protecting Free Speech',
+              href: 'https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/',
+            },
           ],
         },
         {
           title: 'More',
           items: [
-            { label: 'GitHub', href: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io' },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io',
+            },
           ],
         },
       ],
@@ -110,7 +142,7 @@ const config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  }),
+  },
 };
 
 export default config;
