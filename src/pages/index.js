@@ -3,6 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ResearchHighlights from '@site/src/components/HomepageFeatures/ResearchHighlights';
+import SubscribeSection from '@site/src/components/HomepageFeatures/SubscribeSection';
 import Link from '@docusaurus/Link';
 
 import styles from './index.module.css';
@@ -41,7 +42,7 @@ function HomepageHeader() {
         {/* Right side - Illustration */}
         <div className={styles.heroImageContainer}>
           <img
-            src='/img/background8.png'
+            src='/img/websitelogo.webp'
             alt='Platform Governance Research'
             className={styles.heroImage}
           />
@@ -63,6 +64,7 @@ export default function Home() {
         <ResearchHighlights />
         <HomepageVideo />
         <HomepageFeatures />
+        <SubscribeSection />
       </main>
     </Layout>
   );

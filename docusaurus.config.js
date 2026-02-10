@@ -92,51 +92,15 @@ const config = {
       respectPrefersColorScheme: false,
     },
     footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Research',
-          items: [
-            {
-              label: 'Human-Human Marketplace',
-              to: '/research/human-human-marketplace',
-            },
-            {
-              label: 'Human-AI Marketplace',
-              to: '/research/human-ai-marketplace',
-            },
-            { label: 'AI-AI Marketplace', to: '/research/ai-ai-marketplace' },
-          ],
-        },
-        {
-          title: 'Docs',
-          items: [{ label: 'Documentation', to: '/docs/intro' }],
-        },
-        {
-          title: 'Publications',
-          items: [
-            {
-              label: 'Free Speech & the Fake News Problem',
-              href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261',
-            },
-            {
-              label:
-                'Improving §230, Preserving Democracy & Protecting Free Speech',
-              href: 'https://cacm.acm.org/opinion/improving-section-230-preserving-democracy-and-protecting-free-speech/',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/Digital-Information-Research-Lab/digital-information-research-lab.github.io',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Platform Governance Research Lab`,
+      style: 'light',
+      logo: {
+        alt: 'Platform Governance Research Lab',
+        src: 'img/websitelogo.webp',
+        width: 40,
+        height: 40,
+      },
+      copyright: `© ${new Date().getFullYear()} Platform Governance Research Lab`,
+      links: [],
     },
     prism: {
       theme: prismThemes.github,
