@@ -13,7 +13,7 @@ export default function SubscribeSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    
+
     // Simulate form submission - replace with actual newsletter service
     // For example: Mailchimp, ConvertKit, Buttondown, etc.
     try {
@@ -37,23 +37,23 @@ export default function SubscribeSection() {
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.inputGroup}>
             <input
-              type="text"
-              placeholder="Name"
+              type='text'
+              placeholder='Name'
               value={name}
               onChange={(e) => setName(e.target.value)}
               className={styles.input}
               required
             />
             <input
-              type="email"
-              placeholder="Email"
+              type='email'
+              placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={styles.input}
               required
             />
             <button
-              type="submit"
+              type='submit'
               className={styles.submitButton}
               disabled={status === 'loading'}
             >

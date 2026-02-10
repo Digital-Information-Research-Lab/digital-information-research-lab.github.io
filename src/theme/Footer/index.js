@@ -20,42 +20,43 @@ function Footer() {
 
         {/* Center - Description */}
         <div className={styles.description}>
-          A research lab at Boston University studying platform governance and digital marketplaces.
+          A research lab at Boston University studying platform governance and
+          digital marketplaces.
         </div>
 
         {/* Right side - Social icons */}
         <div className={styles.socialLinks}>
           <a
-            href="https://github.com/Digital-Information-Research-Lab"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://github.com/Digital-Information-Research-Lab'
+            target='_blank'
+            rel='noopener noreferrer'
             className={styles.socialLink}
-            aria-label="GitHub"
+            aria-label='GitHub'
           >
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/company/boston-university/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.linkedin.com/company/boston-university/'
+            target='_blank'
+            rel='noopener noreferrer'
             className={styles.socialLink}
-            aria-label="LinkedIn"
+            aria-label='LinkedIn'
           >
             <FaLinkedin />
           </a>
           <a
-            href="https://twitter.com/BU_Tweets"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://twitter.com/BU_Tweets'
+            target='_blank'
+            rel='noopener noreferrer'
             className={styles.socialLink}
-            aria-label="X (Twitter)"
+            aria-label='X (Twitter)'
           >
             <FaXTwitter />
           </a>
           <a
-            href="mailto:info@truthmarket.com"
+            href='mailto:info@truthmarket.com'
             className={styles.socialLink}
-            aria-label="Email"
+            aria-label='Email'
           >
             <FaEnvelope />
           </a>
