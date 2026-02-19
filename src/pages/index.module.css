@@ -14,7 +14,7 @@
 }
 
 .heroContainer {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -51,6 +51,7 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 1.25rem 1.5rem;
+  margin-left: -0.25rem;
   background: linear-gradient(135deg, #fafaf8 0%, #f5f4f2 100%);
   border-radius: 12px;
   text-decoration: none;

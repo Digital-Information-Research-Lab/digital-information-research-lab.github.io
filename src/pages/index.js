@@ -4,10 +4,13 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ResearchHighlights from '@site/src/components/HomepageFeatures/ResearchHighlights';
 import SubscribeSection from '@site/src/components/HomepageFeatures/SubscribeSection';
+import GameplayVideos from '@site/src/components/HomepageFeatures/GameplayVideos';
+import KeyMetrics from '@site/src/components/HomepageFeatures/KeyMetrics';
+import ProblemStatement from '@site/src/components/HomepageFeatures/ProblemStatement';
+import AnalysisVisualizations from '@site/src/components/HomepageFeatures/AnalysisVisualizations';
 import Link from '@docusaurus/Link';
 
 import styles from './index.module.css';
-import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
 
 /**
  * Transluce-inspired hero section with split layout
@@ -62,7 +65,10 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <ResearchHighlights />
-        <HomepageVideo />
+        <KeyMetrics />
+        <GameplayVideos />
+        <ProblemStatement />
+        <AnalysisVisualizations />
         <HomepageFeatures />
         <SubscribeSection />
       </main>

@@ -162,11 +162,9 @@ export default function HomepageFeatures() {
 
   return (
     <div>
-      <Homepage />
-
       {/* Support & Partners Combined Section */}
       <section className={styles.supportSection} data-aos='fade-up'>
-        <div className='container'>
+        <div className={styles.supportContainer}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Support & Partners</h2>
             <p className={styles.sectionSubtitle}>

@@ -1,123 +1,184 @@
 ---
 slug: human-ai-marketplace
-title: "Human-AI Marketplace: Studying AI Assistants in Consumer Decisions"
+title: "Human-AI Marketplace: Studying Agentic LLM Sellers in E-Commerce"
 authors: [pgrl]
-tags: [research, marketplace, human-ai, artificial-intelligence]
-description: "Exploring how AI assistants influence human decision-making in digital marketplaces, and the implications for platform governance."
+tags: [research, marketplace, human-ai, artificial-intelligence, llm, agentic-ai]
+description: "NSF-funded research studying misleading ads through human buyers and agentic LLM seller interactions in controlled marketplace experiments."
 ---
 
 # Human-AI Marketplace Research
 
-Our Human-AI marketplace research investigates the emerging dynamics between human participants and AI-powered assistants in e-commerce environments, studying how AI influences consumer choices and seller strategies.
+Our Human-AI marketplace research investigates what happens when real human buyers interact with AI-powered sellers in controlled e-commerce experiments. This research direction builds on our foundational Human-Human marketplace work to understand how agentic LLM sellers behave, deceive, and respond to market incentives.
 
 <!-- truncate -->
 
-## Overview
+## The Problem
 
-As AI assistants become increasingly integrated into digital marketplaces—from product recommendation systems to chatbot shopping assistants—understanding their impact on market dynamics becomes critical. Our Human-AI marketplace extends our foundational research to explore these new frontiers.
+In real online marketplaces, misleading ads can be profitable, and buyers often can't tell what's true until it's too late. As AI systems increasingly generate product listings and advertisements, understanding their behavior becomes critical. Our research asks: **if you change the rules of the market, can you make honest selling the best strategy—even for AI agents?**
 
-## Research Questions
+## Experiment Design
 
-This research direction addresses pressing questions about AI in marketplaces:
+### Human vs AI Marketplace Configuration
 
-1. **How do AI assistants affect consumer decision-making?**
-   - Do AI recommendations improve or degrade purchase decisions?
-   - How do consumers calibrate trust in AI-provided information?
+Real human buyers interact with agentic LLM sellers that follow different selling strategies:
 
-2. **Can AI be used to detect misleading product claims?**
-   - What signals can AI systems use to identify deceptive advertising?
-   - How accurate are AI-based truth detection mechanisms?
+- **Honest Strategy**: AI sellers accurately represent product quality
+- **Deceptive Strategy**: AI sellers may mislead to maximize short-term profit
+- **Adaptive Strategy**: AI sellers respond to market feedback and reputation signals
 
-3. **What happens when sellers use AI to craft advertisements?**
-   - Do AI-generated product descriptions increase deception rates?
-   - How can platforms govern AI-assisted selling?
+<div style={{display: 'flex', gap: '1rem', margin: '2rem 0', flexWrap: 'wrap'}}>
+  <div style={{flex: 1, minWidth: '300px'}}>
+    <h4 style={{textAlign: 'center', color: '#0075c0'}}>SELLER GAMEPLAY</h4>
+    <video 
+      src="/vid/seller_gameplay.mp4" 
+      autoPlay 
+      muted 
+      loop 
+      playsInline
+      style={{width: '100%', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}
+    />
+    <p style={{fontSize: '0.9rem', color: '#666', textAlign: 'center', marginTop: '0.5rem'}}>
+      Sellers create listings, set prices, and decide whether to stake claims
+    </p>
+  </div>
+  <div style={{flex: 1, minWidth: '300px'}}>
+    <h4 style={{textAlign: 'center', color: '#0075c0'}}>BUYER GAMEPLAY</h4>
+    <video 
+      src="/vid/buyer_gameplay.mp4" 
+      autoPlay 
+      muted 
+      loop 
+      playsInline
+      style={{width: '100%', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}
+    />
+    <p style={{fontSize: '0.9rem', color: '#666', textAlign: 'center', marginTop: '0.5rem'}}>
+      Buyers browse listings, compare sellers, and can challenge misleading claims
+    </p>
+  </div>
+</div>
 
-## Experimental Configurations
+## Key Research Questions
 
-### Configuration 1: AI-Assisted Consumers
+1. **Do LLM sellers increase deception rates?**
+   - How do AI-generated advertisements compare to human-written ones?
+   - What types of misleading claims do LLMs tend to generate?
 
-Human consumers receive AI-powered assistance during their shopping experience:
+2. **Can Truth Warrants work for AI sellers?**
+   - Do staking mechanisms reduce AI deception the same way they do for humans?
+   - How do LLMs reason about risk vs. reward when stakes are involved?
 
-- **Product recommendations** based on stated preferences
-- **Claim verification** assistance that flags potentially misleading statements
-- **Price comparison** tools that aggregate market information
+3. **How do buyers respond to AI sellers?**
+   - Can buyers distinguish AI-generated from human-generated listings?
+   - Does knowing a seller is AI change buyer behavior?
 
-### Configuration 2: AI-Assisted Sellers
+## Interactive Analysis Results
 
-Human sellers can leverage AI tools for their business:
+Explore our experiment results through interactive visualizations. Hover, click, or scroll to dive into the data.
 
-- **Advertisement generation** to create compelling product descriptions
-- **Pricing optimization** based on market conditions
-- **Demand forecasting** to guide production decisions
+*Credits: Vedant Kejariwal, Harshaveena Komatineni, Swapneel Mehta, Quang Nguyen & Team.*
 
-### Configuration 3: Mixed AI Integration
+### LLM Seller Reasoning Analysis
 
-Both buyers and sellers have access to AI assistance, creating complex market dynamics that mirror emerging real-world conditions.
+This visualization shows how LLM sellers reason about production and sales decisions across different market conditions:
 
-## Key Research Themes
+<div style={{width: '100%', height: '700px', borderRadius: '12px', overflow: 'hidden', border: '2px solid rgba(16, 185, 129, 0.2)', marginBottom: '2rem'}}>
+  <iframe 
+    src="/analysis/32_llm_reasoning_with_bars.html"
+    style={{width: '100%', height: '100%', border: 'none'}}
+    title="LLM Seller Reasoning with Production/Sales Bars"
+    loading="lazy"
+  />
+</div>
 
-### AI Trust Calibration
+### Brand Change Reasoning Quadrant
 
-Understanding how humans calibrate their trust in AI systems is crucial for effective platform governance. Our research examines:
+Analyzing how sellers change their branding strategies based on market feedback:
 
-| Factor | Impact on Trust |
-|--------|-----------------|
-| AI accuracy over time | Trust increases with consistent accuracy |
-| Explanation quality | Better explanations lead to more appropriate trust |
-| Prior AI experience | Previous positive/negative experiences influence baseline trust |
-| Task complexity | Humans rely more on AI for complex decisions |
+<div style={{width: '100%', height: '700px', borderRadius: '12px', overflow: 'hidden', border: '2px solid rgba(16, 185, 129, 0.2)', marginBottom: '2rem'}}>
+  <iframe 
+    src="/analysis/31_brand_change_reasoning_quadrant.html"
+    style={{width: '100%', height: '100%', border: 'none'}}
+    title="Brand Change Reasoning Quadrant"
+    loading="lazy"
+  />
+</div>
 
-### AI Detection of Deception
+### Irrational Production Dashboard
 
-We explore whether AI systems can effectively identify misleading product claims:
+Identifying patterns of irrational production decisions:
 
-```
-Signals for AI Deception Detection:
-├── Linguistic patterns in advertisements
-├── Price-quality inconsistencies
-├── Seller behavior patterns
-├── Consumer complaint patterns
-└── Cross-platform verification
-```
+<div style={{width: '100%', height: '700px', borderRadius: '12px', overflow: 'hidden', border: '2px solid rgba(16, 185, 129, 0.2)', marginBottom: '2rem'}}>
+  <iframe 
+    src="/analysis/29_irrational_production_dashboard.html"
+    style={{width: '100%', height: '100%', border: 'none'}}
+    title="Irrational Production Dashboard"
+    loading="lazy"
+  />
+</div>
 
-### Adversarial Dynamics
+### Exit Strategy Analysis
 
-When AI assists both buyers and sellers, we observe interesting adversarial dynamics:
+Understanding how sellers exit the market under different conditions:
 
-- **Arms race effects** where seller AI adapts to evade buyer AI detection
-- **Equilibrium shifts** in market honesty levels
-- **New forms of deception** that emerge from AI capabilities
+<div style={{width: '100%', height: '700px', borderRadius: '12px', overflow: 'hidden', border: '2px solid rgba(16, 185, 129, 0.2)', marginBottom: '2rem'}}>
+  <iframe 
+    src="/analysis/27_exit_sankey_strategy_rep_with_stake.html"
+    style={{width: '100%', height: '100%', border: 'none'}}
+    title="Exit Sankey Strategy with Stake"
+    loading="lazy"
+  />
+</div>
 
-## Platform Capabilities
+## Key Findings
 
-Our Human-AI marketplace platform supports:
+Our experiments have revealed important insights about AI behavior in marketplaces:
 
-- **Configurable AI models** for different experimental conditions
-- **Real-time AI assistance** integration with human interfaces
-- **Comprehensive logging** of human-AI interactions
-- **A/B testing frameworks** for comparing AI intervention effects
+| Finding | Implication |
+|---------|-------------|
+| LLM sellers can generate convincing misleading ads | Platforms need AI-specific content moderation |
+| Staking mechanisms reduce AI deception | Economic incentives work for AI agents too |
+| Buyers struggle to identify AI-generated content | Disclosure requirements may be necessary |
+| AI sellers adapt to reputation signals | Reputation systems remain effective |
 
-## Implications for Platform Governance
+## Research Impact
 
-Our findings inform platform policy in several areas:
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', margin: '2rem 0', textAlign: 'center'}}>
+  <div>
+    <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#0075c0'}}>4,000+</div>
+    <div style={{fontSize: '0.875rem', color: '#666'}}>Participants</div>
+  </div>
+  <div>
+    <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#0075c0'}}>1,250+</div>
+    <div style={{fontSize: '0.875rem', color: '#666'}}>Datasets</div>
+  </div>
+  <div>
+    <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#0075c0'}}>$550K</div>
+    <div style={{fontSize: '0.875rem', color: '#666'}}>NSF Grant</div>
+  </div>
+  <div>
+    <div style={{fontSize: '2rem', fontWeight: 'bold', color: '#0075c0'}}>6+</div>
+    <div style={{fontSize: '0.875rem', color: '#666'}}>Talks</div>
+  </div>
+</div>
 
-1. **AI transparency requirements** for marketplace participants
-2. **Liability frameworks** for AI-assisted transactions
-3. **Disclosure rules** when AI generates product content
-4. **Consumer protection** in AI-mediated marketplaces
+## Technology Stack
 
-## Current Experiments
+Our platform combines multiple technologies:
 
-We are currently running experiments examining:
+- **React.js** + **Tailwind CSS** for the marketplace UI
+- **MIT Empirica** for experiment orchestration
+- **GPT API** for agentic seller behavior
+- **Python** for data pipelines and statistical analysis
 
-- The effect of AI explanation quality on consumer trust
-- Whether AI-assisted sellers are more or less honest
-- Optimal AI intervention points in the shopping journey
+## Related Publications
+
+- [Market Design Interventions for Safer Agentic AI](/publications) - Studying how truth warrants affect LLM seller behavior
+- [Improving the Governance of Digital Platforms with Interactive Marketplace Experiments](/publications) - IC2S2 2024 presentation
 
 ## Get Involved
 
-Interested in participating in our Human-AI marketplace research? [Contact us](/people) to learn about opportunities.
+Interested in participating in our Human-AI marketplace research or accessing our datasets? [Contact us](/people) to learn more.
 
 ---
 
-*This research direction explores the frontier of AI integration in digital marketplaces, building on our foundational Human-Human research.*
+*This research is supported by the National Science Foundation and builds on our foundational [Human-Human marketplace](/research/human-human-marketplace) work.*

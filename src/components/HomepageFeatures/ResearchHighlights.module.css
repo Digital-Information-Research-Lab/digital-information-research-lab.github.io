@@ -8,7 +8,7 @@
 
 /* Section Header - Transluce style */
 .sectionHeader {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto 2rem auto;
   padding: 0 2rem;
   display: flex;
@@ -40,7 +40,7 @@
 /* Carousel Container */
 .carouselContainer {
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
