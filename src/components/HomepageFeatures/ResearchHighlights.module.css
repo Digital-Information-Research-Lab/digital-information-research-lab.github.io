@@ -1,0 +1,241 @@
+/* Transluce-inspired Research Highlights Section */
+
+.highlightsSection {
+  padding: 5rem 0;
+  background: #fdfcfa;
+  border-top: 1px solid #f0efed;
+}
+
+/* Section Header - Transluce style */
+.sectionHeader {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0;
+}
+
+.viewAllLink {
+  font-size: 1rem;
+  color: #0075c0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.viewAllLink:hover {
+  color: #005286;
+  text-decoration: none;
+}
+
+/* Carousel Container */
+.carouselContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Scroll Buttons */
+.scrollButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #eeedeb;
+  background: #fdfcfa;
+  color: #64748b;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.scrollButton:hover {
+  background: #f8f7f5;
+  border-color: #e5e4e2;
+  color: #1e293b;
+}
+
+.scrollLeft {
+  left: 0;
+}
+
+.scrollRight {
+  right: 0;
+}
+
+.scrollButton.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Cards Scroller */
+.cardsScroller {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cardsScroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Research Card - Transluce style */
+.researchCard {
+  flex: 0 0 380px;
+  background: #ffffff;
+  border: 1px solid #eeedeb;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.researchCard:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  border-color: #e5e4e2;
+}
+
+/* Card Image Placeholder */
+.cardImagePlaceholder {
+  height: 200px;
+  background: linear-gradient(135deg, #fafaf8 0%, #f5f4f2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eeedeb;
+}
+
+.cardIcon {
+  font-size: 4rem;
+  opacity: 0.8;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardCategory {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #0075c0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  flex: 1;
+}
+
+.cardDate {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .highlightsSection {
+    padding: 3rem 0;
+  }
+
+  .sectionHeader {
+    padding: 0 1.5rem;
+  }
+
+  .carouselContainer {
+    padding: 0 1.5rem;
+  }
+
+  .researchCard {
+    flex: 0 0 320px;
+  }
+
+  .scrollButton {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlightsSection {
+    padding: 2rem 0;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .carouselContainer {
+    padding: 0 1rem;
+  }
+
+  .researchCard {
+    flex: 0 0 280px;
+  }
+
+  .cardImagePlaceholder {
+    height: 150px;
+  }
+
+  .cardIcon {
+    font-size: 3rem;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+}

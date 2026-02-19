@@ -1,108 +1,179 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Transluce-inspired hero section styles
+ * Clean, minimalist design with split layout
  */
- .heroBanner {
-  background-color: transparent; 
-  min-height: 400px;         
+
+/* Hero Section - Full width with split layout */
+.heroSection {
+  background: #fdfcfa;
+  min-height: calc(100vh - 60px);
   display: flex;
-  align-items: center;         
-  justify-content: center;
-  position: relative;          
-  margin-bottom: 0;          
+  align-items: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
 }
 
-.heroBanner::before {
-  content: "";
-  position: absolute;
-  inset: 0; 
-  background-color: rgba(0, 0, 0, 0.2); 
-  z-index: 0;
-  pointer-events: none;
+.heroContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
 }
 
-.heroBanner .container {
-  position: relative;
-  z-index: 1;
-  max-width: 1000px;
+/* Left side - Text content */
+.heroContent {
+  max-width: 600px;
 }
 
 .heroTitle {
-  text-align: center;
-  color: #fff;       
-  font-size: 4rem;
-  font-weight: 700;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #0a0a0a;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
 }
 
 .heroSubtitle {
-  text-align: center;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: #4a4a4a;
   line-height: 1.6;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-}
-
-/**
- * Secondary mission statement with subtle styling
- */
-.heroMission {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
+  margin: 0 0 2.5rem 0;
   font-weight: 400;
-  line-height: 1.5;
-  margin-bottom: 2.5rem;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  font-style: italic;
 }
 
-.buttons {
+/* News/Featured Card - Transluce style */
+.newsCard {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  margin-left: -0.25rem;
+  background: linear-gradient(135deg, #fafaf8 0%, #f5f4f2 100%);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #eeedeb;
+  max-width: 400px;
 }
 
+.newsCard:hover {
+  transform: translateX(8px);
+  background: linear-gradient(135deg, #f5f4f2 0%, #eeedeb 100%);
+  text-decoration: none;
+  border-color: #0075c0;
+}
+
+.newsLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0075c0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.newsTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.newsArrow {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: #0075c0;
+  transition: transform 0.3s ease;
+}
+
+.newsCard:hover .newsArrow {
+  transform: translateY(-50%) translateX(4px);
+}
+
+/* Right side - Image */
+.heroImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+
+.heroImageContainer:hover .heroImage {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    margin-bottom: 0;
-    min-height: 350px;
+  .heroSection {
+    min-height: auto;
+    padding: 3rem 1.5rem;
   }
-  
-  .heroTitle {
-    font-size: 3rem;
+
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
   }
-  
-  .heroSubtitle {
-    font-size: 1.2rem;
+
+  .heroContent {
+    max-width: 100%;
+    order: 1;
   }
-  
-  .heroMission {
-    font-size: 1rem;
+
+  .heroImageContainer {
+    order: 2;
+  }
+
+  .newsCard {
+    margin: 0 auto;
+  }
+
+  .heroImage {
+    max-height: 350px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .heroSection {
+    padding: 2rem 1rem;
+  }
+
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-  
+
   .heroSubtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-  
-  .heroMission {
-    font-size: 0.95rem;
+
+  .newsCard {
+    padding: 1rem 1.25rem;
   }
-  
-  .buttons {
-    flex-direction: column;
+
+  .newsTitle {
+    font-size: 1rem;
+    padding-right: 2rem;
+  }
+
+  .heroImage {
+    max-height: 280px;
   }
 }
-
- 

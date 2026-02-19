@@ -11,11 +11,12 @@
 }
 
 .featureCard {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   padding: 20px;
   border-radius: 10px;
   background: white;
-  
 }
 
 .featureCard:hover {
@@ -24,10 +25,12 @@
 }
 
 .featureImage {
-  width: 100%; 
-  height: 250px; 
-  object-fit: cover; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Enhanced Impact Section */
@@ -64,7 +67,9 @@
   border-radius: 16px;
   padding: 0;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   border: 1px solid #e2e8f0;
@@ -149,15 +154,15 @@
   .impactSection {
     padding: 3rem 0;
   }
-  
+
   .sectionHeader {
     margin-bottom: 2rem;
   }
-  
+
   .impactCard {
     margin-bottom: 1.5rem;
   }
-  
+
   .cardContent {
     padding: 1.25rem;
   }
@@ -167,11 +172,11 @@
   .impactSection {
     padding: 2rem 0;
   }
-  
+
   .cardHeader {
     height: 150px;
   }
-  
+
   .cardContent {
     padding: 1rem;
   }
@@ -181,6 +186,12 @@
 .supportSection {
   padding: 4rem 0;
   background: linear-gradient(135deg, #fefdf8 0%, #f7f3e9 100%);
+}
+
+.supportContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .partnerSection {
@@ -194,7 +205,9 @@
   border-radius: 16px;
   padding: 0;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   border: 1px solid #e2e8f0;
@@ -202,8 +215,6 @@
   display: flex;
   flex-direction: column;
 }
-
-
 
 .supportCard:hover {
   transform: translateY(-8px);
@@ -309,20 +320,20 @@
   .partnerSection {
     padding: 3rem 0;
   }
-  
+
   .supportCard {
     margin-bottom: 1.5rem;
   }
-  
+
   .supportCardContent {
     padding: 1.25rem;
   }
-  
+
   .supportCardHeader {
     padding: 1.5rem 1.25rem 0.75rem;
     min-height: 100px;
   }
-  
+
   .supportLogo {
     max-height: 60px;
     max-width: 160px;
@@ -334,24 +345,23 @@
   .partnerSection {
     padding: 2rem 0;
   }
-  
+
   .supportCardContent {
     padding: 1rem;
   }
-  
+
   .supportCardHeader {
     padding: 1.25rem 1rem 0.5rem;
     min-height: 80px;
   }
-  
+
   .supportLogo {
     max-height: 50px;
     max-width: 140px;
   }
-  
+
   .amountBadge {
     font-size: 0.8rem;
     padding: 6px 12px;
   }
 }
-

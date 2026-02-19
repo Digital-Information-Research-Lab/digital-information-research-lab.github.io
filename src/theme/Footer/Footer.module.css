@@ -1,0 +1,80 @@
+/**
+ * Transluce-inspired Footer Styles
+ * Clean, minimal design with social icons on the right
+ */
+
+.footer {
+  background: #fdfcfa;
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #64748b;
+  background: transparent;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 1.25rem;
+}
+
+.socialLink:hover {
+  color: #0a0a0a;
+  background: #f1f5f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .copyright {
+    order: 1;
+  }
+
+  .description {
+    order: 2;
+  }
+
+  .socialLinks {
+    order: 3;
+    justify-content: center;
+  }
+}

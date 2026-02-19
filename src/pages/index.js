@@ -2,67 +2,76 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ResearchHighlights from '@site/src/components/HomepageFeatures/ResearchHighlights';
+import SubscribeSection from '@site/src/components/HomepageFeatures/SubscribeSection';
+import GameplayVideos from '@site/src/components/HomepageFeatures/GameplayVideos';
+import KeyMetrics from '@site/src/components/HomepageFeatures/KeyMetrics';
+import ProblemStatement from '@site/src/components/HomepageFeatures/ProblemStatement';
+import AnalysisVisualizations from '@site/src/components/HomepageFeatures/AnalysisVisualizations';
+import Link from '@docusaurus/Link';
 
 import styles from './index.module.css';
-import HomepageVideo from '../components/HomepageFeatures/HomepageVideo';
 
 /**
- * Enhanced header component that emphasizes our mission to combat misinformation
- * in digital marketplaces through behavioral experiments.
+ * Transluce-inspired hero section with split layout
+ * Clean, minimalist design with text on left, illustration on right
  */
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-      <div>
-          <header
-            className={clsx("hero", styles.heroBanner)}
-            style={{
-                backgroundImage: `url(${require("@site/static/img/background8.png").default})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-            >
-            <div className="container">
-                <h1 className={styles.heroTitle}>Platform Governance Research Lab</h1>
-                <p className={styles.heroSubtitle}>
-                  We devise decentralized governance mechanisms to limit misleading claims that harm consumers in digital marketplaces. 
-                </p>
-                <p className={styles.heroMission}>
-                  Bridging economic theory and behavioral experiment design to create research-driven solutions for platform governance.
-                </p>
-                <div className={styles.buttons}>
-                <a
-                className="button button--primary button--lg"
-                href="/docs/intro"
-                >
-                Explore Documentation
-                </a>
-                <a
-                className="button button--secondary button--lg"
-                href="/people"
-                style={{ marginLeft: '1rem' }}
-                >
-                Meet the Team
-                </a>
-            </div>
-            </div>
-            </header>
+    <header className={styles.heroSection}>
+      <div className={styles.heroContainer}>
+        {/* Left side - Text content */}
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            Decentralized governance for trustworthy digital marketplaces
+          </h1>
+          <p className={styles.heroSubtitle}>
+            We are a research lab studying how behavioral experiments and
+            economic mechanisms can combat misinformation in e-commerce
+            platforms.
+          </p>
 
+          {/* Featured News Card */}
+          <Link to='/research' className={styles.newsCard}>
+            <span className={styles.newsLabel}>RESEARCH</span>
+            <span className={styles.newsTitle}>
+              Explore Our Three Marketplace Research Directions
+            </span>
+            <span className={styles.newsArrow}>→</span>
+          </Link>
+        </div>
+
+        {/* Right side - Illustration */}
+        <div className={styles.heroImageContainer}>
+          <img
+            src='/img/websitelogo.webp'
+            alt='Platform Governance Research'
+            className={styles.heroImage}
+          />
+        </div>
       </div>
+    </header>
   );
 }
 
 export default function Home() {
-    const {siteConfig} = useDocusaurusContext();
-    return (
-        <Layout
-            title={`${siteConfig.title}`}
-            description="Platform Governance Research Lab - Combating misinformation through behavioral experiments">
-            <HomepageHeader/>
-            <main>
-                <HomepageVideo/>
-                <HomepageFeatures/>
-            </main>
-        </Layout>
-    );
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title={`${siteConfig.title}`}
+      description='Platform Governance Research Lab - Combating misinformation through behavioral experiments'
+    >
+      <HomepageHeader />
+      <main>
+        <ResearchHighlights />
+        <KeyMetrics />
+        <GameplayVideos />
+        <ProblemStatement />
+        <AnalysisVisualizations />
+        <HomepageFeatures />
+        <SubscribeSection />
+      </main>
+    </Layout>
+  );
 }

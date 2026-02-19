@@ -1,19 +1,44 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+research:
+  label: Research
+  permalink: /research
+  description: Research publications and findings
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+marketplace:
+  label: Marketplace
+  permalink: /marketplace
+  description: Marketplace research and experiments
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+human-human:
+  label: Human-Human
+  permalink: /human-human
+  description: Human-Human marketplace research
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+human-ai:
+  label: Human-AI
+  permalink: /human-ai
+  description: Human-AI marketplace research
+
+ai-ai:
+  label: AI-AI
+  permalink: /ai-ai
+  description: AI-AI marketplace research
+
+behavioral-experiments:
+  label: Behavioral Experiments
+  permalink: /behavioral-experiments
+  description: Behavioral experiment methodology and findings
+
+artificial-intelligence:
+  label: Artificial Intelligence
+  permalink: /artificial-intelligence
+  description: AI-related research
+
+multi-agent-systems:
+  label: Multi-Agent Systems
+  permalink: /multi-agent-systems
+  description: Multi-agent simulation research
+
+simulation:
+  label: Simulation
+  permalink: /simulation
+  description: Simulation-based research

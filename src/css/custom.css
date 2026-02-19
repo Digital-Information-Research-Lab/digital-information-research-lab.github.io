@@ -17,6 +17,17 @@
   --ifm-color-primary-lightest: #0098fa;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #fdfcfa;
+  --ifm-background-surface-color: #fdfcfa;
+}
+
+html,
+body {
+  background-color: #fdfcfa;
+}
+
+.main-wrapper {
+  background-color: #fdfcfa;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -94,53 +105,58 @@
 }
 
 .navbar {
-  font-family: Public Sans, serif;
-  /* background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.2), 
-      rgba(0, 0, 0, 0.2)
-    ), 
-    url('/img/background5.png') 
-    no-repeat center center fixed;
-  background-size: cover; */
-  backdrop-filter: blur(6px); /* Optional soft blur/glass effect */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Public Sans', sans-serif;
+  background: #fdfcfa;
+  box-shadow: none;
+  border-bottom: 1px solid #f0efed;
 }
 
 .navbar__inner {
   display: flex;
   justify-content: space-between;
-  /* Keeps items spaced properly */
-  padding: 0 100px;
-  max-width: 1200px;
+  padding: 0 2rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .navbar__brand {
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar__title {
+  color: #0a0a0a;
+  font-weight: 600;
 }
 
 .navbar__item {
   text-decoration: none;
   position: relative;
-  font-size: 14px;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  font-weight: 500;
 }
 
+.navbar__item:hover {
+  color: #0a0a0a;
+}
+
+.navbar__link {
+  color: #4a4a4a;
+}
+
+.navbar__link:hover {
+  color: #0a0a0a;
+}
+
+.navbar__link--active {
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+/* Remove the underline effect for cleaner look */
 .navbar__item::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 80%;
-  height: 2px;
-  background: white;
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease-in-out;
-}
-
-.navbar__item:hover::after {
-  opacity: 1;
+  display: none;
 }
 
 .image-container {
@@ -269,7 +285,9 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  transition: opacity 0.1s ease-in-out, background 0.1s ease-in-out;
+  transition:
+    opacity 0.1s ease-in-out,
+    background 0.1s ease-in-out;
 }
 
 .modal-overlay.visible {
@@ -284,7 +302,9 @@ body.modal-open {
   text-align: left;
   transform: scale(0.8);
   opacity: 0;
-  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  transition:
+    transform 0.1s ease-out,
+    opacity 0.1s ease-out;
   overflow-y: hidden;
 }
 
@@ -340,7 +360,6 @@ body.modal-open {
   /* Remove underline */
   font-weight: bold;
 }
-
 
 .custom-learn-more-btn:hover {
   background-color: #0063a3;

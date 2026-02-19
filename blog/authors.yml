@@ -1,23 +1,22 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+pgrl:
+  name: Platform Governance Research Lab
+  title: Research Team
+  url: https://github.com/Digital-Information-Research-Lab
+  image_url: /img/websitelogo.webp
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    github: Digital-Information-Research-Lab
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+swapneel:
+  name: Swapneel Mehta
+  title: Principal Investigator
+  url: https://www.swapneelm.com/
+  image_url: /headshot/swapneel_mehta.jpg
+  page: true
+
+mva:
+  name: Marshall Van Alstyne
+  title: Principal Investigator
+  url: https://www.bu.edu/questrom/profile/marshall-van-alstyne/
+  image_url: /headshot/mva.jpg
+  page: true
