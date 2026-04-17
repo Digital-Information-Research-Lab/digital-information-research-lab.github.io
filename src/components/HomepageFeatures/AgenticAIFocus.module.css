@@ -158,17 +158,8 @@
   padding: 1.5rem;
   background: #0a0a0a;
   border-radius: 14px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fafaf8;
   overflow: hidden;
-}
-
-.companionCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-  text-decoration: none;
-  color: inherit;
 }
 
 .companionThumb {
@@ -223,11 +214,41 @@
   color: #ffffff;
 }
 
-.companionCta {
+.companionLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.companionPrimaryLink,
+.companionSecondaryLink {
   font-size: 0.85rem;
   font-weight: 600;
+  text-decoration: none;
+  padding: 0.1rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.companionPrimaryLink {
   color: #8fb8d6;
-  margin-top: 0.25rem;
+}
+
+.companionPrimaryLink:hover {
+  color: #8fb8d6;
+  border-bottom-color: #8fb8d6;
+  text-decoration: none;
+}
+
+.companionSecondaryLink {
+  color: #d4d4d0;
+}
+
+.companionSecondaryLink:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

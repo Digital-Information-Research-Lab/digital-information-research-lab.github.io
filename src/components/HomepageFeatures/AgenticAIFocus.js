@@ -65,13 +65,13 @@ export default function AgenticAIFocus() {
         {/* Featured companion work: the sunburst makes the seller-strategy
             landscape legible for HUMAN sellers. Pairing it with the LLM
             chart above lets a reader see how strategy distributions shift
-            when the same marketplace is populated by AI agents instead. */}
-        <a
-          href='https://venna20.github.io/Visualizing-How-Players-Think-in-a-Digital-Marketplace-Experiment/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className={styles.companionCard}
-        >
+            when the same marketplace is populated by AI agents instead.
+
+            Rendered as a div (not an anchor) because the body carries
+            two separate links: one to the interactive visualization,
+            one to the author's LinkedIn. Nesting anchors is invalid
+            HTML and breaks React hydration. */}
+        <div className={styles.companionCard}>
           <div className={styles.companionThumb}>
             <img
               src='/img/sunburst-seller-strategies.png'
@@ -85,17 +85,31 @@ export default function AgenticAIFocus() {
               How 161 human sellers think across four markets
             </h3>
             <p className={styles.companionText}>
-              An interactive D3 sunburst from our collaborator{' '}
-              <strong>Venna Patel</strong> maps every seller's strategy mix
-              over four weeks of play, with hover tooltips that surface
-              their own exit-survey words. Explore the full interactive
-              version on her site.
+              An interactive D3 sunburst by our graduate researcher{' '}
+              <strong>Harshaveena Komatineni</strong> maps every seller's
+              strategy mix over four weeks of play, with hover tooltips
+              that surface their own exit-survey words.
             </p>
-            <span className={styles.companionCta}>
-              Open the interactive visualization ↗
-            </span>
+            <div className={styles.companionLinks}>
+              <a
+                href='https://venna20.github.io/Visualizing-How-Players-Think-in-a-Digital-Marketplace-Experiment/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={styles.companionPrimaryLink}
+              >
+                Open the interactive visualization ↗
+              </a>
+              <a
+                href='https://www.linkedin.com/in/harshaveena/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={styles.companionSecondaryLink}
+              >
+                Harshaveena on LinkedIn ↗
+              </a>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </section>
   );
