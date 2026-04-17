@@ -1,0 +1,260 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  background: #fdfcfa;
+}
+
+.pageHeader {
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid #eeedeb;
+  padding-bottom: 2rem;
+}
+
+.pageTitle {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 0.75rem 0;
+}
+
+.pageLede {
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  line-height: 1.65;
+  max-width: 720px;
+  margin: 0 0 1.5rem 0;
+}
+
+.tableOfContents {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.tableOfContents a {
+  color: #0075c0;
+  text-decoration: none;
+}
+
+.tableOfContents a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem 0;
+}
+
+.sectionDescription {
+  font-size: 0.95rem;
+  color: #5a5a5a;
+  margin: 0;
+}
+
+.yearGroup {
+  margin-bottom: 2rem;
+}
+
+.yearLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0075c0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e2dfd9;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #eeedeb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  border-color: #c8d8e8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.cardLink:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.year {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b6b6b;
+  letter-spacing: 0.05em;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.muted {
+  font-size: 0.78rem;
+  color: #8a8a8a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+}
+
+.authors {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.5;
+}
+
+.venue {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  font-style: italic;
+  margin: 0 0 0.75rem 0;
+}
+
+.abstract {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.65;
+  margin: 1rem 0 0.5rem 0;
+  padding: 1rem;
+  background: #fafaf8;
+  border-left: 3px solid #0075c0;
+  border-radius: 0 6px 6px 0;
+}
+
+.venueList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.venueList li {
+  font-size: 0.875rem;
+  color: #5a5a5a;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.venueList li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #0075c0;
+  font-weight: 700;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.toggleButton {
+  background: transparent;
+  border: 0;
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0075c0;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  text-decoration: underline;
+}
+
+.linkButton {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  text-decoration: none;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #d6d4d0;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.linkButton:hover {
+  color: #0075c0;
+  border-color: #0075c0;
+  text-decoration: none;
+}
+
+@media (min-width: 720px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Talks and press cards look better in 2 cols, but papers benefit from a wider single column for the abstract */
+  .section#papers .cardGrid,
+  #papers .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}

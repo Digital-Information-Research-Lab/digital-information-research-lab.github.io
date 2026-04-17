@@ -7,12 +7,9 @@ import styles from './AnalysisVisualizations.module.css';
  * Adapted from TruthMarket project
  */
 
+// Note: 32_llm_reasoning_with_bars.html is featured in <AgenticAIFocus />
+// above, so it intentionally is not duplicated here.
 const visualizations = [
-  {
-    id: 'llm-reasoning-bars',
-    title: 'LLM Seller Reasoning with Production/Sales Bars',
-    path: '/analysis/32_llm_reasoning_with_bars.html',
-  },
   {
     id: 'brand-change-reasoning',
     title: 'Brand Change Reasoning Quadrant',

@@ -1,0 +1,170 @@
+.section {
+  padding: 5rem 0;
+  background: #fdfcfa;
+  border-top: 1px solid #f0efed;
+  border-bottom: 1px solid #f0efed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0075c0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0 0 1rem 0;
+}
+
+.lede {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0;
+}
+
+.vizCard {
+  background: #ffffff;
+  border: 1px solid #eeedeb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.vizMeta {
+  padding: 1.5rem 1.75rem 0.75rem;
+  border-bottom: 1px solid #f5f4f2;
+}
+
+.vizLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0075c0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.vizTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+}
+
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  /* Lock aspect to keep the chart legible on wide screens */
+  aspect-ratio: 16 / 9;
+  min-height: 420px;
+}
+
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.takeaway {
+  padding: 1.25rem 1.75rem 1.5rem;
+  background: #fafaf8;
+  border-top: 1px solid #f0efed;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.takeaway strong {
+  color: #0a0a0a;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.primaryAction {
+  background: #0075c0;
+  color: #ffffff;
+}
+
+.primaryAction:hover {
+  background: #005286;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.secondaryAction {
+  border: 1px solid #d6d4d0;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+.secondaryAction:hover {
+  border-color: #0075c0;
+  color: #0075c0;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .vizMeta {
+    padding: 1.25rem 1.25rem 0.5rem;
+  }
+
+  .iframeWrapper {
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
+  }
+
+  .takeaway {
+    padding: 1rem 1.25rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

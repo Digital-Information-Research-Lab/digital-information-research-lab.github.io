@@ -49,6 +49,75 @@
   letter-spacing: 0.02em;
 }
 
+.mechanismSection {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 117, 192, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.mechanismTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.02em;
+}
+
+.mechanismLede {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0 0 1.5rem 0;
+}
+
+.mechanismSteps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.mechanismSteps li {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #faf8ff;
+  border: 1px solid #ece5ff;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.mechanismSteps li strong {
+  color: #1a1a1a;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .mechanismSteps {
+    grid-template-columns: 1fr;
+  }
+}
+
 .approachList {
   list-style: none;
   padding: 0;

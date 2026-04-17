@@ -1,9 +1,8 @@
 /**
- * Transluce-inspired hero section styles
- * Clean, minimalist design with split layout
+ * Hero — split layout, problem-forward copy on the left,
+ * marketplace mechanism diagram on the right.
  */
 
-/* Hero Section - Full width with split layout */
 .heroSection {
   background: #fdfcfa;
   min-height: calc(100vh - 60px);
@@ -17,87 +16,86 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   gap: 4rem;
   align-items: center;
   width: 100%;
 }
 
-/* Left side - Text content */
 .heroContent {
-  max-width: 600px;
+  max-width: 620px;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0075c0;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.25rem, 4.6vw, 3.5rem);
   font-weight: 800;
   color: #0a0a0a;
   line-height: 1.1;
-  margin: 0 0 1.5rem 0;
   letter-spacing: -0.02em;
+  margin: 0 0 1.5rem 0;
 }
 
 .heroSubtitle {
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.9vw, 1.2rem);
   color: #4a4a4a;
   line-height: 1.6;
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 2.25rem 0;
   font-weight: 400;
 }
 
-/* News/Featured Card - Transluce style */
-.newsCard {
+.heroActions {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.25rem 1.5rem;
-  margin-left: -0.25rem;
-  background: linear-gradient(135deg, #fafaf8 0%, #f5f4f2 100%);
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  border: 1px solid #eeedeb;
-  max-width: 400px;
+  flex-wrap: wrap;
+  gap: 0.875rem;
 }
 
-.newsCard:hover {
-  transform: translateX(8px);
-  background: linear-gradient(135deg, #f5f4f2 0%, #eeedeb 100%);
-  text-decoration: none;
-  border-color: #0075c0;
-}
-
-.newsLabel {
-  font-size: 0.75rem;
+.heroPrimary,
+.heroSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #0075c0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.newsTitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1e293b;
-  line-height: 1.4;
+.heroPrimary {
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
-.newsArrow {
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.25rem;
-  color: #0075c0;
-  transition: transform 0.3s ease;
+.heroPrimary:hover {
+  background: #0075c0;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
-.newsCard:hover .newsArrow {
-  transform: translateY(-50%) translateX(4px);
+.heroSecondary {
+  border: 1px solid #d6d4d0;
+  color: #1a1a1a;
+  background: #ffffff;
 }
 
-/* Right side - Image */
+.heroSecondary:hover {
+  border-color: #0a0a0a;
+  color: #0a0a0a;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 .heroImageContainer {
   position: relative;
   display: flex;
@@ -105,22 +103,14 @@
   align-items: center;
 }
 
-.heroImage {
-  max-width: 100%;
+.heroDiagram {
+  width: 100%;
+  max-width: 480px;
   height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  filter: grayscale(20%);
-  opacity: 0.9;
-  transition: all 0.5s ease;
 }
 
-.heroImageContainer:hover .heroImage {
-  filter: grayscale(0%);
-  opacity: 1;
-}
+/* Responsive */
 
-/* Responsive Design */
 @media screen and (max-width: 996px) {
   .heroSection {
     min-height: auto;
@@ -130,7 +120,7 @@
   .heroContainer {
     grid-template-columns: 1fr;
     gap: 3rem;
-    text-align: center;
+    text-align: left;
   }
 
   .heroContent {
@@ -142,38 +132,35 @@
     order: 2;
   }
 
-  .newsCard {
-    margin: 0 auto;
-  }
-
-  .heroImage {
-    max-height: 350px;
+  .heroDiagram {
+    max-width: 380px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .heroSection {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .heroTitle {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
   .heroSubtitle {
     font-size: 1rem;
   }
 
-  .newsCard {
-    padding: 1rem 1.25rem;
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .newsTitle {
-    font-size: 1rem;
-    padding-right: 2rem;
+  .heroPrimary,
+  .heroSecondary {
+    justify-content: center;
   }
 
-  .heroImage {
-    max-height: 280px;
+  .heroDiagram {
+    max-width: 320px;
   }
 }
