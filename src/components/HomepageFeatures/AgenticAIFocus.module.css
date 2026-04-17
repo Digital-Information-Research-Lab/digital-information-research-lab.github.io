@@ -149,6 +149,87 @@
   transform: translateY(-1px);
 }
 
+.companionCard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #0a0a0a;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.companionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  color: inherit;
+}
+
+.companionThumb {
+  width: 280px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companionThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.companionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #fafaf8;
+}
+
+.companionLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.companionTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.companionText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d4d4d0;
+  margin: 0;
+}
+
+.companionText strong {
+  color: #ffffff;
+}
+
+.companionCta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8fb8d6;
+  margin-top: 0.25rem;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 3rem 0;
@@ -166,5 +247,14 @@
   .takeaway {
     padding: 1rem 1.25rem 1.25rem;
     font-size: 0.9rem;
+  }
+
+  .companionCard {
+    grid-template-columns: 1fr;
+  }
+
+  .companionThumb {
+    width: 100%;
+    height: 200px;
   }
 }

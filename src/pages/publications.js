@@ -118,7 +118,7 @@ const PAPERS = [
       "Free Speech vs. Free Ride: Navigating the Supreme Court's Social Media Paradox",
     authors: 'Marshall W. Van Alstyne',
     abstract:
-      'Examines the contradictory legal status of social-media platforms — claiming both publisher rights and common-carrier protections — and proposes a solution grounded in user choice and filter accountability. Uses marketplace and pollution analogies to argue for clearer regulation without government censorship.',
+      'Examines the contradictory legal status of social-media platforms, which claim both publisher rights and common-carrier protections, and proposes a solution grounded in user choice and filter accountability. Uses marketplace and pollution analogies to argue for clearer regulation without government censorship.',
     links: [
       {
         label: 'PDF',
@@ -165,7 +165,7 @@ const TALKS = [
     link: 'https://idw-online.de/en/news835047',
   },
   {
-    year: '—',
+    year: '',
     title: 'Using Markets to Combat Misinformation',
     presenter: 'Marshall Van Alstyne',
     venues: ['Harvard University'],
@@ -307,7 +307,7 @@ function TalkCard({ talk }) {
   return (
     <Wrapper {...wrapperProps}>
       <div className={styles.cardMeta}>
-        <span className={styles.year}>{talk.year}</span>
+        {talk.year && <span className={styles.year}>{talk.year}</span>}
         <span className={styles.muted}>Talk</span>
       </div>
       <h3 className={styles.cardTitle}>{talk.title}</h3>
@@ -425,7 +425,7 @@ export default function Publications() {
           <h1 className={styles.pageTitle}>Publications</h1>
           <p className={styles.pageLede}>
             Research on marketplace mechanisms, truth warrants, and the
-            governance of agentic AI marketplaces — peer-reviewed papers,
+            governance of agentic AI marketplaces: peer-reviewed papers,
             invited talks, and selected press.
           </p>
           <nav className={styles.tableOfContents} aria-label='Sections'>

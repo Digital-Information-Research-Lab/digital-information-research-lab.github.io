@@ -92,8 +92,8 @@ export default function HomepageFeatures() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Support & Partners</h2>
             <p className={styles.sectionSubtitle}>
-              Our research is made possible through generous funding,
-              institutional support, and technology partnerships.
+              This work runs on an NSF award, institutional support from
+              Boston University, and technology built at MIT.
             </p>
           </div>
 

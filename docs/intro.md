@@ -221,7 +221,7 @@ Docs will be created inside:
 
 `npm run gendocs`
 
-This will generate docs in the right folders — no manual setup needed. <br />
+This will generate docs in the right folders. No manual setup needed. <br />
 
 *The last two folders in the sidebar (components and index) are auto-generated folders from the documentation pipeline and contains auto-generated docs and are in beta testing phase at the moment.*
 

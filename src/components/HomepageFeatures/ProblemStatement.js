@@ -2,16 +2,8 @@ import React from 'react';
 import styles from './ProblemStatement.module.css';
 
 /**
- * ProblemStatement
- *
- * Anchored as the second section of the landing page so visitors encounter
- * the *why* before any features or examples. Three blocks:
- *   1. THE PROBLEM   — short, sharp framing of the failure mode
- *   2. THE MECHANISM — three numbered steps showing how a truth warrant works
- *   3. OUR APPROACH  — the experimental program (incl. agentic AI)
- *   4. THE RESULT    — verifiable outcomes
- *
- * Copy intentionally avoids the word "misinformation" per project terminology.
+ * ProblemStatement lays out the why: problem, mechanism, approach, result.
+ * Copy avoids the word "misinformation" per project terminology.
  */
 export default function ProblemStatement() {
   return (
@@ -22,11 +14,11 @@ export default function ProblemStatement() {
             <h2 className={styles.problemTitle}>THE PROBLEM</h2>
             <p className={styles.problemText}>
               In real online marketplaces, misleading product claims can be
-              profitable, and buyers usually can't tell what's true until it's
-              too late. Reputation systems and after-the-fact moderation rarely
-              keep up. Our research asks a practical question: if you change
-              the rules of the market, can you make honest selling the most
-              rewarding strategy — without heavy moderation?
+              profitable, and buyers usually can't tell what's true until
+              after they've paid. Reputation systems and after-the-fact
+              moderation rarely keep up. We ask a practical question: can we
+              change the rules of the market so that honest selling becomes
+              the most rewarding strategy, without needing heavy moderation?
             </p>
           </div>
 
@@ -34,8 +26,8 @@ export default function ProblemStatement() {
             <h2 className={styles.mechanismTitle}>THE MECHANISM</h2>
             <p className={styles.mechanismLede}>
               Truth warrants let sellers escrow money to back the claims in
-              their advertisements. Honest sellers signal credibility cheaply;
-              dishonest sellers pay buyers when caught.
+              their advertisements. Honest sellers signal credibility
+              cheaply, and dishonest sellers pay buyers when caught.
             </p>
             <ol className={styles.mechanismSteps}>
               <li>
@@ -67,19 +59,21 @@ export default function ProblemStatement() {
             <ul className={styles.approachList}>
               <li>
                 <strong>Human vs Human.</strong> Real people act as both
-                buyers and sellers in a controlled marketplace.
+                buyers and sellers inside a controlled marketplace.
               </li>
               <li>
                 <strong>Human vs AI.</strong> Real buyers transact with
                 LLM-driven sellers running different advertising strategies.
               </li>
               <li>
-                <strong>AI vs AI.</strong> Large-scale simulations of agentic
-                seller economies stress-test market rules at machine speed.
+                <strong>AI vs AI.</strong> Large-scale simulations of
+                agentic seller economies stress-test market rules at machine
+                speed.
               </li>
               <li>
-                <strong>100+ controlled experiments</strong> comparing market
-                designs head-to-head — not opinion, evidence.
+                <strong>100+ controlled experiments</strong> compare market
+                designs head to head, so we reason from evidence rather than
+                from intuition.
               </li>
             </ul>
           </div>
@@ -92,8 +86,9 @@ export default function ProblemStatement() {
                 research with both human and AI sellers.
               </li>
               <li>
-                Clear evidence that rule changes — not moderation — shift
-                seller behavior and improve buyer outcomes.
+                Clear evidence that changing market rules shifts seller
+                behavior and improves buyer outcomes, while moderation alone
+                rarely does.
               </li>
               <li>
                 Findings presented at Harvard, MIT, Google, Yale, Columbia,

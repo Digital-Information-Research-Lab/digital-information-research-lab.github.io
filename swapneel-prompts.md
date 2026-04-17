@@ -107,3 +107,46 @@ Harvard Business School
 - `yarn build` passes (74s).
 - Playwright headed-style scripted test: 5 routes (`/`, `/publications`, `/research`, `/people`, `/docs/intro`) × 2 viewports (1440×900, 375×812) = 10 combinations, all returned 200 with zero JS console errors. Screenshots in `/tmp/dirl-zero-trust/evidence/`.
 - Verified the word "misinformation" is no longer in the hero subtitle. SubscribeSection text "Subscribe to receive monthly research" no longer appears anywhere on `/`.
+
+---
+
+### Prompt 6 follow-ups — 2026-04-17
+Prompts 6 and 7 directed a full rework of the hero plus iteration discipline. Summary of the user's brutal feedback: the previous hero SVG was amateur, the `AnalysisVisualizations` carousel duplicated the agentic-AI section, the `KeyMetrics` emojis were unprofessional, and the section order needed to be hero → metrics → problem → videos → agentic AI → support. They also asked me to integrate a colleague's D3 sunburst (venna20's "Visualizing How Players Think") and to iterate with zero-trust checks for duplicates, AI-sounding text, and em-dashes using the `write-like-a-human` skill.
+
+**TL;DR:** Reworked the landing page in six testable iterations: stripped em-dashes and AI-voice phrasing, removed the duplicate agentic section plus the research highlights, redesigned `KeyMetrics` without emojis, built a real d3-force buyer/seller/AI-agent network in the hero, integrated the colleague's sunburst as a dark companion card in the agentic-AI section, and ran Playwright at desktop and mobile after each iteration. Documented the prior amateur-SVG failure as a lessons file so future sessions apply `web-design-ux` rules from the start.
+
+**Files changed:**
+- `scratchpad/lessons/2026-04-17-hero-design-failure.md` — [NEW] post-mortem of the amateur hero SVG, duplicate section, and emoji icons. Lists the specific `web-design-ux` rules I violated and concrete habits for future work.
+- `package.json`, `yarn.lock` — added `d3-force@3.0.0` for the hero network simulation.
+- `src/components/HomepageFeatures/MarketplaceNetwork.js` — [NEW] force-directed SVG network of 5 buyers, 4 human sellers, 3 AI sellers, and a central warrant escrow. Uses `BrowserOnly` so the simulation only runs client-side, with a deterministic static fallback for SSR. Group labels ("BUYERS", "SELLERS", "AI AGENT SELLERS") anchor the layout even before a visitor hovers.
+- `src/components/HomepageFeatures/MarketplaceNetwork.module.css` — [NEW]
+- `src/components/HomepageFeatures/KeyMetrics.js` — removed emoji icons, removed the tech-stack badges strip. Renders as four big-number / uppercase-label columns with dividers, Linear/Stripe style. Corrected talk count to 8 to match publications data.
+- `src/components/HomepageFeatures/KeyMetrics.module.css` — rewritten for the typography-first layout (grid of four, bordered row, italic caption).
+- `src/components/HomepageFeatures/ProblemStatement.js` — stripped em-dashes. Rewrote sentences to use "we" openings and direct statements. Replaced `head-to-head` with `head to head`.
+- `src/components/HomepageFeatures/GameplayVideos.js` — retitled to "How the marketplace plays", tightened the subtitle to describe what the two videos show, reworded seller/buyer descriptions to refer to the warrant mechanism explicitly. Added `preload='metadata'` to the `<video>` tags.
+- `src/components/HomepageFeatures/AgenticAIFocus.js` — stripped em-dashes. Added a dark "COMPANION ANALYSIS" card at the bottom that embeds the sunburst thumbnail, credits the collaborator, and links to the original interactive.
+- `src/components/HomepageFeatures/AgenticAIFocus.module.css` — added styles for the companion card: dark background, two-column grid with image + body, hover lift.
+- `src/components/HomepageFeatures/index.js` — reworded the Support & Partners subtitle.
+- `src/components/HomepageFeatures/AnalysisVisualizations.{js,module.css}` — [DELETED] the "duplicate agentic AI section" the user called out.
+- `src/components/HomepageFeatures/ResearchHighlights.{js,module.css}` — [DELETED] not part of the user's specified section list and the content is covered elsewhere.
+- `src/pages/index.js` — rewritten for the new section order (Hero → KeyMetrics → Problem → Videos → AgenticAI → Support). Hero uses `<MarketplaceNetwork />` instead of the prior hand-coded SVG. Copy stripped of em-dashes.
+- `src/pages/publications.js` — stripped em-dashes from the one abstract that used them and from the page lede (replaced with a colon). Handled an empty-year talk entry so the old `—` literal is gone.
+- `docs/intro.md` — replaced one em-dash with a period to keep the zero-trust em-dash check green across the whole site.
+- `static/img/sunburst-seller-strategies.png` — [NEW] screenshot of Venna Patel's D3 sunburst, 1.6 MB, used as the companion-card thumbnail.
+
+**Key decisions:**
+- Picked `d3-force` (15 KB) over `react-force-graph-2d` (~120 KB) because I only needed the simulation, not the canvas renderer. SVG output gives me full styling control through the site's design language.
+- Used `BrowserOnly` with a static SVG fallback so the first paint on the server shows the same topology, then hydrates into the animated version. Keeps SSR valid and avoids hydration flashes.
+- Kept the companion sunburst card dark on purpose. The sunburst is natively dark-themed, and the contrast against the light section reads as intentional rather than accidental.
+- Crop behavior on the companion thumbnail was `cover` (cropping off the outer ring); changed to `contain` after the first visual review so the whole circle is legible at thumbnail size.
+- Corrected the KeyMetrics talk count from the earlier "9" to "8" to match the publications data. When the number is on the page, the page has to match.
+
+**Errors caught and resolved:**
+- Iteration 1 zero-trust picked up 4 em-dashes in rendered body text; tracked each to its source file and fixed.
+- Iteration 6 caught an em-dash in `docs/intro.md` I had not written but that rendered into the run. Fixed.
+- No JS errors at any viewport. No hydration warnings from the client-only `MarketplaceNetwork`.
+
+**Verification:**
+- `yarn build` passes. Only remaining build warnings are pre-existing broken anchors in auto-generated `/docs/components/*` files, none of them touched this round.
+- Playwright against the local production build: 5 routes × 2 viewports = 10 combinations, all 200, zero JS errors, zero em-dashes, zero "delve", no emojis in the metrics section, no ghost Subscribe copy. Evidence in `/tmp/dirl-zero-trust/evidence/`.
+

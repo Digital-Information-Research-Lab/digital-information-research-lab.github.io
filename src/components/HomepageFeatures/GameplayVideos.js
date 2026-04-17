@@ -2,9 +2,8 @@ import React from 'react';
 import styles from './GameplayVideos.module.css';
 
 /**
- * GameplayVideos Component
- * Shows seller and buyer gameplay videos side by side
- * Adapted from TruthMarket project showcase
+ * Side-by-side seller and buyer gameplay recordings from the marketplace.
+ * Autoplays silently so the page feels alive without demanding attention.
  */
 export default function GameplayVideos() {
   return (
@@ -12,11 +11,12 @@ export default function GameplayVideos() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.sectionTitle}>
-            Interactive Marketplace Simulation
+            How the marketplace plays
           </h2>
           <p className={styles.sectionSubtitle}>
-            Watch how our experimental platform enables controlled behavioral
-            experiments with real participants
+            Two short recordings from a live experiment. Sellers on the left
+            decide what to claim about their product and whether to back it.
+            Buyers on the right decide who to trust.
           </p>
         </div>
 
@@ -30,12 +30,14 @@ export default function GameplayVideos() {
                 muted
                 loop
                 playsInline
+                preload='metadata'
                 className={styles.video}
               />
             </div>
             <p className={styles.videoDescription}>
-              Sellers create product listings, set quality levels, choose
-              pricing strategies, and decide whether to warrant their claims
+              Sellers post listings, pick a quality level, set a price, and
+              choose whether to put money on their claim through a truth
+              warrant.
             </p>
           </div>
 
@@ -48,12 +50,13 @@ export default function GameplayVideos() {
                 muted
                 loop
                 playsInline
+                preload='metadata'
                 className={styles.video}
               />
             </div>
             <p className={styles.videoDescription}>
-              Buyers browse listings, compare sellers, make purchases, and can
-              challenge misleading claims to collect stakes
+              Buyers compare sellers, make a purchase, and can challenge a
+              misleading claim to collect the seller's warrant.
             </p>
           </div>
         </div>
