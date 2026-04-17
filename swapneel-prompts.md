@@ -150,3 +150,27 @@ Prompts 6 and 7 directed a full rework of the hero plus iteration discipline. Su
 - `yarn build` passes. Only remaining build warnings are pre-existing broken anchors in auto-generated `/docs/components/*` files, none of them touched this round.
 - Playwright against the local production build: 5 routes × 2 viewports = 10 combinations, all 200, zero JS errors, zero em-dashes, zero "delve", no emojis in the metrics section, no ghost Subscribe copy. Evidence in `/tmp/dirl-zero-trust/evidence/`.
 
+---
+
+### Prompt 10 — 2026-04-17
+"great let's add https://www.linkedin.com/in/harshaveena collecting her info from linkedin to our website as a graduate researcher (MS)" plus "under people" / "and can you also play around with reformatting people to better fit the theme then push it?" / "veena headshot: [discord url]"
+
+**TL;DR:** Added Harshaveena Komatineni as a graduate researcher (MS) with her headshot, LinkedIn link, and a stub bio. Redesigned the whole People page to match the landing-page theme: warm off-white background, bordered cards, typography-first section headers, restyled modal. Made headshots runtime-loaded with an initials fallback so missing images no longer break the build.
+
+**Files changed:**
+- `src/data/people/grad.json` — added Harshaveena entry (name, role "Graduate Researcher (MS)", LinkedIn `harshaveena`, stub description). Contact left null pending user input.
+- `static/headshot/harshaveena.jpg` — [NEW] headshot the user shared; downloaded and converted from WebP to JPEG (152 KB, 1064×1420).
+- `src/components/people/Headshot.jsx` — switched from build-time `require` to runtime `<img src="/headshot/{id}.jpg">` with an initials fallback via `onError`. Missing headshots now render a muted blue circle with the person's initials rather than crashing the build.
+- `src/components/people/ProfileCard.jsx` — restyled to match the new theme (bordered white card, square headshot above, name + role + optional email below). Email click no longer triggers the card click.
+- `src/css/people.module.css` — rewritten end to end. Old dark-blue `.header` bar is gone. New layout uses the `#fdfcfa` base, a typography-first page header, uppercase category labels with member counts, a 4-column responsive card grid, and a properly styled modal with animated overlay.
+- `src/pages/people.js` — rewritten to use the new module CSS, `react-markdown` for bios, LinkedIn link when present. Sort now keeps `joined: null` entries at the end of each group.
+
+**Key decisions:**
+- Runtime image loading instead of `require` means the build no longer hard-depends on every roster member having a jpg file in `static/headshot/`. Missing headshots fall back to an initials circle that looks deliberate, not broken.
+- Stubbed Harshaveena's description from what's derivable from repo context (she is already credited on the marketplace-analysis work). Left `contact` null so the UI renders "LinkedIn" only until a real email is added.
+- Kept the existing four-category structure and data files so adding new people stays a single-line edit to the relevant `grad.json` / `undergrad.json` / etc.
+
+**Verification:**
+- `yarn build` passes.
+- Playwright: `/people` renders at 1440×900 with zero JS errors, zero em-dashes, 6 PIs / 1 postdoc / 5 graduate students (was 4) / 15 undergraduates. Harshaveena's card is present; clicking it opens the modal with her headshot, LinkedIn link, and bio. Screenshots in `/tmp/dirl-zero-trust/evidence/people-*.png`.
+

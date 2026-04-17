@@ -50,3 +50,21 @@ yeah but now you have a duplicate agentic AI section as the other section, also 
 ## Prompt 7 — 2026-04-17
 
 This is also a fantastic visualization to use from my colleague about this same project so think like a designer and think how you might integrate these incredible elements and adapt the theme of the landing page to be more in sync with the concept of marketplaces (maybe some nice JS force graph network plots with buyer and seller dynamics reflected in the hero section or something of that sort) https://venna20.github.io/Visualizing-How-Players-Think-in-a-Digital-Marketplace-Experiment/
+
+---
+
+## Prompt 8 — 2026-04-17
+
+network graph may not be the top priority because we have good graphs already
+
+---
+
+## Prompt 9 — 2026-04-17
+
+but try and let's see what you come up with
+
+---
+
+## Prompt 10 — 2026-04-17
+
+great let's add https://www.linkedin.com/in/harshaveena collecting her info from linkedin to our website as a graduate researcher (MS)

@@ -34,5 +34,14 @@
     "contact": "zoeyyang@bu.edu",
     "linkedin": null,
     "description": "Zou (Zoey) Yang is a data science graduate student working on this project with post-docs and PIs. She participated in the research design and initial coding tasks for building the experiments. Her research interest focuses on causal inference, cognitive modeling, and machine learning. She is particularly interested in applications in health outcomes and behavioral economics."
+  },
+  {
+    "id": "harshaveena",
+    "name": "Harshaveena Komatineni",
+    "role": "Graduate Researcher (MS)",
+    "joined": null,
+    "contact": null,
+    "linkedin": "harshaveena",
+    "description": "Harshaveena is a graduate researcher on the marketplace project, contributing to data analysis and the interactive dashboards that trace how sellers reason about price, quality, and warrant choices across experiment rounds."
   }
 ]
